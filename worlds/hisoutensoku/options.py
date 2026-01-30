@@ -297,8 +297,61 @@ class SystemCardCharacterChecks(Choice):
     option_universal = 0
     option_individual = 1
 
-#Misc
+#Difficulty Settings
 
+class DifficultyItems(Choice):
+    """
+    Determines whether Story/Arcade difficulty's will be locked 
+    behind "Progressive Difficulty" checks
+
+    - Open: All difficulties are available from the start.
+    - Seperate: You start with one random/selected difficulty, 
+    and the others are individual AP Items.
+    - From Lunatic: Start with Lunatic, and "Progressive Difficulty" 
+    items give you the next lowest difficulty
+    - From Easy: Start with Easy, and "Progressive Difficulty" items 
+    give you the next highest difficulty
+    """
+    display_name = "Difficulty Items"
+    default = 0
+    option_open = 0
+    option_seperate = 1
+    option_from_lunatic = 2
+    option_from_easy = 3
+
+class DifficultyStart(Choice):
+    """
+    Determines Which difficulty to start with if "Difficuly Items" is 
+    set to "Seperate".
+    """
+    display_name = "Difficulty Start"
+    default = "random"
+    option_easy = 0
+    option_medium = 1
+    option_hard = 2
+    option_lunatic = 3
+
+class ExcludeLunatic(Toggle):
+    """
+    Determines whether Lunatic will be excluded from progressive difficulty. 
+
+    If difficulty unlocks are progressive "From Lunatic", or set to "Seperate" 
+    and you start with "Lunatic", you will also be given "Hard" if excluded
+    """
+    display_name = "Exclude Lunatic"
+    default = True
+
+class OnlyLunatic(Toggle):
+    """
+    All other difficulties will be disabled, and Lunatic will be the only 
+    available difficulty.
+
+    Enable at your own discretion
+    """
+    display_name = "Only Lunatic"
+    default = False
+
+# Misc Settings
 class Traps(Range):
     """
     Determines what percentage of filer items get relaced with traps 
@@ -356,6 +409,12 @@ class SokuOptions(PerGameCommonOptions):
     cardsanity_blacklist: CardsanityBlacklist
     system_card_check_count: SystemCardCheckCount
     system_card_character_checks: SystemCardCharacterChecks
+
+    # Difficulty Options
+    difficulty_items: DifficultyItems
+    difficulty_start: DifficultyStart
+    exclude_lunatic: ExcludeLunatic
+    only_lunatic: OnlyLunatic
 
     # Misc Options
     traps: Traps

@@ -2,7 +2,6 @@ from typing import Dict, NamedTuple, Optional
 from .variables import *
 
 from .charactercards import item_table
-from .groups import itemgroups, locationgroups
 from BaseClasses import Item, ItemClassification
 
 class TItem(Item):
@@ -47,33 +46,42 @@ item_table: Dict[str, TItemData] = {
     "Suwako Moriya":            TItemData("Characters", STARTING_ID + 19, ItemClassification.progression, 1),
 
     # Story Unlocks
-    "Progressive Story Stage":
-    "Progressive Sanae Story Stage":
-    "Progressive Cirno Story Stage":
-    "Progressive Meiling Story Stage":
+    "Progressive Story Stage":          TItemData("[Universal][Story] Stages", STARTING_ID + 20, ItemClassification.progression, ),
+    "Progressive Sanae Story Stage":    TItemData("[Sanae][Individual][Story] Stages", STARTING_ID + 21, ItemClassification.progression, ),
+    "Progressive Cirno Story Stage":    TItemData("[Cirno][Individual][Story] Stages", STARTING_ID + 22, ItemClassification.progression, ),
+    "Progressive Meiling Story Stage":  TItemData("[Meiling][Individual][Story] Stages", STARTING_ID + 23, ItemClassification.progression, ),
 
     # Arcade Unlocks
-    "Progressive Arcade Stage":
-    "Progressive Alice Arcade Stage":
-    "Progressive Aya Arcade Stage":
-    "Progressive Ciro Arcade Stage":
-    "Progressive Iku Arcade Stage":
-    "Progressive Komachi Arcade Stage":
-    "Progressive Marisa Arcade Stage":
-    "Progressive Meiling Arcade Stage":
-    "Progressive Patchouli Arcade Stage":
-    "Progressive Reimu Arcade Stage":
-    "Progressive Reisen Arcade Stage":
-    "Progressive Remilia Arcade Stage":
-    "Progressive Sakuya Arcade Stage":
-    "Progressive Sanae Arcade Stage":
-    "Progressive Suika Arcade Stage":
-    "Progressive Suwako Arcade Stage":
-    "Progressive Tenshi Arcade Stage":
-    "Progressive Utsuho Arcade Stage":
-    "Progressive Youmu Arcade Stage":
-    "Progressive Yukari Arcade Stage":
-    "Progressive Yuyuko Arcade Stage":
+    "Progressive Arcade Stage":           TItemData("[Universal][Arcade] Stages", STARTIND_ID + 24, ItemClassification.progression, 9),
+    "Progressive Alice Arcade Stage":     TItemData("[Alice][Individual][Arcade] Stages", STARTIND_ID + 25, ItemClassification.progression, 9),
+    "Progressive Aya Arcade Stage":       TItemData("[Aya][Individual][Arcade] Stages", STARTIND_ID + 26, ItemClassification.progression, 9),
+    "Progressive Cirno Arcade Stage":      TItemData("[Cirno][Individual][Arcade] Stages", STARTIND_ID + 27, ItemClassification.progression, 9),
+    "Progressive Iku Arcade Stage":       TItemData("[Iku][Individual][Arcade] Stages", STARTIND_ID + 28, ItemClassification.progression, 9),
+    "Progressive Komachi Arcade Stage":   TItemData("[Komachi][Individual][Arcade] Stages", STARTIND_ID + 29, ItemClassification.progression, 9),
+    "Progressive Marisa Arcade Stage":    TItemData("[Marisa][Individual][Arcade] Stages", STARTIND_ID + 30, ItemClassification.progression, 9),
+    "Progressive Meiling Arcade Stage":   TItemData("[Meiling][Individual][Arcade] Stages", STARTIND_ID + 31, ItemClassification.progression, 9),
+    "Progressive Patchouli Arcade Stage": TItemData("[Patchouli][Individual][Arcade] Stages", STARTIND_ID + 32, ItemClassification.progression, 9),
+    "Progressive Reimu Arcade Stage":     TItemData("[Reimu][Individual][Arcade] Stages", STARTIND_ID + 33, ItemClassification.progression, 9),
+    "Progressive Reisen Arcade Stage":    TItemData("[Reisen][Individual][Arcade] Stages", STARTIND_ID + 34, ItemClassification.progression, 9),
+    "Progressive Remilia Arcade Stage":   TItemData("[Remilia][Individual][Arcade] Stages", STARTIND_ID + 35, ItemClassification.progression, 9), 
+    "Progressive Sakuya Arcade Stage":    TItemData("[Sakuya][Individual][Arcade] Stages", STARTIND_ID + 36, ItemClassification.progression, 9),
+    "Progressive Sanae Arcade Stage":     TItemData("[Sanae][Individual][Arcade] Stages", STARTIND_ID + 37, ItemClassification.progression, 9),
+    "Progressive Suika Arcade Stage":     TItemData("[Suika][Individual][Arcade] Stages", STARTIND_ID + 38, ItemClassification.progression, 9),
+    "Progressive Suwako Arcade Stage":    TItemData("[Suwako][Individual][Arcade] Stages", STARTIND_ID + 39, ItemClassification.progression, 9),
+    "Progressive Tenshi Arcade Stage":    TItemData("[Tenshi][Individual][Arcade] Stages", STARTIND_ID + 40, ItemClassification.progression, 9),
+    "Progressive Utsuho Arcade Stage":    TItemData("[Utsuho][Individual][Arcade] Stages", STARTIND_ID + 41, ItemClassification.progression, 9),
+    "Progressive Youmu Arcade Stage":     TItemData("[Youmu][Individual][Arcade] Stages", STARTIND_ID + 42, ItemClassification.progression, 9),
+    "Progressive Yukari Arcade Stage":    TItemData("[Yukari][Individual][Arcade] Stages", STARTIND_ID + 43, ItemClassification.progression, 9),
+    "Progressive Yuyuko Arcade Stage":    TItemData("[Yuyuko][Individual][Arcade] Stages", STARTIND_ID + 44, ItemClassification.progression, 9),
+
+    # Misc
+    "Lower Difficulty":        TItemData("[Progressive Lower] Difficulty", STARTING_ID + 45, ItemClassification.useful, 3),
+    "Higher Difficulty":       TItemData("[Progressive Higher] Difficulty", STARTING_ID + 46, ItemClassification.useful, 3),
+    "Easy Difficulty":         TItemData("[DIndividual] Difficulty", STARTING_ID + 47, ItemClassification.useful, 1),
+    "Medium Difficulty":       TItemData("[DIndividual] Difficulty", STARTING_ID + 48, ItemClassification.useful, 1),
+    "Hard Difficulty":         TItemData("[DIndividual] Difficulty", STARTING_ID + 49, ItemClassification.useful, 1),
+    "Lunatic Difficulty":      TItemData("[DIndividual][Lunatic] Difficulty", STARTING_ID + 50, ItemClassification.useful, 1),
+
 
     # Filler
 
