@@ -70,7 +70,9 @@ class CharacterFullBlacklist(OptionSet):
     DeterminesWhich Characters will be autofilled into all Character 
     Blacklist settings
 
-    Characters listed will have no checks or items associated with them 
+    Characters listed will have no checks or items associated with 
+    playing as them (In Arcade or VS Modes)
+
     (except for story mode Sanae, Cirno, and Meiling specifically. If 
     they are listed in this blacklist, they will still be exempt from 
     other settings)
@@ -99,6 +101,35 @@ class CharacterFullBlacklist(OptionSet):
         "Yukari"
         ]
     default = []
+
+#VS Mode Options
+class VSModeCharacterwins(Choice):
+    """    
+    Determines whether playing in VS Mode and winning AS and/or AGAINST 
+    a given character
+    ex: Winning playing AGAINST Cirno once rewards a check (if "Opponent" 
+    is chosen), as does winning playing AS Cirno (If "Player" is chosen)
+
+    Note: These checks can also be gotten during Arcade Mode as long as 
+    you have recieved the character associated with the check. In VS Mode, 
+    you can only play as or against characters you already have recieved.
+    """
+    display_name = "VS Mode Checks"
+    default = 0
+    option_none = 0
+    option_opponent = 1
+    option_player = 2
+    option_both = 3
+
+class VSModeCount(Range):
+    """
+    Determine how many checks exist for winning as/against given characters 
+    in VS Mode, from 1 to 10.
+    """
+    display_name = "VS Mode Win Count"
+    range_start = 1
+    range_end = 10
+
 
 #Story Mode Options
 class StoryModeChecks(OptionSet):
@@ -242,6 +273,24 @@ class CardsanitySpells(Toggle):
     """
     display_name = "Cardsanity Spells"
     default = False
+
+class CardsanitySpellCount(Range):
+    """
+    Docstring for CardsanitySpellCount
+    
+    :var Lunatic: Description
+    :vartype Lunatic: Start
+    :var Easy: Description
+    :vartype Easy: Start
+    :var Loss: Description
+    :vartype Loss: when
+    :var Loss: Description
+    :vartype Loss: Only
+    """
+    display_name = "Cardsanity Spell Count"
+    range_start = 1
+    range_end = 4
+
 
 class CardsanityBlacklist(OptionSet):
     """
@@ -393,6 +442,10 @@ class SokuOptions(PerGameCommonOptions):
     goal: Goal
     character_full_blacklist: CharacterFullBlacklist
 
+    # VS Mode Options
+    vs_mode_character_wins: VSModeCharacterwins
+    vs_mode_win_count: VSModeCount
+    
     # Story Mode Options
     story_mode_checks: StoryModeChecks
     story_stage_unlocks: StoryStageUnlocks
@@ -406,6 +459,7 @@ class SokuOptions(PerGameCommonOptions):
     cardsanity_items: CardsanityItems
     cardsanity_specials: CardsanitySpecials
     cardsanity_spells: CardsanitySpells
+    cardsanity_spell_count: CardsanitySpellCount
     cardsanity_blacklist: CardsanityBlacklist
     system_card_check_count: SystemCardCheckCount
     system_card_character_checks: SystemCardCharacterChecks
