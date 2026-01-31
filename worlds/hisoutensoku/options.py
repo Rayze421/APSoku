@@ -11,16 +11,16 @@ class Goal(OptionSet):
 
     - Story: Find all required items to complete a number of the 3 
     characters' Story Modes. 
-      Each of the 3 characters need their own "Progressive Story 
+    * Each of the 3 characters need their own "Progressive Story 
     Stage" item to access each stage past the first, up to the final 
     stage.
-      (This will add "Sanae" to "Story Mode Checks" if enabled if the setting is otherwise empty)
+    * (This will add "Sanae" to "Story Mode Checks" if the setting is otherwise empty)
     
     - Arcade (Default): Find all required items to complete Arcade Mode with a 
     number of characters
-      Each character needs their own "Progressive Arcade Stage" item 
+    * Each character needs their own "Progressive Arcade Stage" item 
     to access each stage past the first, up to the final stage 
-      (This will default "Arcade Mode Checks" to be true if listed)
+    * (This will default "Arcade Mode Checks" to be true if listed)
 
     - Card Collector: Collect a number of Special or Spell cards from 
     any character, defined in "Card Collector Goal". Requires "Spellcard Sanity" to be enabled
@@ -35,6 +35,15 @@ class Goal(OptionSet):
     display_name = "Goal"
     valid_keys = ["Story", "Arcade", "Card Collector", "Card Tester"]
     default = ["Arcade"]
+
+class StoryModeCount(Range):
+    """
+    If Story Mode is chosen as a goal condition, determine how many 
+    Story paths must be completed to count towards the goal.
+    """
+    display_name = "Story Mode Count"
+    range_start = 1
+    range_end = 3
     
 class StartingCharacter(Choice):
     """
@@ -107,7 +116,7 @@ class VSModeCharacterwins(Choice):
     """    
     Determines whether playing in VS Mode and winning AS and/or AGAINST 
     a given character
-    ex: Winning playing AGAINST Cirno once rewards a check (if "Opponent" 
+    example: Winning playing AGAINST Cirno once rewards a check (if "Opponent" 
     is chosen), as does winning playing AS Cirno (If "Player" is chosen)
 
     Note: These checks can also be gotten during Arcade Mode as long as 
@@ -144,6 +153,7 @@ class StoryModeChecks(OptionSet):
     display_name = "Story Mode Checks"
     valid_keys = ["Sanae", "Meiling", "Cirno"]
     default = []
+
 
 class StoryStageUnlocks(Choice):
     """
@@ -220,13 +230,13 @@ class CardsanityItems(Choice):
     Determines how Cards are handled in the pool. Recieving a card for a 
     character will let you add as up to 4 to their deck
 
-      Off: Every character will have all of their Special and Spell 
+    - Off: Every character will have all of their Special and Spell 
     cards available to use from the start
-      Spellcards: will only shuffle Spellcards(Supers) into the pool for 
+    - Spellcards: will only shuffle Spellcards(Supers) into the pool for 
     characters to unlock, leaving all Specials free to use
-      Specials: Will only shuffle Special cards into the pool, leaving 
+    - Specials: Will only shuffle Special cards into the pool, leaving 
     all Spellcards free to use
-      All: All cards are shuffled into the pool, not including system 
+    - All: All cards are shuffled into the pool, not including system 
     cards (you are required to have a deck to play, so these cant be 
     shuffled)
 
@@ -245,12 +255,12 @@ class CardsanitySpecials(Choice):
     Determines whether using Special Cards (up to a given level) 
     in a game rewards a check.
     
-      Off: Using Special Cards to level your Specials will not award 
+    - Off: Using Special Cards to level your Specials will not award 
     any checks.
-      Once: Special cards only need to be used once in a game to reward 
+    - Once: Special cards only need to be used once in a game to reward 
     the check.
-      Max: Ranking up a character's special to Rank 4 rewards a check.
-      Individual: Same as Max, but each level up to max also sends a 
+    - Max: Ranking up a character's special to Rank 4 rewards a check.
+    - Individual: Same as Max, but each level up to max also sends a 
     check, amounting to 4 checks per special.
 
     Importantly, These checks can be gotten while playing Arcade Mode, 
@@ -276,16 +286,8 @@ class CardsanitySpells(Toggle):
 
 class CardsanitySpellCount(Range):
     """
-    Docstring for CardsanitySpellCount
-    
-    :var Lunatic: Description
-    :vartype Lunatic: Start
-    :var Easy: Description
-    :vartype Easy: Start
-    :var Loss: Description
-    :vartype Loss: when
-    :var Loss: Description
-    :vartype Loss: Only
+    Determines how many times using a given Spell card will reward a 
+    check, from 1 to 4
     """
     display_name = "Cardsanity Spell Count"
     range_start = 1
@@ -411,6 +413,18 @@ class Traps(Range):
     range_start = 0
     range_end = 100
 
+class NoDeckLimit(Choice):
+    """
+    Determines whether the standard limit of 4 duplicates of a card in a deck 
+    is in place.
+
+    - Vanilla: The card limit of 4 is as normal.
+    - Item: The card limit will be normal from the start, but recieve an item 
+    that can unlimit cards in a characters deck.
+    - Always: Decks will be allowed any number of cards you own.
+    """
+
+
 class Deathlink(Deathlink):
     """
     When you lose in Arcade Mode or Story Mode, everyone else with 
@@ -425,9 +439,9 @@ class DeathlinkTrigger(Choice):
     """
     Determines what kind of loss sends a deathlink
 
-      Round Loss: when your HP drops to 0 and you become downed, send 
+    - Round Loss: when your HP drops to 0 and you become downed, send 
     a deathlink
-      Match Loss: Only send a deathlink when you lose a whole match 
+    - Match Loss: Only send a deathlink when you lose a whole match 
     (best of 2 in Arcade Mode, and losing all 3 lives in Story Mode, 
     for context)
     """
@@ -445,7 +459,7 @@ class SokuOptions(PerGameCommonOptions):
     # VS Mode Options
     vs_mode_character_wins: VSModeCharacterwins
     vs_mode_win_count: VSModeCount
-    
+
     # Story Mode Options
     story_mode_checks: StoryModeChecks
     story_stage_unlocks: StoryStageUnlocks
@@ -469,8 +483,3 @@ class SokuOptions(PerGameCommonOptions):
     difficulty_start: DifficultyStart
     exclude_lunatic: ExcludeLunatic
     only_lunatic: OnlyLunatic
-
-    # Misc Options
-    traps: Traps
-    deathlink: Deathlink
-    deathlink_trigger: DeathlinkTrigger
