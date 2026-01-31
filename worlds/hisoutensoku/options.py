@@ -23,17 +23,18 @@ class Goal(OptionSet):
     * (This will default "Arcade Mode Checks" to be true if listed)
 
     - Card Collector: Collect a number of Special or Spell cards from 
-    any character, defined in "Card Collector Goal". Requires "Spellcard Sanity" to be enabled
+    any character, defined in "Card Collector Count". Requires cards 
+    to be shuffled into the item pool.
 
-    - Card Tester: Obtain the checks for maxing out a number of 
+    - Card Master: Obtain the checks for maxing out a number of 
     caracters' Special cards/activating Spellcards, defined in 
-    "Card Tester Goal"
+    "Card Master Count". Requires cards to be shuffled into the item pool.
 
 
     
     """
     display_name = "Goal"
-    valid_keys = ["Story", "Arcade", "Card Collector", "Card Tester"]
+    valid_keys = ["Story", "Arcade", "Card Collector", "Card Master"]
     default = ["Arcade"]
 
 class StoryModeCount(Range):
@@ -45,6 +46,36 @@ class StoryModeCount(Range):
     range_start = 1
     range_end = 3
     
+class ArcadeModeCount(Range):
+    """
+    If Arcade is selected as a goal condition, determine how many 
+    characters you must complete all 10 rounds of Arcade Mode with 
+    to count towards the goal
+    """
+    display_name = "Arcade Mode Count"
+    range_start = 1
+    range_end = 20
+
+class CardCollectorCount(Range):
+    """
+    If "Card Collector" is selected as a goal condition, determines 
+    what percentage of available character Special and Spell cards must be 
+    collected to count towards the goal.
+    """
+    display_name = "Card Collector Goal"
+    range_start = 1
+    range_end = 100
+
+class CardMasterCount(Range):
+    """
+    If "Card Master" is selected as a goal option, determines what 
+    percentage of available special and spell card checks must be completed 
+    to count towards the goal.
+    """
+    display_name = "Card Master Count"
+    range_start = 1
+    range_end = 100
+
 class StartingCharacter(Choice):
     """
     Choose which character you wish to start with for modes other 
@@ -452,8 +483,15 @@ class DeathlinkTrigger(Choice):
 
 @dataclass
 class SokuOptions(PerGameCommonOptions):
-    # General Options
+    # Goal Options
     goal: Goal
+    story_mode_count: StoryModeCount
+    arcade_mode_count: ArcadeModeCount
+    card_collector_count: CardCollectorCount
+    card_master_count: CardMasterCount
+
+    #General Options
+    starting_character: StartingCharacter
     character_full_blacklist: CharacterFullBlacklist
 
     # VS Mode Options
@@ -483,3 +521,6 @@ class SokuOptions(PerGameCommonOptions):
     difficulty_start: DifficultyStart
     exclude_lunatic: ExcludeLunatic
     only_lunatic: OnlyLunatic
+
+    # Misc Options
+    no_deck_limit: NoDeckLimit
