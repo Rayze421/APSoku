@@ -162,7 +162,7 @@ sakuya_22d = "Sakuya 22: Vanishing Everything"
 sakuya_22a1 = "Sakuya 22: Perfect Maid"
 sakuya_22a2 = "Sakuya 22: Time Paradox"
 #Spells
-sakuya_2sc_kd = 'Sakuya 2SC: Illusion Sign "Killing Doll"' #Tempting to make a setting handling this bastard
+sakuya_2sc_kd = 'Sakuya 2SC: Illusion Sign "Killing Doll"' 
 sakuya_2sc_sb = 'Sakuya 2SC: Silver Sign "Silver Bound"' 
 sakuya_2sc_em = 'Sakuya 2SC: Conjuring "Eternal Meek"'
 sakuya_3sc_ps = 'Sakuya 3SC: Time Sign: "Private Square"'
