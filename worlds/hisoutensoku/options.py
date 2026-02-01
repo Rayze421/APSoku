@@ -256,48 +256,29 @@ class ArcadeBlacklist(OptionSet):
     default = []
 
 #Card Options
-class CardsanityItems(Choice):
-    """
-    Determines how Cards are handled in the pool. Recieving a card for a 
-    character will let you add as up to 4 to their deck
 
-    - Off: Every character will have all of their Special and Spell 
-    cards available to use from the start
-    - Spellcards: will only shuffle Spellcards(Supers) into the pool for 
-    characters to unlock, leaving all Specials free to use
-    - Specials: Will only shuffle Special cards into the pool, leaving 
-    all Spellcards free to use
-    - All: All cards are shuffled into the pool, not including system 
-    cards (you are required to have a deck to play, so these cant be 
-    shuffled)
-
-    Note: Shuffling Cards at all requires certain Cardsanity Specials/Spells 
-    settings to be on to make sure the item and location count match. If Card Locations are not enabled, these will default to off
+class CardsanitySkills(Choice):
     """
-    display_name = "CardSanity Items"
-    default = 0
-    option_off = 0
-    option_spellcards = 1
-    option_specials = 2
-    option_all = 3
-
-class CardsanitySpecials(Choice):
-    """
-    Determines whether using Special Cards (up to a given level) 
-    in a game rewards a check.
+    Determines whether using Skill Cards (up to a given level) 
+    in a game rewards a check. If enabled, Shuffles all characters' 
+    Special Cards into the item pool.
     
-    - Off: Using Special Cards to level your Specials will not award 
+    - Off: Using Skill Cards to level your Skills will not award 
     any checks.
-    - Once: Special cards only need to be used once in a game to reward 
+    - Once: Skill cards only need to be used once in a game to reward 
     the check.
-    - Max: Ranking up a character's special to Rank 4 rewards a check.
+    - Max: Ranking up a character's Skill card to Rank 4 rewards a check.
     - Individual: Same as Max, but each level up to max also sends a 
     check, amounting to 4 checks per special.
 
     Importantly, These checks can be gotten while playing Arcade Mode, 
     Story Mode, VS Com, or VS Player. (VS Network reading TBD)
+
+    Warning: This setting will add about 200+ checks associated with 
+    each Special Card, Individual however multiplies this by 4. Enable
+    with discretion.
     """
-    display_name = "Cardsanity Specials"
+    display_name = "Cardsanity Skills"
     default = 0
     option_off = 0
     option_once = 1
@@ -307,7 +288,7 @@ class CardsanitySpecials(Choice):
 class CardsanitySpells(Toggle):
     """
     Determines whether activating specific Spell Cards in a game
-    awards checks. 
+    awards checks, And shuffles all characters' Spell Cards into the item pool.
 
     Importantly, These checks can be gotten while playing Arcade Mode, 
     Story Mode, VS Com, or VS Player.
@@ -318,7 +299,10 @@ class CardsanitySpells(Toggle):
 class CardsanitySpellCount(Range):
     """
     Determines how many times using a given Spell card will reward a 
-    check, from 1 to 4
+    check, from 1 to 4.
+
+    Warning: This setting will add about 200+ checks to the pool times 
+    this value, so at max can get quite close to 900. Enable with discretion.
     """
     display_name = "Cardsanity Spell Count"
     range_start = 1
@@ -465,6 +449,8 @@ class Deathlink(Deathlink):
     When you recieve a deathlink from another player, a round will 
     be immediately lost with your HP dropped to 0.
     """
+    display_name = "Deathlink"
+    default = False
     
 class DeathlinkTrigger(Choice):
     """
@@ -508,8 +494,7 @@ class SokuOptions(PerGameCommonOptions):
     arcade_mode_blacklist: ArcadeBlacklist
 
     # Card Options
-    cardsanity_items: CardsanityItems
-    cardsanity_specials: CardsanitySpecials
+    cardsanity_skills: CardsanitySkills
     cardsanity_spells: CardsanitySpells
     cardsanity_spell_count: CardsanitySpellCount
     cardsanity_blacklist: CardsanityBlacklist
@@ -521,6 +506,3 @@ class SokuOptions(PerGameCommonOptions):
     difficulty_start: DifficultyStart
     exclude_lunatic: ExcludeLunatic
     only_lunatic: OnlyLunatic
-
-    # Misc Options
-    no_deck_limit: NoDeckLimit
