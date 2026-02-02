@@ -1,22 +1,49 @@
+#Goal Location Definitions
+sanae_story_end =      "Sanae: Story Complete"
+cirno_story_end =      "Cirno: Story Complete"
+meiling_story_end =    "Meiling: Story Complete"
+story_end =            "Story Mode: Complete"
+
+reimu_arcade_end =     "Reimu: Arcade Complete"
+marisa_arcade_end =    "Marisa: Arcade Complete"
+sakuya_arcade_end =    "Sakuya: Arcade Complete" 
+alice_arcade_end =     "Alice: Arcade Complete"
+patchouli_arcade_end = "Patchouli: Arcade Complete" 
+youmu_arcade_end =     "Youmu: Arcade Complete"
+remilia_arcade_end =   "Remilia: Arcade Complete"
+yuyuko_arcade_end =    "Yuyuko: Arcade Complete"
+yukari_arcade_end =    "Yukari: Arcade Complete"
+suika_arcade_end =     "Suika: Arcade Complete"
+reisen_arcade_end =    "Reisen: Arcade Complete"
+aya_arcade_end =       "Aya: Arcade Complete" 
+komachi_arcade_end =   "Komachi: Arcade Complete"
+iku_arcade_end =       "Iku: Arcade Complete" 
+tenshi_arcade_end =    "Tenshi: Arcade Complete" 
+sanae_arcade_end =     "Sanae: Arcade Complete"
+cirno_arcade_end =     "Cirno: Arcade Complete"
+meiling_arcade_end =   "Meiling: Arcade Complete"
+okuu_arcade_end =      "Utsuho: Arcade Complete" 
+suwako_arcade_end =    "Suwako: Arcade Complete" 
+
+collector_goal = "Card Collector: Complete"
+master_goal = "Card Master Complete"
+
 #Story Mode Stages
 sanae_story_1 =   "Sanae: Story Stage 1"
 sanae_story_2 =   "Sanae: Story Stage 2"
 sanae_story_3 =   "Sanae: Story Stage 3"
 sanae_story_4 =   "Sanae: Story Stage 4"
 sanae_story_5 =   "Sanae: Story Stage 5"
-sanae_story_end = "Sanae: Story Complete" #Sanae's Story Goal Location
 cirno_story_1 =   "Cirno: Story Stage 1"
 cirno_story_2 =   "Cirno: Story Stage 2"
 cirno_story_3 =   "Cirno: Story Stage 3"
 cirno_story_4 =   "Cirno: Story Stage 4"
 cirno_story_5 =   "Cirno: Story Stage 5"
-cirno_story_end = "Cirno: Story Complete" #Cirno's Story Goal Location
 meiling_story_1 =   "Meiling: Story Stage 1"
 meiling_story_2 =   "Meiling: Story Stage 2"
 meiling_story_3 =   "Meiling: Story Stage 3"
 meiling_story_4 =   "Meiling: Story Stage 4"
 meiling_story_5 =   "Meiling: Story Stage 5" 
-meiling_story_end = "Meiling: Story Complete" #Meiling's Story Goal Location
 
 #Story Mode Spellcard Checks
 sanae_cirno_s1 =      """Sanae Story: Cirno's Spell (Ice Sign "Icicle Fall") """

@@ -1,3 +1,33 @@
+#Goal Item Definitions
+sanae_story_endi =      "Sanae: Story Complete"
+cirno_story_endi =      "Cirno: Story Complete"
+meiling_story_endi =    "Meiling: Story Complete"
+story_endi =            "Story Mode: Complete"
+
+reimu_arcade_endi =     "Reimu: Arcade Complete"
+marisa_arcade_endi =    "Marisa: Arcade Complete"
+sakuya_arcade_endi =    "Sakuya: Arcade Complete" 
+alice_arcade_endi =     "Alice: Arcade Complete"
+patchouli_arcade_endi = "Patchouli: Arcade Complete" 
+youmu_arcade_endi =     "Youmu: Arcade Complete"
+remilia_arcade_endi =   "Remilia: Arcade Complete"
+yuyuko_arcade_endi =    "Yuyuko: Arcade Complete"
+yukari_arcade_endi =    "Yukari: Arcade Complete"
+suika_arcade_endi =     "Suika: Arcade Complete"
+reisen_arcade_endi =    "Reisen: Arcade Complete"
+aya_arcade_endi =       "Aya: Arcade Complete" 
+komachi_arcade_endi =   "Komachi: Arcade Complete"
+iku_arcade_endi =       "Iku: Arcade Complete" 
+tenshi_arcade_endi =    "Tenshi: Arcade Complete" 
+sanae_arcade_endi =     "Sanae: Arcade Complete"
+cirno_arcade_endi =     "Cirno: Arcade Complete"
+meiling_arcade_endi =   "Meiling: Arcade Complete"
+okuu_arcade_endi =      "Utsuho: Arcade Complete" 
+suwako_arcade_endi =    "Suwako: Arcade Complete" 
+
+collector_goali = "Card Collector: Complete"
+master_goali = "Card Master: Complete"
+
 #Character Definitions
 reimu =          "Reimu Hakurei"
 marisa =         "Marisa Kirisame"
