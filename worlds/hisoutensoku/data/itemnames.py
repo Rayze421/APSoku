@@ -61,11 +61,39 @@ medium_diff =    "Medium Difficulty"
 hard_diff =      "Hard Difficulty"
 lunatic_diff =   "Lunatic Difficulty"
 
+#Filler Item Definitions
+card_draw = "Draw a Card"
+two_card_draw = "Draw 2 Cards"
+spirit_break_opp = "Break Opponent's Spirit"
+card_break_opp = "Break Opponent's Card"
+cycle_weather = "Cycle The Weather"
+trigger_weather = "Start/Stop The Weather"
+heal_self = "Heal Some Life"
+heal_more_self = "Heal Some More Life"
+max_health = "Heal All Life"
+poke_opp = "Opponent Loses Some Life"
+poke_more_opp = "Opponent Loses Some More Life"
+drain_opp = "Drain Opponent's Life"
+spirit_regen = "Regenerate Some Spirit"
+heal_spirit = "Heal Broken Spirit"
+
+#Trap Item Definitions
+poke_trap = "Take Some Damage"
+drain_trap = "Opponent Drains Some Life"
+half_hp_trap = "Lose Half Your Life" 
+card_trap = "Break Your Cards"
+spirit_trap = "Break Your Spirit"
+heal_trap = "Opponent Heals Some Life"
+heal_all_trap = "Opponent Heals All Life"
+draw_trap = "Opponent Draws A Card"
+pause_weather = "Pause The Weather Timer"
+randomize_weather = "Trigger A Random Weather"
+
 #CARDS
 #Skill Cards are simply notated as ordered in the decklist; 
 #- 236d= Default 236
 #- 236a1= First alternate Skill card in order
-#- 236a2= Scond alternate Skill card in order
+#- 236a2= Second alternate Skill card in order
 
 #System Cards Definitions
 #System Cards likely wont be randomized but may as well list them

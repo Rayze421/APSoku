@@ -308,6 +308,19 @@ class CardsanitySpellCount(Range):
     range_start = 1
     range_end = 4
 
+class CardsanityStartCards(Range):
+    """
+    If either Cardsanity setting is enabled, determines how 
+    many of their cards each character starts with when you 
+    recieve them, from 0 to 27.
+
+    (Characters with less cards in the pool than the amount 
+    listed will simply start with all available cards)
+    """
+    display_name = "Cardsanity Starting Cards"
+    default = 0
+    range_start = 0
+    range_end = 27
 
 class CardsanityBlacklist(OptionSet):
     """
@@ -497,6 +510,7 @@ class SokuOptions(PerGameCommonOptions):
     cardsanity_skills: CardsanitySkills
     cardsanity_spells: CardsanitySpells
     cardsanity_spell_count: CardsanitySpellCount
+    cardsanity_starting_cards: CardsanityStartCards
     cardsanity_blacklist: CardsanityBlacklist
     system_card_check_count: SystemCardCheckCount
     system_card_character_checks: SystemCardCharacterChecks
