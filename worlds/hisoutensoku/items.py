@@ -76,10 +76,57 @@ difficulty_table = { #Difficulty IDs Range 0xFF000-FF005
 }
 
 system_card_table = {
+    itemnames.sys_talisman: SokuItemData(0xFF0035, ItemClassification.progression),
+    itemnames.sys_potion: SokuItemData(0xFF0036, ItemClassification.progression),
+    itemnames.sys_stopwatch: SokuItemData(0xFF0037, ItemClassification.progression),
+    itemnames.sys_haku: SokuItemData(0xFF0038, ItemClassification.progression),
+    itemnames.sys_doll: SokuItemData(0xFF0039, ItemClassification.progression),
+    itemnames.sys_grimoire: SokuItemData(0xFF0040, ItemClassification.progression),
+    itemnames.sys_parasol: SokuItemData(0xFF0041, ItemClassification.progression),
+    itemnames.sys_torch: SokuItemData(0xFF0042, ItemClassification.progression),
+    itemnames.sys_folding: SokuItemData(0xFF0043, ItemClassification.progression),
+    itemnames.sys_gourd: SokuItemData(0xFF0044, ItemClassification.progression),
+    itemnames.sys_fan: SokuItemData(0xFF0045, ItemClassification.progression),
+    itemnames.sys_drug: SokuItemData(0xFF0046, ItemClassification.progression),
+    itemnames.sys_coin: SokuItemData(0xFF0047, ItemClassification.progression),
+    itemnames.sys_raiment: SokuItemData(0xFF0048, ItemClassification.progression),
+    itemnames.sys_sword: SokuItemData(0xFF0049, ItemClassification.progression),
+    itemnames.sys_charm: SokuItemData(0xFF0050, ItemClassification.progression),
+    itemnames.sys_frog: SokuItemData(0xFF0051, ItemClassification.progression),
+    itemnames.sys_star: SokuItemData(0xFF0052, ItemClassification.progression),
+    itemnames.sys_rod: SokuItemData(0xFF0053, ItemClassification.progression),
+    itemnames.sys_drops: SokuItemData(0xFF0054, ItemClassification.progression),
+    itemnames.sys_fish: SokuItemData(0xFF0055, ItemClassification.progression),
 
 }
 
-reimu_card_table = {
+reimu_skill_table = {
+    itemnames.reimu_236d: SokuItemData(0xFF0100, ItemClassification.progression),
+    itemnames.reimu_236a1: SokuItemData(0xFF0101, ItemClassification.progression),
+    itemnames.reimu_236a2: SokuItemData(0xFF0102, ItemClassification.progression),
+    itemnames.reimu_623d: SokuItemData(0xFF0103, ItemClassification.progression),
+    itemnames.reimu_623a1: SokuItemData(0xFF0104, ItemClassification.progression),
+    itemnames.reimu_623a2: SokuItemData(0xFF0105, ItemClassification.progression),
+    itemnames.reimu_214d: SokuItemData(0xFF0106, ItemClassification.progression),
+    itemnames.reimu_214a1: SokuItemData(0xFF0107, ItemClassification.progression),
+    itemnames.reimu_214a2: SokuItemData(0xFF0108, ItemClassification.progression),
+    itemnames.reimu_421d: SokuItemData(0xFF0109, ItemClassification.progression),
+    itemnames.reimu_421a1: SokuItemData(0xFF0110, ItemClassification.progression),
+    itemnames.reimu_421a2: SokuItemData(0xFF0111, ItemClassification.progression),
+
+}
+
+reimu_spell_table = {
+    itemnames.reimu_1sc: SokuItemData(0xFF0112, ItemClassification.progression),
+    itemnames.reimu_2sc_fo: SokuItemData(0xFF0113, ItemClassification.progression),
+    itemnames.reimu_2sc_dba: SokuItemData(0xFF0114, ItemClassification.progression),
+    itemnames.reimu_2sc_yyo: SokuItemData(0xFF0115, ItemClassification.progression),
+    itemnames.reimu_3sc_eb: SokuItemData(0xFF0116, ItemClassification.progression),
+    itemnames.reimu_3sc_wgk: SokuItemData(0xFF0117, ItemClassification.progression),
+    itemnames.reimu_4sc_dbc: SokuItemData(0xFF0118, ItemClassification.progression),
+    itemnames.reimu_4sc_yyso: SokuItemData(0xFF0119, ItemClassification.progression),
+    itemnames.reimu_5sc_fs: SokuItemData(0xFF0120, ItemClassification.progression),
+    itemnames.reimu_5sc_fh: SokuItemData(0xFF0121, ItemClassification.progression),
 
 }
 
