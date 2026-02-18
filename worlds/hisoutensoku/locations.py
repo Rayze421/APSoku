@@ -405,3 +405,563 @@ suwako_arcade_stage_table = {
     locationnames.suwako_arcade_10: 0xFF2139
 
 }
+
+reimu_vs_win_table = {
+    locationnames.reimu_vs_w1:  0xFF3000,
+    locationnames.reimu_vs_w2:  0xFF3001,
+    locationnames.reimu_vs_w3:  0xFF3002,
+    locationnames.reimu_vs_w4:  0xFF3003,
+    locationnames.reimu_vs_w5:  0xFF3004,
+    locationnames.reimu_vs_w6:  0xFF3005,
+    locationnames.reimu_vs_w7:  0xFF3006,
+    locationnames.reimu_vs_w8:  0xFF3007,
+    locationnames.reimu_vs_w9:  0xFF3008,
+    locationnames.reimu_vs_w10: 0xFF3009
+
+}
+
+marisa_vs_win_table = {
+    locationnames.marisa_vs_w1:  0xFF3010,
+    locationnames.marisa_vs_w2:  0xFF3011,
+    locationnames.marisa_vs_w3:  0xFF3012,
+    locationnames.marisa_vs_w4:  0xFF3013,
+    locationnames.marisa_vs_w5:  0xFF3014,
+    locationnames.marisa_vs_w6:  0xFF3015,
+    locationnames.marisa_vs_w7:  0xFF3016,
+    locationnames.marisa_vs_w8:  0xFF3017,
+    locationnames.marisa_vs_w9:  0xFF3018,
+    locationnames.marisa_vs_w10: 0xFF3019
+
+}
+
+sakuya_vs_win_table = {
+    locationnames.sakuya_vs_w1:  0xFF3020,
+    locationnames.sakuya_vs_w2:  0xFF3021,
+    locationnames.sakuya_vs_w3:  0xFF3022,
+    locationnames.sakuya_vs_w4:  0xFF3023,
+    locationnames.sakuya_vs_w5:  0xFF3024,
+    locationnames.sakuya_vs_w6:  0xFF3025,
+    locationnames.sakuya_vs_w7:  0xFF3026,
+    locationnames.sakuya_vs_w8:  0xFF3027,
+    locationnames.sakuya_vs_w9:  0xFF3028,
+    locationnames.sakuya_vs_w10: 0xFF3029
+
+}
+
+alice_vs_win_table = {
+    locationnames.alice_vs_w1:  0xFF3030,
+    locationnames.alice_vs_w2:  0xFF3031,
+    locationnames.alice_vs_w3:  0xFF3032,
+    locationnames.alice_vs_w4:  0xFF3033,
+    locationnames.alice_vs_w5:  0xFF3034,
+    locationnames.alice_vs_w6:  0xFF3035,
+    locationnames.alice_vs_w7:  0xFF3036,
+    locationnames.alice_vs_w8:  0xFF3037,
+    locationnames.alice_vs_w9:  0xFF3038,
+    locationnames.alice_vs_w10: 0xFF3039
+
+}
+
+patchouli_vs_win_table = {
+    locationnames.patchouli_vs_w1:  0xFF3040,
+    locationnames.patchouli_vs_w2:  0xFF3041,
+    locationnames.patchouli_vs_w3:  0xFF3042,
+    locationnames.patchouli_vs_w4:  0xFF3043,
+    locationnames.patchouli_vs_w5:  0xFF3044,
+    locationnames.patchouli_vs_w6:  0xFF3045,
+    locationnames.patchouli_vs_w7:  0xFF3046,
+    locationnames.patchouli_vs_w8:  0xFF3047,
+    locationnames.patchouli_vs_w9:  0xFF3048,
+    locationnames.patchouli_vs_w10: 0xFF3049
+
+}
+
+youmu_vs_win_table = {
+    locationnames.youmu_vs_w1:  0xFF3050,
+    locationnames.youmu_vs_w2:  0xFF3051,
+    locationnames.youmu_vs_w3:  0xFF3052,
+    locationnames.youmu_vs_w4:  0xFF3053,
+    locationnames.youmu_vs_w5:  0xFF3054,
+    locationnames.youmu_vs_w6:  0xFF3055,
+    locationnames.youmu_vs_w7:  0xFF3056,
+    locationnames.youmu_vs_w8:  0xFF3057,
+    locationnames.youmu_vs_w9:  0xFF3058,
+    locationnames.youmu_vs_w10: 0xFF3059
+
+}
+
+remilia_vs_win_table = {
+    locationnames.remilia_vs_w1:  0xFF3060,
+    locationnames.remilia_vs_w2:  0xFF3061,
+    locationnames.remilia_vs_w3:  0xFF3062,
+    locationnames.remilia_vs_w4:  0xFF3063,
+    locationnames.remilia_vs_w5:  0xFF3064,
+    locationnames.remilia_vs_w6:  0xFF3065,
+    locationnames.remilia_vs_w7:  0xFF3066,
+    locationnames.remilia_vs_w8:  0xFF3067,
+    locationnames.remilia_vs_w9:  0xFF3068,
+    locationnames.remilia_vs_w10: 0xFF3069
+
+}
+
+yuyuko_vs_win_table = {
+    locationnames.yuyuko_vs_w1:  0xFF3070,
+    locationnames.yuyuko_vs_w2:  0xFF3071,
+    locationnames.yuyuko_vs_w3:  0xFF3072,
+    locationnames.yuyuko_vs_w4:  0xFF3073,
+    locationnames.yuyuko_vs_w5:  0xFF3074,
+    locationnames.yuyuko_vs_w6:  0xFF3075,
+    locationnames.yuyuko_vs_w7:  0xFF3076,
+    locationnames.yuyuko_vs_w8:  0xFF3077,
+    locationnames.yuyuko_vs_w9:  0xFF3078,
+    locationnames.yuyuko_vs_w10: 0xFF3079
+
+}
+
+yukari_vs_win_table = {
+    locationnames.yukari_vs_w1:  0xFF3080,
+    locationnames.yukari_vs_w2:  0xFF3081,
+    locationnames.yukari_vs_w3:  0xFF3082,
+    locationnames.yukari_vs_w4:  0xFF3083,
+    locationnames.yukari_vs_w5:  0xFF3084,
+    locationnames.yukari_vs_w6:  0xFF3085,
+    locationnames.yukari_vs_w7:  0xFF3086,
+    locationnames.yukari_vs_w8:  0xFF3087,
+    locationnames.yukari_vs_w9:  0xFF3088,
+    locationnames.yukari_vs_w10: 0xFF3089
+
+}
+
+suika_vs_win_table = {
+    locationnames.suika_vs_w1:  0xFF3090, 
+    locationnames.suika_vs_w2:  0xFF3091, 
+    locationnames.suika_vs_w3:  0xFF3092, 
+    locationnames.suika_vs_w4:  0xFF3093, 
+    locationnames.suika_vs_w5:  0xFF3094, 
+    locationnames.suika_vs_w6:  0xFF3095, 
+    locationnames.suika_vs_w7:  0xFF3096, 
+    locationnames.suika_vs_w8:  0xFF3097, 
+    locationnames.suika_vs_w9:  0xFF3098, 
+    locationnames.suika_vs_w10: 0xFF3099
+
+}
+
+reisen_vs_win_table = {
+    locationnames.reisen_vs_w1:  0xFF30A0,
+    locationnames.reisen_vs_w2:  0xFF30A1,
+    locationnames.reisen_vs_w3:  0xFF30A2,
+    locationnames.reisen_vs_w4:  0xFF30A3,
+    locationnames.reisen_vs_w5:  0xFF30A4,
+    locationnames.reisen_vs_w6:  0xFF30A5,
+    locationnames.reisen_vs_w7:  0xFF30A6,
+    locationnames.reisen_vs_w8:  0xFF30A7,
+    locationnames.reisen_vs_w9:  0xFF30A8,
+    locationnames.reisen_vs_w10: 0xFF30A9
+
+}
+
+aya_vs_win_table = {
+    locationnames.aya_vs_w1:  0xFF30B0,
+    locationnames.aya_vs_w2:  0xFF30B1,
+    locationnames.aya_vs_w3:  0xFF30B2,
+    locationnames.aya_vs_w4:  0xFF30B3,
+    locationnames.aya_vs_w5:  0xFF30B4,
+    locationnames.aya_vs_w6:  0xFF30B5,
+    locationnames.aya_vs_w7:  0xFF30B6,
+    locationnames.aya_vs_w8:  0xFF30B7,
+    locationnames.aya_vs_w9:  0xFF30B8,
+    locationnames.aya_vs_w10: 0xFF30B9
+
+}
+
+komachi_vs_win_table = {
+    locationnames.komachi_vs_w1:  0xFF30C0,
+    locationnames.komachi_vs_w2:  0xFF30C0,
+    locationnames.komachi_vs_w3:  0xFF30C0,
+    locationnames.komachi_vs_w4:  0xFF30C0,
+    locationnames.komachi_vs_w5:  0xFF30C0,
+    locationnames.komachi_vs_w6:  0xFF30C0,
+    locationnames.komachi_vs_w7:  0xFF30C0,
+    locationnames.komachi_vs_w8:  0xFF30C0,
+    locationnames.komachi_vs_w9:  0xFF30C0,
+    locationnames.komachi_vs_w10: 0xFF30C0
+
+}
+
+iku_vs_win_table = {
+    locationnames.iku_vs_w1:  0xFF30D0,
+    locationnames.iku_vs_w2:  0xFF30D1,
+    locationnames.iku_vs_w3:  0xFF30D2,
+    locationnames.iku_vs_w4:  0xFF30D3,
+    locationnames.iku_vs_w5:  0xFF30D4,
+    locationnames.iku_vs_w6:  0xFF30D5,
+    locationnames.iku_vs_w7:  0xFF30D6,
+    locationnames.iku_vs_w8:  0xFF30D7,
+    locationnames.iku_vs_w9:  0xFF30D8,
+    locationnames.iku_vs_w10: 0xFF30D9
+
+}
+
+tenshi_vs_win_table = {
+    locationnames.tenshi_vs_w1:  0xFF30E0,
+    locationnames.tenshi_vs_w2:  0xFF30E1,
+    locationnames.tenshi_vs_w3:  0xFF30E2,
+    locationnames.tenshi_vs_w4:  0xFF30E3,
+    locationnames.tenshi_vs_w5:  0xFF30E4,
+    locationnames.tenshi_vs_w6:  0xFF30E5,
+    locationnames.tenshi_vs_w7:  0xFF30E6,
+    locationnames.tenshi_vs_w8:  0xFF30E7,
+    locationnames.tenshi_vs_w9:  0xFF30E8,
+    locationnames.tenshi_vs_w10: 0xFF30E9
+
+}
+
+sanae_vs_win_table = {
+    locationnames.sanae_vs_w1:  0xFF30F0,
+    locationnames.sanae_vs_w2:  0xFF30F1,
+    locationnames.sanae_vs_w3:  0xFF30F2,
+    locationnames.sanae_vs_w4:  0xFF30F3,
+    locationnames.sanae_vs_w5:  0xFF30F4,
+    locationnames.sanae_vs_w6:  0xFF30F5,
+    locationnames.sanae_vs_w7:  0xFF30F6,
+    locationnames.sanae_vs_w8:  0xFF30F7,
+    locationnames.sanae_vs_w9:  0xFF30F8,
+    locationnames.sanae_vs_w10: 0xFF30F9
+
+}
+
+cirno_vs_win_table = {
+    locationnames.cirno_vs_w1:  0xFF3100,
+    locationnames.cirno_vs_w2:  0xFF3101,
+    locationnames.cirno_vs_w3:  0xFF3102,
+    locationnames.cirno_vs_w4:  0xFF3103,
+    locationnames.cirno_vs_w5:  0xFF3104,
+    locationnames.cirno_vs_w6:  0xFF3105,
+    locationnames.cirno_vs_w7:  0xFF3106,
+    locationnames.cirno_vs_w8:  0xFF3107,
+    locationnames.cirno_vs_w9:  0xFF3108,
+    locationnames.cirno_vs_w10: 0xFF3109
+
+}
+
+meiling_vs_win_table = {
+    locationnames.meiling_vs_w1:  0xFF3110,
+    locationnames.meiling_vs_w2:  0xFF3111,
+    locationnames.meiling_vs_w3:  0xFF3112,
+    locationnames.meiling_vs_w4:  0xFF3113,
+    locationnames.meiling_vs_w5:  0xFF3114,
+    locationnames.meiling_vs_w6:  0xFF3115,
+    locationnames.meiling_vs_w7:  0xFF3116,
+    locationnames.meiling_vs_w8:  0xFF3117,
+    locationnames.meiling_vs_w9:  0xFF3118,
+    locationnames.meiling_vs_w10: 0xFF3119
+
+}
+
+okuu_vs_win_table = {
+    locationnames.okuu_vs_w1:  0xFF3120,
+    locationnames.okuu_vs_w2:  0xFF3121,
+    locationnames.okuu_vs_w3:  0xFF3122,
+    locationnames.okuu_vs_w4:  0xFF3123,
+    locationnames.okuu_vs_w5:  0xFF3124,
+    locationnames.okuu_vs_w6:  0xFF3125,
+    locationnames.okuu_vs_w7:  0xFF3126,
+    locationnames.okuu_vs_w8:  0xFF3127,
+    locationnames.okuu_vs_w9:  0xFF3128,
+    locationnames.okuu_vs_w10: 0xFF3129
+
+}
+
+suwako_vs_win_table = {
+    locationnames.suwako_vs_w1:  0xFF3130,
+    locationnames.suwako_vs_w2:  0xFF3131,
+    locationnames.suwako_vs_w3:  0xFF3132,
+    locationnames.suwako_vs_w4:  0xFF3133,
+    locationnames.suwako_vs_w5:  0xFF3134,
+    locationnames.suwako_vs_w6:  0xFF3135,
+    locationnames.suwako_vs_w7:  0xFF3136,
+    locationnames.suwako_vs_w8:  0xFF3137,
+    locationnames.suwako_vs_w9:  0xFF3138,
+    locationnames.suwako_vs_w10: 0xFF3139
+
+}
+
+reimu_vs_defeat_table = {
+    locationnames.reimu_vs_l1:  0xFF4000,
+    locationnames.reimu_vs_l2:  0xFF4001,
+    locationnames.reimu_vs_l3:  0xFF4002,
+    locationnames.reimu_vs_l4:  0xFF4003,
+    locationnames.reimu_vs_l5:  0xFF4004,
+    locationnames.reimu_vs_l6:  0xFF4005,
+    locationnames.reimu_vs_l7:  0xFF4006,
+    locationnames.reimu_vs_l8:  0xFF4007,
+    locationnames.reimu_vs_l9:  0xFF4008,
+    locationnames.reimu_vs_l10: 0xFF4009
+
+}
+
+marisa_vs_defeat_table = {
+    locationnames.marisa_vs_l1:  0xFF4010,
+    locationnames.marisa_vs_l2:  0xFF4011,
+    locationnames.marisa_vs_l3:  0xFF4012,
+    locationnames.marisa_vs_l4:  0xFF4013,
+    locationnames.marisa_vs_l5:  0xFF4014,
+    locationnames.marisa_vs_l6:  0xFF4015,
+    locationnames.marisa_vs_l7:  0xFF4016,
+    locationnames.marisa_vs_l8:  0xFF4017,
+    locationnames.marisa_vs_l9:  0xFF4018,
+    locationnames.marisa_vs_l10: 0xFF4019
+
+}
+
+sakuya_vs_defeat_table = {
+    locationnames.sakuya_vs_l1:  0xFF4020,
+    locationnames.sakuya_vs_l2:  0xFF4021,
+    locationnames.sakuya_vs_l3:  0xFF4022,
+    locationnames.sakuya_vs_l4:  0xFF4023,
+    locationnames.sakuya_vs_l5:  0xFF4024,
+    locationnames.sakuya_vs_l6:  0xFF4025,
+    locationnames.sakuya_vs_l7:  0xFF4026,
+    locationnames.sakuya_vs_l8:  0xFF4027,
+    locationnames.sakuya_vs_l9:  0xFF4028,
+    locationnames.sakuya_vs_l10: 0xFF4029
+
+}
+
+alice_vs_defeat_table = {
+    locationnames.alice_vs_l1:   0xFF4030,
+    locationnames.alice_vs_l2:   0xFF4031,
+    locationnames.alice_vs_l3:   0xFF4032,
+    locationnames.alice_vs_l4:   0xFF4033,
+    locationnames.alice_vs_l5:   0xFF4034,
+    locationnames.alice_vs_l6:   0xFF4035,
+    locationnames.alice_vs_l7:   0xFF4036,
+    locationnames.alice_vs_l8:   0xFF4037,
+    locationnames.alice_vs_l9:   0xFF4038,
+    locationnames.alice_vs_l10:  0xFF4039
+
+}
+
+patchouli_vs_defeat_table = {
+    locationnames.patchouli_vs_l1:  0xFF4040,
+    locationnames.patchouli_vs_l2:  0xFF4041,
+    locationnames.patchouli_vs_l3:  0xFF4042,
+    locationnames.patchouli_vs_l4:  0xFF4043,
+    locationnames.patchouli_vs_l5:  0xFF4044,
+    locationnames.patchouli_vs_l6:  0xFF4045,
+    locationnames.patchouli_vs_l7:  0xFF4046,
+    locationnames.patchouli_vs_l8:  0xFF4047,
+    locationnames.patchouli_vs_l9:  0xFF4048,
+    locationnames.patchouli_vs_l10: 0xFF4049
+
+}
+
+youmu_vs_defeat_table = {
+    locationnames.youmu_vs_l1:  0xFF4050,
+    locationnames.youmu_vs_l2:  0xFF4051,
+    locationnames.youmu_vs_l3:  0xFF4052,
+    locationnames.youmu_vs_l4:  0xFF4053,
+    locationnames.youmu_vs_l5:  0xFF4054,
+    locationnames.youmu_vs_l6:  0xFF4055,
+    locationnames.youmu_vs_l7:  0xFF4056,
+    locationnames.youmu_vs_l8:  0xFF4057,
+    locationnames.youmu_vs_l9:  0xFF4058,
+    locationnames.youmu_vs_l10: 0xFF4059
+
+}
+
+remilia_vs_defeat_table = {
+    locationnames.remilia_vs_l1:  0xFF4060,
+    locationnames.remilia_vs_l2:  0xFF4061,
+    locationnames.remilia_vs_l3:  0xFF4062,
+    locationnames.remilia_vs_l4:  0xFF4063,
+    locationnames.remilia_vs_l5:  0xFF4064,
+    locationnames.remilia_vs_l6:  0xFF4065,
+    locationnames.remilia_vs_l7:  0xFF4066,
+    locationnames.remilia_vs_l8:  0xFF4067,
+    locationnames.remilia_vs_l9:  0xFF4068,
+    locationnames.remilia_vs_l10: 0xFF4069
+
+}
+
+yuyuko_vs_defeat_table = {
+    locationnames.yuyuko_vs_l1:  0xFF4070,
+    locationnames.yuyuko_vs_l2:  0xFF4071,
+    locationnames.yuyuko_vs_l3:  0xFF4072,
+    locationnames.yuyuko_vs_l4:  0xFF4073,
+    locationnames.yuyuko_vs_l5:  0xFF4074,
+    locationnames.yuyuko_vs_l6:  0xFF4075,
+    locationnames.yuyuko_vs_l7:  0xFF4076,
+    locationnames.yuyuko_vs_l8:  0xFF4077,
+    locationnames.yuyuko_vs_l9:  0xFF4078,
+    locationnames.yuyuko_vs_l10: 0xFF4079
+
+}
+
+yukari_vs_defeat_table = {
+    locationnames.yukari_vs_l1:  0xFF4080,
+    locationnames.yukari_vs_l2:  0xFF4081,
+    locationnames.yukari_vs_l3:  0xFF4082,
+    locationnames.yukari_vs_l4:  0xFF4083,
+    locationnames.yukari_vs_l5:  0xFF4084,
+    locationnames.yukari_vs_l6:  0xFF4085,
+    locationnames.yukari_vs_l7:  0xFF4086,
+    locationnames.yukari_vs_l8:  0xFF4087,
+    locationnames.yukari_vs_l9:  0xFF4088,
+    locationnames.yukari_vs_l10: 0xFF4089
+
+}
+
+suika_vs_defeat_table = {
+    locationnames.suika_vs_l1:  0xFF4090,
+    locationnames.suika_vs_l2:  0xFF4091,
+    locationnames.suika_vs_l3:  0xFF4092,
+    locationnames.suika_vs_l4:  0xFF4093,
+    locationnames.suika_vs_l5:  0xFF4094,
+    locationnames.suika_vs_l6:  0xFF4095,
+    locationnames.suika_vs_l7:  0xFF4096,
+    locationnames.suika_vs_l8:  0xFF4097,
+    locationnames.suika_vs_l9:  0xFF4098,
+    locationnames.suika_vs_l10: 0xFF4099
+
+}
+
+reisen_vs_defeat_table = {
+    locationnames.reisen_vs_l1:  0xFF40A0,
+    locationnames.reisen_vs_l2:  0xFF40A1,
+    locationnames.reisen_vs_l3:  0xFF40A2,
+    locationnames.reisen_vs_l4:  0xFF40A3,
+    locationnames.reisen_vs_l5:  0xFF40A4,
+    locationnames.reisen_vs_l6:  0xFF40A5,
+    locationnames.reisen_vs_l7:  0xFF40A6,
+    locationnames.reisen_vs_l8:  0xFF40A7,
+    locationnames.reisen_vs_l9:  0xFF40A8,
+    locationnames.reisen_vs_l10: 0xFF40A9
+
+}
+
+aya_vs_defeat_table = {
+    locationnames.aya_vs_l1:  0xFF40B0,
+    locationnames.aya_vs_l2:  0xFF40B1,
+    locationnames.aya_vs_l3:  0xFF40B2,
+    locationnames.aya_vs_l4:  0xFF40B3,
+    locationnames.aya_vs_l5:  0xFF40B4,
+    locationnames.aya_vs_l6:  0xFF40B5,
+    locationnames.aya_vs_l7:  0xFF40B6,
+    locationnames.aya_vs_l8:  0xFF40B7,
+    locationnames.aya_vs_l9:  0xFF40B8,
+    locationnames.aya_vs_l10: 0xFF40B9
+
+}
+
+komachi_vs_defeat_table = {
+    locationnames.komachi_vs_l1:  0xFF40C0,
+    locationnames.komachi_vs_l2:  0xFF40C1,
+    locationnames.komachi_vs_l3:  0xFF40C2,
+    locationnames.komachi_vs_l4:  0xFF40C3,
+    locationnames.komachi_vs_l5:  0xFF40C4,
+    locationnames.komachi_vs_l6:  0xFF40C5,
+    locationnames.komachi_vs_l7:  0xFF40C6,
+    locationnames.komachi_vs_l8:  0xFF40C7,
+    locationnames.komachi_vs_l9:  0xFF40C8,
+    locationnames.komachi_vs_l10: 0xFF40C9
+
+}
+
+iku_vs_defeat_table = {
+    locationnames.iku_vs_l1:  0xFF40D0,
+    locationnames.iku_vs_l2:  0xFF40D1,
+    locationnames.iku_vs_l3:  0xFF40D2,
+    locationnames.iku_vs_l4:  0xFF40D3,
+    locationnames.iku_vs_l5:  0xFF40D4,
+    locationnames.iku_vs_l6:  0xFF40D5,
+    locationnames.iku_vs_l7:  0xFF40D6,
+    locationnames.iku_vs_l8:  0xFF40D7,
+    locationnames.iku_vs_l9:  0xFF40D8,
+    locationnames.iku_vs_l10: 0xFF40D9
+
+}
+
+tenshi_vs_defeat_table = {
+    locationnames.tenshi_vs_l1:  0xFF40E0,
+    locationnames.tenshi_vs_l2:  0xFF40E1,
+    locationnames.tenshi_vs_l3:  0xFF40E2,
+    locationnames.tenshi_vs_l4:  0xFF40E3,
+    locationnames.tenshi_vs_l5:  0xFF40E4,
+    locationnames.tenshi_vs_l6:  0xFF40E5,
+    locationnames.tenshi_vs_l7:  0xFF40E6,
+    locationnames.tenshi_vs_l8:  0xFF40E7,
+    locationnames.tenshi_vs_l9:  0xFF40E8,
+    locationnames.tenshi_vs_l10: 0xFF40E9
+
+}
+
+sanae_vs_defeat_table = {
+    locationnames.sanae_vs_l1:  0xFF40F0,
+    locationnames.sanae_vs_l2:  0xFF40F1,
+    locationnames.sanae_vs_l3:  0xFF40F2,
+    locationnames.sanae_vs_l4:  0xFF40F3,
+    locationnames.sanae_vs_l5:  0xFF40F4,
+    locationnames.sanae_vs_l6:  0xFF40F5,
+    locationnames.sanae_vs_l7:  0xFF40F6,
+    locationnames.sanae_vs_l8:  0xFF40F7,
+    locationnames.sanae_vs_l9:  0xFF40F8,
+    locationnames.sanae_vs_l10: 0xFF40F9
+
+}
+
+cirno_vs_defeat_table = {
+    locationnames.cirno_vs_l1:  0xFF4100,
+    locationnames.cirno_vs_l2:  0xFF4101,
+    locationnames.cirno_vs_l3:  0xFF4102,
+    locationnames.cirno_vs_l4:  0xFF4103,
+    locationnames.cirno_vs_l5:  0xFF4104,
+    locationnames.cirno_vs_l6:  0xFF4105,
+    locationnames.cirno_vs_l7:  0xFF4106,
+    locationnames.cirno_vs_l8:  0xFF4107,
+    locationnames.cirno_vs_l9:  0xFF4108,
+    locationnames.cirno_vs_l10: 0xFF4109
+
+}
+
+meiling_vs_defeat_table = {
+    locationnames.meiling_vs_l1:  0xFF4110,
+    locationnames.meiling_vs_l2:  0xFF4111,
+    locationnames.meiling_vs_l3:  0xFF4112,
+    locationnames.meiling_vs_l4:  0xFF4113,
+    locationnames.meiling_vs_l5:  0xFF4114,
+    locationnames.meiling_vs_l6:  0xFF4115,
+    locationnames.meiling_vs_l7:  0xFF4116,
+    locationnames.meiling_vs_l8:  0xFF4117,
+    locationnames.meiling_vs_l9:  0xFF4118,
+    locationnames.meiling_vs_l10: 0xFF4119
+
+}
+
+okuu_vs_defeat_table = {
+    locationnames.okuu_vs_l1:  0xFF4120,
+    locationnames.okuu_vs_l2:  0xFF4121,
+    locationnames.okuu_vs_l3:  0xFF4122,
+    locationnames.okuu_vs_l4:  0xFF4123,
+    locationnames.okuu_vs_l5:  0xFF4124,
+    locationnames.okuu_vs_l6:  0xFF4125,
+    locationnames.okuu_vs_l7:  0xFF4126,
+    locationnames.okuu_vs_l8:  0xFF4127,
+    locationnames.okuu_vs_l9:  0xFF4128,
+    locationnames.okuu_vs_l10: 0xFF4129
+
+}
+
+suwako_vs_defeat_table = {
+    locationnames.suwako_vs_l1:  0xFF4130,
+    locationnames.suwako_vs_l2:  0xFF4131,
+    locationnames.suwako_vs_l3:  0xFF4132,
+    locationnames.suwako_vs_l4:  0xFF4133,
+    locationnames.suwako_vs_l5:  0xFF4134,
+    locationnames.suwako_vs_l6:  0xFF4135,
+    locationnames.suwako_vs_l7:  0xFF4136,
+    locationnames.suwako_vs_l8:  0xFF4137,
+    locationnames.suwako_vs_l9:  0xFF4138,
+    locationnames.suwako_vs_l10: 0xFF4139
+
+}
