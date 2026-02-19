@@ -1,4 +1,4 @@
-from typing import Dict, NamedTuple, Optional
+import typing
 from .variables import *
 from .data import itemnames
 from BaseClasses import Item, ItemClassification
@@ -6,12 +6,12 @@ from BaseClasses import Item, ItemClassification
 class SokuItem(Item):
     game: str = "Touhou 12.3 - Hisoutensoku"
 
-class SokuItemData(NamedTuple):
+class SokuItemData(typing.NamedTuple):
     category: str
-    code: Optional[int] = None
+    code: typing.Optional[int] = None
     classification: ItemClassification = ItemClassification.filler
 
-#Item ID's in hexadecimal bc it makes me feel smart
+#Item ID's in hexadecimal bc it makes me feel smart and this games sheer size will probably warrant it as far as sorting goes
 characters_table = {
     #Character IDs Range 0xFF0001-FF0014
     itemnames.reimu: SokuItemData(0xFF0001, ItemClassification.progression),
@@ -533,7 +533,7 @@ iku_spell_table = {
 
 }
 
-tenshi_card_table = {
+tenshi_skill_table = {
     itemnames.tenshi_236d:    SokuItemData(0xFF0F00, ItemClassification.progression),
     itemnames.tenshi_236a1:   SokuItemData(0xFF0F01, ItemClassification.progression),
     itemnames.tenshi_236a2:   SokuItemData(0xFF0F02, ItemClassification.progression),
@@ -654,7 +654,7 @@ meiling_spell_table = {
 
 }
 
-okuu_card_table = { #Utsuho, also affectionately reffered to as "Okuu"
+okuu_skill_table = { #Utsuho, also affectionately reffered to as "Okuu"
     itemnames.okuu_236d:    SokuItemData(0xFF1300, ItemClassification.progression),
     itemnames.okuu_236a1:   SokuItemData(0xFF1301, ItemClassification.progression),
     itemnames.okuu_236a2:   SokuItemData(0xFF1302, ItemClassification.progression),
@@ -750,3 +750,71 @@ trap_table = {
     itemnames.t_randomize_weather:      SokuItemData(0xFF2109, ItemClassification.filler),
 
 }
+
+item_table = {
+    **characters_table,
+    **arcade_table,
+    **difficulty_table,
+    **system_card_table,
+    **reimu_skill_table,
+    **reimu_spell_table,
+    **marisa_skill_table,
+    **marisa_spell_table,
+    **sakuya_skill_table,
+    **sakuya_spell_table,
+    **alice_skill_table,
+    **alice_spell_table,
+    **patchouli_skill_table,
+    **patchouli_spell_table,
+    **youmu_skill_table,
+    **youmu_spell_table,
+    **remilia_skill_table,
+    **remilia_spell_table,
+    **yuyuko_skill_table,
+    **yuyuko_spell_table,
+    **yukari_skill_table,
+    **yukari_spell_table,
+    **suika_skill_table,
+    **suika_spell_table,
+    **reisen_skill_table,
+    **reisen_spell_table,
+    **aya_skill_table,
+    **aya_spell_table,
+    **komachi_skill_table,
+    **komachi_spell_table,
+    **iku_skill_table,
+    **iku_spell_table,
+    **tenshi_skill_table,
+    **tenshi_spell_table,
+    **sanae_skill_table,
+    **sanae_spell_table,
+    **cirno_skill_table,
+    **cirno_spell_table,
+    **meiling_skill_table,
+    **meiling_spell_table,
+    **okuu_skill_table,
+    **okuu_spell_table,
+    **suwako_skill_table,
+    **suwako_spell_table
+
+}
+
+item_groups: typing.Dict[int, str] = {
+
+    #General Item Groups
+    "Characters": list(characters_table.keys()),
+    "Story Characters": list(itemnames.sanae_story, itemnames.cirno_story, itemnames.meiling_story),
+    "System Cards": list(system_card_table.keys()),
+    "Reimu Skills": list(reimu_skill_table.keys()),
+    "Reimu Spells": list(reimu_spell_table.keys()),
+    
+    #Miscelaneous Slang
+    "Reimu 236d": list(itemnames.reimu_236d),
+    "Reimu 236a1": list(itemnames.reimu_236a1),
+    "Reimu 236a2": list(itemnames.reimu_236a2),
+    "Reimu Orbs": list(itemnames.reimu_2sc_fo),
+    "Reimu Gems": list(itemnames.reimu_5sc_fs),
+}
+
+lookup_id_to_name: typing.Dict[int, str] = {data.code: item_name for item_name, data in item_table.items() if data.code}
+
