@@ -1,6 +1,59 @@
 from dataclasses import dataclass
 
-from options import Choice, List, Toggle, OptionSet, DefaultOnToggle, PerGameCommonOptions, Deathlink, Range
+from options import Choice, Toggle, OptionSet, OptionGroup, PerGameCommonOptions, Deathlink, Range
+
+class ProgressionBalancing(ProgressionBalancing):
+    """
+    Docstring for ProgressionBalancing
+    
+    :var Collector: Description
+    :vartype Collector: Collect
+    :var Master: Description
+    :vartype Master: Obtain
+    :var example: Description
+    :vartype example: Winning
+    :var Note: Description
+    :vartype Note: These
+    :var Warning: Description
+    :vartype Warning: This
+    :var Warning: Description
+    :vartype Warning: This
+    :var Lunatic: Description
+    :vartype Lunatic: Start
+    :var Easy: Description
+    :vartype Easy: Start
+    :var Loss: Description
+    :vartype Loss: when
+    :var Loss: Description
+    :vartype Loss: Only
+    """
+
+class Accessibility(Accessibility):
+    """
+    Docstring for Accessibility
+    
+    :var Collector: Description
+    :vartype Collector: Collect
+    :var Master: Description
+    :vartype Master: Obtain
+    :var example: Description
+    :vartype example: Winning
+    :var Note: Description
+    :vartype Note: These
+    :var Warning: Description
+    :vartype Warning: This
+    :var Warning: Description
+    :vartype Warning: This
+    :var Lunatic: Description
+    :vartype Lunatic: Start
+    :var Easy: Description
+    :vartype Easy: Start
+    :var Loss: Description
+    :vartype Loss: when
+    :var Loss: Description
+    :vartype Loss: Only
+    """
+        
 
 class Goal(OptionSet):
     """
@@ -169,6 +222,76 @@ class VSModeCount(Range):
     display_name = "VS Mode Win Count"
     range_start = 1
     range_end = 10
+
+class VSBlacklistPlayer(OptionSet):
+    """
+    Determine which characters to exclude from having to play VS Mode 
+    as. These characters will not have checks associated with the 
+    "VS Mode Checks" - "Player" option.
+    
+    Example, "["Reimu", "Utsuho", "Meiling"]"
+    """
+    display_name = "VS Mode Player Blacklist"
+    valid_keys = [
+        "Reimu", 
+        "Marisa", 
+        "Sanae", 
+        "Alice", 
+        "Aya", 
+        "Cirno", 
+        "Iku", 
+        "Komachi", 
+        "Meiling", 
+        "Patchouli", 
+        "Reisen", 
+        "Remilia", 
+        "Sakuya", 
+        "Suika", 
+        "Suwako", 
+        "Tenshi", 
+        "Utsuho", 
+        "Youmu", 
+        "Yuyuko", 
+        "Yukari"
+        ]
+    default = []
+
+class VSBlacklistOpponent(OptionSet):
+    """
+    Determine which characters to exclude from having to play VS Mode 
+    against. These characters will not have checks associated with winning 
+    battles against them. 
+    
+    (This will not exclude them from appearing in Arcade mode, they simply 
+    wont have checks from the "VS Mode Checks" setting)
+    
+    Example, "["Reimu", "Utsuho", "Meiling"]"
+    """
+    display_name = "Arcade Mode Blacklist"
+    valid_keys = [
+        "Reimu", 
+        "Marisa", 
+        "Sanae", 
+        "Alice", 
+        "Aya", 
+        "Cirno", 
+        "Iku", 
+        "Komachi", 
+        "Meiling", 
+        "Patchouli", 
+        "Reisen", 
+        "Remilia", 
+        "Sakuya", 
+        "Suika", 
+        "Suwako", 
+        "Tenshi", 
+        "Utsuho", 
+        "Youmu", 
+        "Yuyuko", 
+        "Yukari"
+        ]
+    default = []
+
 
 
 #Story Mode Options
@@ -496,6 +619,8 @@ class SokuOptions(PerGameCommonOptions):
     # VS Mode Options
     vs_mode_character_wins: VSModeCharacterwins
     vs_mode_win_count: VSModeCount
+    vs_blacklist_player: VSBlacklistPlayer
+    vs_blacklist_opponent: VSBlacklistOpponent
 
     # Story Mode Options
     story_mode_checks: StoryModeChecks
@@ -520,3 +645,35 @@ class SokuOptions(PerGameCommonOptions):
     difficulty_start: DifficultyStart
     exclude_lunatic: ExcludeLunatic
     only_lunatic: OnlyLunatic
+
+
+option_groups = [
+    OptionGroup(
+        "Goal Settings",
+        [Goal, StoryModeCount, ArcadeModeCount, CardCollectorCount, CardMasterCount],
+    ),
+    OptionGroup(
+        "General Settings",
+        [StartingCharacter, CharacterFullBlacklist],
+    ),
+    OptionGroup(
+        "VS Mode Settings",
+        [VSModeCharacterwins, VSModeCount, VSBlacklistOpponent, VSBlacklistPlayer],
+    ),
+    OptionGroup(
+        "Story Mode Settings",
+        [StoryModeChecks, StoryStageUnlocks],
+    ),
+    OptionGroup(
+        "Arcade Mode Settings",
+        [ArcadeModeChecks, IndividualArcadeUnlocks, ArcadeBlacklist],
+    ),
+    OptionGroup(
+        "Cardsanity Settings",
+        [CardsanitySkills, CardsanitySpells, CardsanitySpellCount, SystemCardCharacterChecks, CardsanityStartCards, CardsanityBlacklist],
+    ),
+    OptionGroup(
+        "Difficulty Options",
+        [DifficultyItems, DifficultyStart, ExcludeLunatic, OnlyLunatic]
+    )
+]
