@@ -2,58 +2,7 @@ from dataclasses import dataclass
 
 from options import Choice, Toggle, OptionSet, OptionGroup, PerGameCommonOptions, Deathlink, Range
 
-class ProgressionBalancing(ProgressionBalancing):
-    """
-    Docstring for ProgressionBalancing
     
-    :var Collector: Description
-    :vartype Collector: Collect
-    :var Master: Description
-    :vartype Master: Obtain
-    :var example: Description
-    :vartype example: Winning
-    :var Note: Description
-    :vartype Note: These
-    :var Warning: Description
-    :vartype Warning: This
-    :var Warning: Description
-    :vartype Warning: This
-    :var Lunatic: Description
-    :vartype Lunatic: Start
-    :var Easy: Description
-    :vartype Easy: Start
-    :var Loss: Description
-    :vartype Loss: when
-    :var Loss: Description
-    :vartype Loss: Only
-    """
-
-class Accessibility(Accessibility):
-    """
-    Docstring for Accessibility
-    
-    :var Collector: Description
-    :vartype Collector: Collect
-    :var Master: Description
-    :vartype Master: Obtain
-    :var example: Description
-    :vartype example: Winning
-    :var Note: Description
-    :vartype Note: These
-    :var Warning: Description
-    :vartype Warning: This
-    :var Warning: Description
-    :vartype Warning: This
-    :var Lunatic: Description
-    :vartype Lunatic: Start
-    :var Easy: Description
-    :vartype Easy: Start
-    :var Loss: Description
-    :vartype Loss: when
-    :var Loss: Description
-    :vartype Loss: Only
-    """
-        
 
 class Goal(OptionSet):
     """
@@ -675,5 +624,5 @@ option_groups = [
     OptionGroup(
         "Difficulty Options",
         [DifficultyItems, DifficultyStart, ExcludeLunatic, OnlyLunatic]
-    )
+    ),
 ]
