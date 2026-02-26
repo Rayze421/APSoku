@@ -2078,10 +2078,10 @@ csl2_yukari_421a2 = "Rank 2 - Yukari 421: Wings of the Chimera"
 csl3_yukari_421a2 = "Rank 3 - Yukari 421: Wings of the Chimera"
 csl4_yukari_421a2 = "Max Rank - Yukari 421: Wings of the Chimera"
 #Spells
-csl1_ukari_1sc_bbtat = 'Spellsanity 1 - Yukari 1SC: Boundary "Border Between 2D and 3D"'
-csl2_ukari_1sc_bbtat = 'Spellsanity 2 - Yukari 1SC: Boundary "Border Between 2D and 3D"'
-csl3_ukari_1sc_bbtat = 'Spellsanity 3 - Yukari 1SC: Boundary "Border Between 2D and 3D"'
-csl4_ukari_1sc_bbtat = 'Spellsanity 4 - Yukari 1SC: Boundary "Border Between 2D and 3D"'
+csl1_yukari_1sc_bbtat = 'Spellsanity 1 - Yukari 1SC: Boundary "Border Between 2D and 3D"'
+csl2_yukari_1sc_bbtat = 'Spellsanity 2 - Yukari 1SC: Boundary "Border Between 2D and 3D"'
+csl3_yukari_1sc_bbtat = 'Spellsanity 3 - Yukari 1SC: Boundary "Border Between 2D and 3D"'
+csl4_yukari_1sc_bbtat = 'Spellsanity 4 - Yukari 1SC: Boundary "Border Between 2D and 3D"'
 csl1_yukari_1sc_c = 'Spellsanity 1 - Yukari 1SC: Shikigami "Chen"'
 csl2_yukari_1sc_c = 'Spellsanity 2 - Yukari 1SC: Shikigami "Chen"'
 csl3_yukari_1sc_c = 'Spellsanity 3 - Yukari 1SC: Shikigami "Chen"'
