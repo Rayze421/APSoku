@@ -1,4 +1,4 @@
-from typing import Dict, NamedTuple, Optional
+import typing
 from worlds.AutoWorld import World
 from .data import locationnames
 from BaseClasses import Location, Multiworld
@@ -991,7 +991,7 @@ start_sys_card_table = {
 
 }
 
-start_reimu_card_table = { #0xFF50100-FF50115
+reimu_start_card_table = { #0xFF50100-FF50115
     locationnames.reimu_start_card1:   0xFF50100,
     locationnames.reimu_start_card2:   0xFF50101,
     locationnames.reimu_start_card3:   0xFF50102,
@@ -1017,7 +1017,7 @@ start_reimu_card_table = { #0xFF50100-FF50115
 
 }
 
-start_marisa_card_table = { #0xFF50200-FF50219
+marisa_start_card_table = { #0xFF50200-FF50219
     locationnames.marisa_start_card1:   0xFF50200,
     locationnames.marisa_start_card2:   0xFF50201,
     locationnames.marisa_start_card3:   0xFF50202,
@@ -3531,3 +3531,148 @@ suwako_spell_loc_table = { #0xFA1330 - FA135B
     locationnames.csl4_suwako_5sc_ms:     0xFA135B
 
 }
+
+all_locations = {
+    **goal_location_table, #26
+    **sanae_story_stage_table, #5
+    **sanae_story_spell_table, #16
+    **cirno_story_stage_table, #5
+    **cirno_story_spell_table, #16
+    **meiling_story_stage_table, #5
+    **meiling_story_spell_table, #16
+
+    **reimu_arcade_stage_table,
+    **marisa_arcade_stage_table,
+    **sakuya_arcade_stage_table,
+    **alice_arcade_stage_table,
+    **patchouli_arcade_stage_table,
+    **youmu_arcade_stage_table,
+    **yuyuko_arcade_stage_table,
+    **yukari_arcade_stage_table,
+    **suika_arcade_stage_table,
+    **reisen_arcade_stage_table,
+    **aya_arcade_stage_table,
+    **komachi_arcade_stage_table,
+    **iku_arcade_stage_table,
+    **tenshi_arcade_stage_table,
+    **sanae_arcade_stage_table,
+    **cirno_arcade_stage_table,
+    **meiling_arcade_stage_table,
+    **okuu_arcade_stage_table,
+    **suwako_arcade_stage_table,
+
+    **reimu_vs_win_table,
+    **marisa_vs_win_table,
+    **sakuya_vs_win_table,
+    **alice_vs_win_table,
+    **patchouli_vs_win_table,
+    **youmu_vs_win_table,
+    **remilia_vs_win_table,
+    **yuyuko_vs_win_table,
+    **yukari_vs_win_table,
+    **suika_vs_win_table,
+    **reisen_vs_win_table,
+    **aya_vs_win_table,
+    **komachi_vs_win_table,
+    **iku_vs_win_table,
+    **tenshi_vs_win_table,
+    **sanae_vs_win_table,
+    **cirno_vs_win_table,
+    **meiling_vs_win_table,
+    **okuu_vs_win_table,
+    **suwako_vs_win_table,
+
+    **reimu_vs_defeat_table,
+    **marisa_vs_defeat_table,
+    **sakuya_vs_defeat_table,
+    **alice_vs_defeat_table,
+    **patchouli_vs_defeat_table,
+    **youmu_vs_defeat_table,
+    **remilia_vs_defeat_table,
+    **yuyuko_vs_defeat_table,
+    **yukari_vs_defeat_table,
+    **suika_vs_defeat_table,
+    **reisen_vs_defeat_table,
+    **aya_vs_defeat_table,
+    **komachi_vs_defeat_table,
+    **iku_vs_defeat_table,
+    **tenshi_vs_defeat_table,
+    **sanae_vs_defeat_table,
+    **cirno_vs_defeat_table,
+    **meiling_vs_defeat_table,
+    **okuu_vs_defeat_table,
+    **suwako_vs_defeat_table,
+
+    **start_sys_card_table,
+    **reimu_start_card_table,
+    **marisa_start_card_table,
+    **sakuya_start_card_table,
+    **alice_start_card_table,
+    **patchouli_start_card_table,
+    **youmu_start_card_table,
+    **remilia_start_card_table,
+    **yuyuko_start_card_table,
+    **yukari_start_card_table,
+    **suika_start_card_table,
+    **reisen_start_card_table,
+    **aya_start_card_table,
+    **komachi_start_card_table,
+    **iku_start_card_table,
+    **tenshi_start_card_table,
+    **sanae_start_card_table,
+    **cirno_start_card_table,
+    **meiling_start_card_table,
+    **okuu_start_card_table,
+    **suwako_start_card_table,
+
+    **reimu_skill_loc_table,
+    **reimu_spell_loc_table,
+    **marisa_skill_loc_table,
+    **marisa_spell_loc_table,
+    **sakuya_skill_loc_table,
+    **sakuya_spell_loc_table,
+    **alice_skill_loc_table,
+    **alice_spell_loc_table,
+    **patchouli_skill_loc_table,
+    **patchouli_spell_loc_table,
+    **youmu_skill_loc_table,
+    **youmu_spell_loc_table,
+    **remilia_skill_loc_table,
+    **remilia_spell_loc_table,
+    **yuyuko_skill_loc_table,
+    **yuyuko_spell_loc_table,
+    **yukari_skill_loc_table,
+    **yukari_spell_loc_table,
+    **suika_skill_loc_table,
+    **suika_spell_loc_table,
+    **reisen_skill_loc_table,
+    **reisen_spell_loc_table,
+    **aya_skill_loc_table,
+    **aya_spell_loc_table,
+    **komachi_skill_loc_table,
+    **komachi_spell_loc_table,
+    **iku_skill_loc_table,
+    **iku_spell_loc_table,
+    **tenshi_skill_loc_table,
+    **tenshi_spell_loc_table,
+    **sanae_skill_loc_table,
+    **sanae_spell_loc_table,
+    **cirno_skill_loc_table,
+    **cirno_spell_loc_table,
+    **meiling_skill_loc_table,
+    **meiling_spell_loc_table,
+    **okuu_skill_loc_table,
+    **okuu_spell_loc_table,
+    **suwako_skill_loc_table,
+    **suwako_spell_loc_table
+
+}
+
+lookup_id_to_name: typing.Dict[int, str] = {id: name for name, _ in all_locations.items()}
+
+
+def setup_locations(world: World, player: int):
+    location_table = {}
+
+
+    return location_table
