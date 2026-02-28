@@ -9,10 +9,10 @@ class SokuLocation(Location):
 
 
 goal_location_table = {
-    locationnames.story_end: 0xFF0000,
-    locationnames.sanae_story_end: 0xFF0001,
-    locationnames.cirno_story_end: 0xFF0002,
-    locationnames.meiling_story_end: 0xFF0003,
+    locationnames.story_end:          0xFF0000,
+    locationnames.sanae_story_end:    0xFF0001,
+    locationnames.cirno_story_end:    0xFF0002,
+    locationnames.meiling_story_end:  0xFF0003,
     
     locationnames.reimu_arcade_end:     0xFF0004,
     locationnames.marisa_arcade_end:    0xFF0005,
@@ -49,22 +49,22 @@ sanae_story_stage_table = {
 }
 
 sanae_story_spell_table = {
-    locationnames.sanae_cirno_s1: 0xFF1005,
-    locationnames.sanae_cirno_s2: 0xFF1006,
+    locationnames.sanae_cirno_s1:   0xFF1005,
+    locationnames.sanae_cirno_s2:   0xFF1006,
     locationnames.sanae_meiling_s1: 0xFF1007,
     locationnames.sanae_meiling_s2: 0xFF1008,
-    locationnames.sanae_reimu_s1: 0xFF1009,
-    locationnames.sanae_reimu_s2: 0xFF100A,
-    locationnames.sanae_reimu_s3: 0xFF100B,
-    locationnames.sanae_okuu_s1: 0xFF100C,
-    locationnames.sanae_okuu_s2: 0xFF100D,
-    locationnames.sanae_okuu_s3: 0xFF100E,
-    locationnames.sanae_okuu_s4: 0xFF100F,
-    locationnames.sanae_suwako_s1: 0xFF1010,
-    locationnames.sanae_suwako_s2: 0xFF1011,
-    locationnames.sanae_suwako_s3: 0xFF1012,
-    locationnames.sanae_suwako_s4: 0xFF1013,
-    locationnames.sanae_suwako_s5: 0xFF1014
+    locationnames.sanae_reimu_s1:   0xFF1009,
+    locationnames.sanae_reimu_s2:   0xFF100A,
+    locationnames.sanae_reimu_s3:   0xFF100B,
+    locationnames.sanae_okuu_s1:    0xFF100C,
+    locationnames.sanae_okuu_s2:    0xFF100D,
+    locationnames.sanae_okuu_s3:    0xFF100E,
+    locationnames.sanae_okuu_s4:    0xFF100F,
+    locationnames.sanae_suwako_s1:  0xFF1010,
+    locationnames.sanae_suwako_s2:  0xFF1011,
+    locationnames.sanae_suwako_s3:  0xFF1012,
+    locationnames.sanae_suwako_s4:  0xFF1013,
+    locationnames.sanae_suwako_s5:  0xFF1014
 
 }
 
@@ -78,22 +78,22 @@ cirno_story_stage_table = {
 }
 
 cirno_story_spell_table = {
-    locationnames.cirno_sanae_s1: 0xFF1105,
-    locationnames.cirno_sanae_s2: 0xFF1106,
-    locationnames.cirno_meiling_s1: 0xFF1107,
-    locationnames.cirno_meiling_s2: 0xFF1108,
-    locationnames.cirno_marisa_s1: 0xFF1109,
-    locationnames.cirno_marisa_s2: 0xFF110A,
-    locationnames.cirno_marisa_s3: 0xFF110B,
-    locationnames.cirno_okuu_s1: 0xFF110C,
-    locationnames.cirno_okuu_s2: 0xFF110D,
-    locationnames.cirno_okuu_s3: 0xFF110E,
-    locationnames.cirno_okuu_s4: 0xFF110F,
-    locationnames.cirno_alice_s1: 0xFF1110,
-    locationnames.cirno_alice_s2: 0xFF1111,
-    locationnames.cirno_alice_s3: 0xFF1112,
-    locationnames.cirno_alice_s4: 0xFF1113,
-    locationnames.cirno_alice_s5: 0xFF1114
+    locationnames.cirno_sanae_s1:    0xFF1105,
+    locationnames.cirno_sanae_s2:    0xFF1106,
+    locationnames.cirno_meiling_s1:  0xFF1107,
+    locationnames.cirno_meiling_s2:  0xFF1108,
+    locationnames.cirno_marisa_s1:   0xFF1109,
+    locationnames.cirno_marisa_s2:   0xFF110A,
+    locationnames.cirno_marisa_s3:   0xFF110B,
+    locationnames.cirno_okuu_s1:     0xFF110C,
+    locationnames.cirno_okuu_s2:     0xFF110D,
+    locationnames.cirno_okuu_s3:     0xFF110E,
+    locationnames.cirno_okuu_s4:     0xFF110F,
+    locationnames.cirno_alice_s1:    0xFF1110,
+    locationnames.cirno_alice_s2:    0xFF1111,
+    locationnames.cirno_alice_s3:    0xFF1112,
+    locationnames.cirno_alice_s4:    0xFF1113,
+    locationnames.cirno_alice_s5:    0xFF1114
 
 }
 
@@ -109,20 +109,20 @@ meiling_story_stage_table = {
 meiling_story_spell_table = {
     locationnames.meiling_patchouli_s1: 0xFF1205,
     locationnames.meiling_patchouli_s2: 0xFF1206,
-    locationnames.meiling_alice_s1: 0xFF1207,
-    locationnames.meiling_alice_s2: 0xFF1208,
-    locationnames.meiling_marisa_s1: 0xFF1209,
-    locationnames.meiling_marisa_s2: 0xFF120A,
-    locationnames.meiling_marisa_s3: 0xFF120B,
-    locationnames.meiling_reimu_s1: 0xFF120C,
-    locationnames.meiling_reimu_s2: 0xFF120D,
-    locationnames.meiling_reimu_s3: 0xFF120E,
-    locationnames.meiling_reimu_s4: 0xFF120F,
-    locationnames.meiling_fish_s1: 0xFF1210,
-    locationnames.meiling_fish_s2: 0xFF1211,
-    locationnames.meiling_fish_s3: 0xFF1212,
-    locationnames.meiling_fish_s4: 0xFF1213,
-    locationnames.meiling_fish_s5: 0xFF1214
+    locationnames.meiling_alice_s1:     0xFF1207,
+    locationnames.meiling_alice_s2:     0xFF1208,
+    locationnames.meiling_marisa_s1:    0xFF1209,
+    locationnames.meiling_marisa_s2:    0xFF120A,
+    locationnames.meiling_marisa_s3:    0xFF120B,
+    locationnames.meiling_reimu_s1:     0xFF120C,
+    locationnames.meiling_reimu_s2:     0xFF120D,
+    locationnames.meiling_reimu_s3:     0xFF120E,
+    locationnames.meiling_reimu_s4:     0xFF120F,
+    locationnames.meiling_fish_s1:      0xFF1210,
+    locationnames.meiling_fish_s2:      0xFF1211,
+    locationnames.meiling_fish_s3:      0xFF1212,
+    locationnames.meiling_fish_s4:      0xFF1213,
+    locationnames.meiling_fish_s5:      0xFF1214
 
 }
 
