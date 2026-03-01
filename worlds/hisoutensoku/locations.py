@@ -3547,6 +3547,7 @@ all_locations = {
     **alice_arcade_stage_table,
     **patchouli_arcade_stage_table,
     **youmu_arcade_stage_table,
+    **remilia_arcade_stage_table,
     **yuyuko_arcade_stage_table,
     **yukari_arcade_stage_table,
     **suika_arcade_stage_table,
@@ -3673,6 +3674,150 @@ lookup_id_to_name: typing.Dict[int, str] = {id: name for name, _ in all_location
 
 def setup_locations(world: World, player: int):
     location_table = {}
+    
+    #Add Story stage and spell checks per the player setting
+    if world.option.story_mode_checks == "Sanae":
+        location_table.update({**sanae_story_stage_table})
+        location_table.update({**sanae_story_spell_table})
+    if world.option.story_mode_checks == "Cirno":
+        location_table.update({**cirno_story_stage_table})
+        location_table.update({**cirno_story_spell_table})
+    if world.option.story_mode_checks == "Meiling":
+        location_table.update({**meiling_story_stage_table})
+        location_table.update({**meiling_story_spell_table})
 
+    #Add VS mode locations per the player setting
+    if world.options.vs_mode_character_wins == 1:
+        if world.options.vs_mode_win_count == 1:
+            location_table.update({locationnames.reimu_vs_w1})
+            location_table.update({locationnames.marisa_vs_w1})
+            location_table.update({locationnames.sakuya_vs_w1})
+            location_table.update({locationnames.alice_vs_w1})
+            location_table.update({locationnames.patchouli_vs_w1})
+            location_table.update({locationnames.youmu_vs_w1})
+            location_table.update({locationnames.remilia_vs_w1})
+            location_table.update({locationnames.yuyuko_vs_w1})
+            location_table.update({locationnames.yukari_vs_w1})
+            location_table.update({locationnames.suika_vs_w1})
+            location_table.update({locationnames.reisen_vs_w1})
+            location_table.update({locationnames.aya_vs_w1})
+            location_table.update({locationnames.komachi_vs_w1})
+            location_table.update({locationnames.iku_vs_w1})
+            location_table.update({locationnames.tenshi_vs_w1})
+            location_table.update({locationnames.sanae_vs_w1})
+            location_table.update({locationnames.cirno_vs_w1})
+            location_table.update({locationnames.meiling_vs_w1})
+            location_table.update({locationnames.okuu_vs_w1})
+            location_table.update({locationnames.suwako_vs_w1})
+        elif world.options.vs_mode_win_count == 2:
+            location_table.update({locationnames.reimu_vs_w1})
+            location_table.update({locationnames.reimu_vs_w2})
+            location_table.update({locationnames.marisa_vs_w1})
+            location_table.update({locationnames.marisa_vs_w2})
+            location_table.update({locationnames.sakuya_vs_w1})
+            location_table.update({locationnames.sakuya_vs_w2})
+            location_table.update({locationnames.alice_vs_w1})
+            location_table.update({locationnames.alice_vs_w2})
+            location_table.update({locationnames.patchouli_vs_w1})
+            location_table.update({locationnames.patchouli_vs_w2})
+            location_table.update({locationnames.youmu_vs_w1})
+            location_table.update({locationnames.youmu_vs_w2})
+            location_table.update({locationnames.remilia_vs_w1})
+            location_table.update({locationnames.remilia_vs_w2})
+            location_table.update({locationnames.yuyuko_vs_w1})
+            location_table.update({locationnames.yuyuko_vs_w2})
+            location_table.update({locationnames.yukari_vs_w1})
+            location_table.update({locationnames.yukari_vs_w2})
+            location_table.update({locationnames.suika_vs_w1})
+            location_table.update({locationnames.suika_vs_w2})
+            location_table.update({locationnames.reisen_vs_w1})
+            location_table.update({locationnames.reisen_vs_w2})
+            location_table.update({locationnames.aya_vs_w1})
+            location_table.update({locationnames.aya_vs_w2})
+            location_table.update({locationnames.komachi_vs_w1})
+            location_table.update({locationnames.komachi_vs_w2})
+            location_table.update({locationnames.iku_vs_w1})
+            location_table.update({locationnames.iku_vs_w2})
+            location_table.update({locationnames.tenshi_vs_w1})
+            location_table.update({locationnames.tenshi_vs_w2})
+            location_table.update({locationnames.sanae_vs_w1})
+            location_table.update({locationnames.sanae_vs_w2})
+            location_table.update({locationnames.cirno_vs_w1})
+            location_table.update({locationnames.cirno_vs_w2})
+            location_table.update({locationnames.meiling_vs_w1})
+            location_table.update({locationnames.meiling_vs_w2})
+            location_table.update({locationnames.okuu_vs_w1})
+            location_table.update({locationnames.okuu_vs_w2})
+            location_table.update({locationnames.suwako_vs_w1})
+            location_table.update({locationnames.suwako_vs_w2})
+
+        #Check VS Mode Blacklist
+    if world.option.vs_blacklist_player == "Reimu":
+        del location_table[{**reimu_vs_win_table}]
+
+    if world.option.arcade_mode_checks == 1:
+        location_table.update({**reimu_arcade_stage_table})
+        location_table.update({**marisa_arcade_stage_table})
+        location_table.update({**sakuya_arcade_stage_table})
+        location_table.update({**alice_arcade_stage_table})
+        location_table.update({**patchouli_arcade_stage_table})
+        location_table.update({**youmu_arcade_stage_table})
+        location_table.update({**remilia_arcade_stage_table})
+        location_table.update({**yuyuko_arcade_stage_table})
+        location_table.update({**yukari_arcade_stage_table})
+        location_table.update({**suika_arcade_stage_table})
+        location_table.update({**reisen_arcade_stage_table})
+        location_table.update({**aya_arcade_stage_table})
+        location_table.update({**komachi_arcade_stage_table})
+        location_table.update({**iku_arcade_stage_table})
+        location_table.update({**tenshi_arcade_stage_table})
+        location_table.update({**sanae_arcade_stage_table})
+        location_table.update({**cirno_arcade_stage_table})
+        location_table.update({**meiling_arcade_stage_table})
+        location_table.update({**okuu_arcade_stage_table})
+        location_table.update({**suwako_arcade_stage_table})
+
+    #Check Arcade Mode Blacklist    
+    if world.option.arcade_mode_blacklist == "Reimu":
+        del location_table[{**reimu_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Marisa":
+        del location_table[{**marisa_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Sakuya":
+        del location_table[{**sakuya_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Alice":
+        del location_table[{**alice_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Patchouli":
+        del location_table[{**patchouli_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Youmu":
+        del location_table[{**youmu_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Remilia":
+        del location_table[{**remilia_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Yuyuko":
+        del location_table[{**yuyuko_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Yukari":
+        del location_table[{**yukari_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Suika":
+        del location_table[{**suika_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Reisen":
+        del location_table[{**reisen_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Aya":
+        del location_table[{**aya_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Komachi":
+        del location_table[{**komachi_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Iku":
+        del location_table[{**iku_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Tenshi":
+        del location_table[{**tenshi_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Sanae":
+        del location_table[{**sanae_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Cirno":
+        del location_table[{**cirno_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Meiling":
+        del location_table[{**meiling_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Utsuho":
+        del location_table[{**okuu_arcade_stage_table}]
+    if world.option.arcade_mode_blacklist == "Suwako":
+        del location_table[{**suwako_arcade_stage_table}]
+    
 
     return location_table

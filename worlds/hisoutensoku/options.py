@@ -523,6 +523,11 @@ class NoDeckLimit(Choice):
     that can unlimit cards in a characters deck.
     - Always: Decks will be allowed any number of cards you own.
     """
+    display_name = "No Deck Limit"
+    default = 0
+    option_vanilla = 0
+    option_item = 1
+    option_always = 2
 
 
 class Deathlink(Deathlink):
@@ -588,6 +593,7 @@ class SokuOptions(PerGameCommonOptions):
     cardsanity_blacklist: CardsanityBlacklist
     system_card_check_count: SystemCardCheckCount
     system_card_character_checks: SystemCardCharacterChecks
+    no_deck_limit: NoDeckLimit
 
     # Difficulty Options
     difficulty_items: DifficultyItems
@@ -619,7 +625,7 @@ option_groups = [
     ),
     OptionGroup(
         "Cardsanity Settings",
-        [CardsanitySkills, CardsanitySpells, CardsanitySpellCount, SystemCardCharacterChecks, CardsanityStartCards, CardsanityBlacklist],
+        [CardsanitySkills, CardsanitySpells, CardsanitySpellCount, SystemCardCharacterChecks, CardsanityStartCards, CardsanityBlacklist, NoDeckLimit],
     ),
     OptionGroup(
         "Difficulty Options",
