@@ -3849,15 +3849,15 @@ def setup_locations(world: World, player: int):
     #Add Skillsanity checks per the player option
     if world.option.cardsanity_skills == 1:
         for index, (key, value) in enumerate(locationnames.items()):
-            if key[+5:] == "cslk1":
+            if key[:5] == "cslk1":
                 location_table.update({locationnames[key]})
     if world.option.cardsanity_skills == 2:
         for index, (key, value) in enumerate(locationnames.items()):
-            if key[+5:] == "cslk4":
+            if key[:5] == "cslk4":
                 location_table.update({locationnames[key]})
     if world.option.cardsanity_skills == 3:
         for index, (key, value) in enumerate(locationnames.items()):
-            if key[+4:] == "cslk":
+            if key[:4] == "cslk":
                 location_table.update({locationnames[key]})
 
     #Check Spellsanity Count if Cardsanity Spells is enabled
