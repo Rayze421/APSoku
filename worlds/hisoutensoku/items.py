@@ -817,5 +817,5 @@ item_groups: typing.Dict[int, str] = {
     "Reimu Gems": list(itemnames.reimu_5sc_fs),
 }
 
-lookup_id_to_name: typing.Dict[int, str] = {data.code: item_name for item_name, data in item_table.items() if data.code}
+lookup_id_to_name: typing.Dict[int, str] = {data.code: item_name for item_name, data in all_items.items() if data.code}
 
