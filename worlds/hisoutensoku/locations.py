@@ -3682,20 +3682,38 @@ def create_region(world: SokuWorld) -> None:
 
 
 
-
 def setup_locations(world: World, player: int):
     location_table = {}
+
+
+    #Check Goal Inputs
+    if world.option.goal == "Story":
+        location_table.update(locationnames.story_end)
+    if world.option.goal == "Arcade":
+        for index, (key, value) in enumerate(locationnames.items()):
+            if key[-11:] == "arcade_end":
+                location_table.update({locationnames[key]})
+    if world.option.goal == "Card Collector":
+        location_table.update(locationnames.collector_goal)
+    if world.option.goal == "Card Master":
+        location_table.update(locationnames.master_goal)
     
     #Add Story stage and spell checks per the player setting
     if world.option.story_mode_checks == "Sanae":
         location_table.update({**sanae_story_stage_table})
         location_table.update({**sanae_story_spell_table})
+        if world.option.goal == "Story":
+            location_table.update(locationnames.sanae_story_end)
     if world.option.story_mode_checks == "Cirno":
         location_table.update({**cirno_story_stage_table})
         location_table.update({**cirno_story_spell_table})
+        if world.option.goal == "Story":
+            location_table.update(locationnames.cirno_story_end)
     if world.option.story_mode_checks == "Meiling":
         location_table.update({**meiling_story_stage_table})
         location_table.update({**meiling_story_spell_table})
+        if world.option.goal == "Story":
+            location_table.update(locationnames.meiling_story_end)
 
     #Add VS mode locations per the player setting
     if world.option.vs_mode_character_wins == 1:
