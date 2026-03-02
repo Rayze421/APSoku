@@ -11,7 +11,7 @@ from worlds.AutoWorld import WebWorld, World
 from worlds.generic.Rules import set_rule, forbid_item
 
 from .options import SokuOptions
-from .locations import location_table, setup_locations, all_locations, location_groups, lookup_id_to_name
+from .locations import location_table, setup_locations, all_locations, location_groups, lookup_id_to_name, create_region
 from .items import item_table, all_items, item_groups
 from .world import SokuWorld as SokuWorld
 
@@ -32,6 +32,12 @@ class SokuWorld(World):
     location_name_to_id = all_locations
 
     location_table: Dict[str, int]
+
+    def create_regions(self) -> None:
+        create_region(self)
+        setup_locations(self)
+      
+        self.location_table = setup_locations(self, self.player)
     
 
 

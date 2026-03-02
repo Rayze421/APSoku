@@ -1,7 +1,8 @@
 from typing import Dict, int, str
 from worlds.AutoWorld import World
 from .data import locationnames
-from BaseClasses import Location, Multiworld
+from BaseClasses import Location, Multiworld, Region
+from .world import SokuWorld
 
 class SokuLocation(Location):
     game: str = "Touhou 12.3 - Hisoutensoku"
@@ -3672,6 +3673,16 @@ all_locations = {
 lookup_id_to_name: Dict[int, str] = {id: name for name, _ in all_locations.items()}
 
 
+def create_region(world: SokuWorld) -> None:
+    start_region = Region("Start Region", world.player, world.multiworld)
+    start_region.locations += [all_locations(lookup_id_to_name)]
+    regions = [start_region]
+
+    world.multiworld.regions += regions
+
+
+
+
 def setup_locations(world: World, player: int):
     location_table = {}
     
@@ -3695,6 +3706,7 @@ def setup_locations(world: World, player: int):
                 if key[-3:] == "_l" + str(i):
                     location_table.update({locationnames[key]})
 
+#Praying these blacklists actually work and arent formatted catastrophically wrong
         #Check VS Mode Win Blacklist
         if world.option.vs_blacklist_player == "Reimu":
             del location_table[{**reimu_vs_win_table}]
