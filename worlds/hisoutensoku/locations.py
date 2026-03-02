@@ -3687,139 +3687,15 @@ def setup_locations(world: World, player: int):
         location_table.update({**meiling_story_spell_table})
 
     #Add VS mode locations per the player setting
-    if world.options.vs_mode_character_wins == 1:
-        if world.options.vs_mode_win_count == 1:
+    if world.option.vs_mode_character_wins == 1:
+        for i in range(1, world.option.vs_mode_win_count+1):
             for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
+                if key[-3:] == "_w" + str(i):
                     location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 2:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 3:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w3":
-                    location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 4:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w3":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w4":
-                    location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 5:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w3":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w4":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w5":
-                    location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 6:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w3":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w4":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w5":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w6":
-                    location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 7:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w3":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w4":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w5":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w6":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w7":
-                    location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 8:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w3":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w4":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w5":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w6":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w7":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w8":
-                    location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 9:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w3":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w4":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w5":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w6":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w7":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w8":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w9":
-                    location_table.update({locationnames[key]})
-        if world.options.vs_mode_win_count == 10:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[-3:] == "_w1":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w2":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w3":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w4":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w5":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w6":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w7":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w8":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w9":
-                    location_table.update({locationnames[key]})
-                if key[-3:] == "_w10":
+                if key[-3:] == "_l" + str(i):
                     location_table.update({locationnames[key]})
 
-        #Check VS Mode Blacklist
+        #Check VS Mode Win Blacklist
         if world.option.vs_blacklist_player == "Reimu":
             del location_table[{**reimu_vs_win_table}]
         if world.option.vs_blacklist_player == "Marisa":
@@ -3850,6 +3726,59 @@ def setup_locations(world: World, player: int):
             del location_table[{**iku_vs_win_table}]
         if world.option.vs_blacklist_player == "Tenshi":
             del location_table[{**tenshi_vs_win_table}]
+        if world.option.vs_blacklist_player == "Sanae":
+            del location_table[{**sanae_vs_win_table}]
+        if world.option.vs_blacklist_player == "Cirno":
+            del location_table[{**cirno_vs_win_table}]
+        if world.option.vs_blacklist_player == "Meiling":
+            del location_table[{**meiling_vs_win_table}]
+        if world.option.vs_blacklist_player == "Utsuho":
+            del location_table[{**okuu_vs_win_table}]
+        if world.option.vs_blacklist_player == "Suwako":
+            del location_table[{**suwako_vs_win_table}]
+
+        #Check VS Mode Defeat Blacklist
+        if world.option.vs_blacklist_opponent == "Reimu":
+            del location_table[{**reimu_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Marisa":
+            del location_table[{**marisa_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Sakuya":
+            del location_table[{**sakuya_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Alice":
+            del location_table[{**alice_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Patchouli":
+            del location_table[{**patchouli_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Youmu":
+            del location_table[{**youmu_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Remilia":
+            del location_table[{**remilia_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Yuyuko":
+            del location_table[{**yuyuko_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Yukari":
+            del location_table[{**yukari_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Suika":
+            del location_table[{**suika_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Reisen":
+            del location_table[{**reisen_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Aya":
+            del location_table[{**aya_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Komachi":
+            del location_table[{**komachi_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Iku":
+            del location_table[{**iku_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Tenshi":
+            del location_table[{**tenshi_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Sanae":
+            del location_table[{**sanae_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Cirno":
+            del location_table[{**cirno_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Meiling":
+            del location_table[{**meiling_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Utsuho":
+            del location_table[{**okuu_vs_defeat_table}]
+        if world.option.vs_blacklist_opponent == "Suwako":
+            del location_table[{**suwako_vs_defeat_table}]
+
 
     #Add all Arcade mode checks if enabled
     if world.option.arcade_mode_checks == 1:
@@ -3933,39 +3862,9 @@ def setup_locations(world: World, player: int):
 
     #Check Spellsanity Count if Cardsanity Spells is enabled
     if world.option.cardsanity_spells == 1:
-        if world.option.cardsanity_spell_count == 1:
+        for i in range(1, world.option.cardsanity_spell_count+1):
             for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl1":
-                    location_table.update({locationnames[key]})
-        if world.option.cardsanity_spell_count == 2:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl1":
-                    location_table.update({locationnames[key]})
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl2":
-                    location_table.update({locationnames[key]})
-        if world.option.cardsanity_spell_count == 3:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl1":
-                    location_table.update({locationnames[key]})
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl2":
-                    location_table.update({locationnames[key]})
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl3":
-                    location_table.update({locationnames[key]})
-        if world.option.cardsanity_spell_count == 4:
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl1":
-                    location_table.update({locationnames[key]})
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl2":
-                    location_table.update({locationnames[key]})
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl3":
-                    location_table.update({locationnames[key]})
-            for index, (key, value) in enumerate(locationnames.items()):
-                if key[+4:] == "csl4":
+                if key[:4] == "csl" + str(i):
                     location_table.update({locationnames[key]})
 
         
