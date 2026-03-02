@@ -1,4 +1,4 @@
-import typing
+from typing import Dict, int, str
 from worlds.AutoWorld import World
 from .data import locationnames
 from BaseClasses import Location, Multiworld
@@ -1532,54 +1532,54 @@ suwako_start_card_table = { #0xFF51400 - FF51416
 }
 
 reimu_skill_loc_table = { #0xFA0000 - FA002F
-    locationnames.csl1_reimu_236d:  0xFA0000,
-    locationnames.csl2_reimu_236d:  0xFA0001,
-    locationnames.csl4_reimu_236d:  0xFA0002,
-    locationnames.csl3_reimu_236d:  0xFA0003,
-    locationnames.csl1_reimu_236a1: 0xFA0004,
-    locationnames.csl2_reimu_236a1: 0xFA0005,
-    locationnames.csl3_reimu_236a1: 0xFA0006,
-    locationnames.csl4_reimu_236a1: 0xFA0007,
-    locationnames.csl1_reimu_236a2: 0xFA0008,
-    locationnames.csl2_reimu_236a2: 0xFA0009,
-    locationnames.csl3_reimu_236a2: 0xFA000A,
-    locationnames.csl4_reimu_236a2: 0xFA000B,
-    locationnames.csl1_reimu_623d:  0xFA000C,
-    locationnames.csl2_reimu_623d:  0xFA000D,
-    locationnames.csl3_reimu_623d:  0xFA000E,
-    locationnames.csl4_reimu_623d:  0xFA000F,
-    locationnames.csl1_reimu_623a1: 0xFA0010,
-    locationnames.csl2_reimu_623a1: 0xFA0011,
-    locationnames.csl3_reimu_623a1: 0xFA0012,
-    locationnames.csl4_reimu_623a1: 0xFA0013,
-    locationnames.csl1_reimu_623a2: 0xFA0014,
-    locationnames.csl2_reimu_623a2: 0xFA0015,
-    locationnames.csl3_reimu_623a2: 0xFA0016,
-    locationnames.csl4_reimu_623a2: 0xFA0017,
-    locationnames.csl1_reimu_214d:  0xFA0018,
-    locationnames.csl2_reimu_214d:  0xFA0019,
-    locationnames.csl3_reimu_214d:  0xFA001A,
-    locationnames.csl4_reimu_214d:  0xFA001B,
-    locationnames.csl1_reimu_214a1: 0xFA001C,
-    locationnames.csl2_reimu_214a1: 0xFA001D,
-    locationnames.csl3_reimu_214a1: 0xFA001E,
-    locationnames.csl4_reimu_214a1: 0xFA001F,
-    locationnames.csl1_reimu_214a2: 0xFA0020,
-    locationnames.csl2_reimu_214a2: 0xFA0021,
-    locationnames.csl3_reimu_214a2: 0xFA0022,
-    locationnames.csl4_reimu_214a2: 0xFA0023,
-    locationnames.csl1_reimu_421d:  0xFA0024,
-    locationnames.csl2_reimu_421d:  0xFA0025,
-    locationnames.csl3_reimu_421d:  0xFA0026,
-    locationnames.csl4_reimu_421d:  0xFA0027,
-    locationnames.csl1_reimu_421a1: 0xFA0028,
-    locationnames.csl2_reimu_421a1: 0xFA0029,
-    locationnames.csl3_reimu_421a1: 0xFA002A,
-    locationnames.csl4_reimu_421a1: 0xFA002B,
-    locationnames.csl1_reimu_421a2: 0xFA002C,
-    locationnames.csl2_reimu_421a2: 0xFA002D,
-    locationnames.csl3_reimu_421a2: 0xFA002E,
-    locationnames.csl4_reimu_421a2: 0xFA002F,
+    locationnames.cslk1_reimu_236d:  0xFA0000,
+    locationnames.cslk2_reimu_236d:  0xFA0001,
+    locationnames.cslk4_reimu_236d:  0xFA0002,
+    locationnames.cslk3_reimu_236d:  0xFA0003,
+    locationnames.cslk1_reimu_236a1: 0xFA0004,
+    locationnames.cslk2_reimu_236a1: 0xFA0005,
+    locationnames.cslk3_reimu_236a1: 0xFA0006,
+    locationnames.cslk4_reimu_236a1: 0xFA0007,
+    locationnames.cslk1_reimu_236a2: 0xFA0008,
+    locationnames.cslk2_reimu_236a2: 0xFA0009,
+    locationnames.cslk3_reimu_236a2: 0xFA000A,
+    locationnames.cslk4_reimu_236a2: 0xFA000B,
+    locationnames.cslk1_reimu_623d:  0xFA000C,
+    locationnames.cslk2_reimu_623d:  0xFA000D,
+    locationnames.cslk3_reimu_623d:  0xFA000E,
+    locationnames.cslk4_reimu_623d:  0xFA000F,
+    locationnames.cslk1_reimu_623a1: 0xFA0010,
+    locationnames.cslk2_reimu_623a1: 0xFA0011,
+    locationnames.cslk3_reimu_623a1: 0xFA0012,
+    locationnames.cslk4_reimu_623a1: 0xFA0013,
+    locationnames.cslk1_reimu_623a2: 0xFA0014,
+    locationnames.cslk2_reimu_623a2: 0xFA0015,
+    locationnames.cslk3_reimu_623a2: 0xFA0016,
+    locationnames.cslk4_reimu_623a2: 0xFA0017,
+    locationnames.cslk1_reimu_214d:  0xFA0018,
+    locationnames.cslk2_reimu_214d:  0xFA0019,
+    locationnames.cslk3_reimu_214d:  0xFA001A,
+    locationnames.cslk4_reimu_214d:  0xFA001B,
+    locationnames.cslk1_reimu_214a1: 0xFA001C,
+    locationnames.cslk2_reimu_214a1: 0xFA001D,
+    locationnames.cslk3_reimu_214a1: 0xFA001E,
+    locationnames.cslk4_reimu_214a1: 0xFA001F,
+    locationnames.cslk1_reimu_214a2: 0xFA0020,
+    locationnames.cslk2_reimu_214a2: 0xFA0021,
+    locationnames.cslk3_reimu_214a2: 0xFA0022,
+    locationnames.cslk4_reimu_214a2: 0xFA0023,
+    locationnames.cslk1_reimu_421d:  0xFA0024,
+    locationnames.cslk2_reimu_421d:  0xFA0025,
+    locationnames.cslk3_reimu_421d:  0xFA0026,
+    locationnames.cslk4_reimu_421d:  0xFA0027,
+    locationnames.cslk1_reimu_421a1: 0xFA0028,
+    locationnames.cslk2_reimu_421a1: 0xFA0029,
+    locationnames.cslk3_reimu_421a1: 0xFA002A,
+    locationnames.cslk4_reimu_421a1: 0xFA002B,
+    locationnames.cslk1_reimu_421a2: 0xFA002C,
+    locationnames.cslk2_reimu_421a2: 0xFA002D,
+    locationnames.cslk3_reimu_421a2: 0xFA002E,
+    locationnames.cslk4_reimu_421a2: 0xFA002F,
 
 }
 
@@ -1628,54 +1628,54 @@ reimu_spell_loc_table = { #0xFA0030 - FA0057
 }
 
 marisa_skill_loc_table = { #0xFA0100 - FA012F
-    locationnames.csl1_marisa_236d:   0xFA0100,
-    locationnames.csl2_marisa_236d:   0xFA0101,
-    locationnames.csl3_marisa_236d:   0xFA0102,
-    locationnames.csl4_marisa_236d:   0xFA0103,
-    locationnames.csl1_marisa_236a1:  0xFA0104,
-    locationnames.csl2_marisa_236a1:  0xFA0105,
-    locationnames.csl3_marisa_236a1:  0xFA0106,
-    locationnames.csl4_marisa_236a1:  0xFA0107,
-    locationnames.csl1_marisa_236a2:  0xFA0108,
-    locationnames.csl2_marisa_236a2:  0xFA0109,
-    locationnames.csl3_marisa_236a2:  0xFA010A,
-    locationnames.csl4_marisa_236a2:  0xFA010B,
-    locationnames.csl1_marisa_623d:   0xFA010C,
-    locationnames.csl2_marisa_623d:   0xFA010D,
-    locationnames.csl3_marisa_623d:   0xFA010E,
-    locationnames.csl4_marisa_623d:   0xFA010F,
-    locationnames.csl1_marisa_623a1:  0xFA0110,
-    locationnames.csl2_marisa_623a1:  0xFA0111,
-    locationnames.csl3_marisa_623a1:  0xFA0112,
-    locationnames.csl4_marisa_623a1:  0xFA0113,
-    locationnames.csl1_marisa_623a2:  0xFA0114,
-    locationnames.csl2_marisa_623a2:  0xFA0115,
-    locationnames.csl3_marisa_623a2:  0xFA0116,
-    locationnames.csl4_marisa_623a2:  0xFA0117,
-    locationnames.csl1_marisa_214d:   0xFA0118,
-    locationnames.csl2_marisa_214d:   0xFA0119,
-    locationnames.csl3_marisa_214d:   0xFA011A,
-    locationnames.csl4_marisa_214d:   0xFA011B,
-    locationnames.csl1_marisa_214a1:  0xFA011C,
-    locationnames.csl2_marisa_214a1:  0xFA011D,
-    locationnames.csl3_marisa_214a1:  0xFA011E,
-    locationnames.csl4_marisa_214a1:  0xFA011F,
-    locationnames.csl1_marisa_214a2:  0xFA0120,
-    locationnames.csl2_marisa_214a2:  0xFA0121,
-    locationnames.csl3_marisa_214a2:  0xFA0122,
-    locationnames.csl4_marisa_214a2:  0xFA0123,
-    locationnames.csl1_marisa_22d:    0xFA0124,
-    locationnames.csl2_marisa_22d:    0xFA0125,
-    locationnames.csl3_marisa_22d:    0xFA0126,
-    locationnames.csl4_marisa_22d:    0xFA0127,
-    locationnames.csl1_marisa_22a1:   0xFA0128,
-    locationnames.csl2_marisa_22a1:   0xFA0129,
-    locationnames.csl3_marisa_22a1:   0xFA012A,
-    locationnames.csl4_marisa_22a1:   0xFA012B,
-    locationnames.csl1_marisa_22a2:   0xFA012C,
-    locationnames.csl2_marisa_22a2:   0xFA012D,
-    locationnames.csl3_marisa_22a2:   0xFA012E,
-    locationnames.csl4_marisa_22a2:   0xFA012F,
+    locationnames.cslk1_marisa_236d:   0xFA0100,
+    locationnames.cslk2_marisa_236d:   0xFA0101,
+    locationnames.cslk3_marisa_236d:   0xFA0102,
+    locationnames.cslk4_marisa_236d:   0xFA0103,
+    locationnames.cslk1_marisa_236a1:  0xFA0104,
+    locationnames.cslk2_marisa_236a1:  0xFA0105,
+    locationnames.cslk3_marisa_236a1:  0xFA0106,
+    locationnames.cslk4_marisa_236a1:  0xFA0107,
+    locationnames.cslk1_marisa_236a2:  0xFA0108,
+    locationnames.cslk2_marisa_236a2:  0xFA0109,
+    locationnames.cslk3_marisa_236a2:  0xFA010A,
+    locationnames.cslk4_marisa_236a2:  0xFA010B,
+    locationnames.cslk1_marisa_623d:   0xFA010C,
+    locationnames.cslk2_marisa_623d:   0xFA010D,
+    locationnames.cslk3_marisa_623d:   0xFA010E,
+    locationnames.cslk4_marisa_623d:   0xFA010F,
+    locationnames.cslk1_marisa_623a1:  0xFA0110,
+    locationnames.cslk2_marisa_623a1:  0xFA0111,
+    locationnames.cslk3_marisa_623a1:  0xFA0112,
+    locationnames.cslk4_marisa_623a1:  0xFA0113,
+    locationnames.cslk1_marisa_623a2:  0xFA0114,
+    locationnames.cslk2_marisa_623a2:  0xFA0115,
+    locationnames.cslk3_marisa_623a2:  0xFA0116,
+    locationnames.cslk4_marisa_623a2:  0xFA0117,
+    locationnames.cslk1_marisa_214d:   0xFA0118,
+    locationnames.cslk2_marisa_214d:   0xFA0119,
+    locationnames.cslk3_marisa_214d:   0xFA011A,
+    locationnames.cslk4_marisa_214d:   0xFA011B,
+    locationnames.cslk1_marisa_214a1:  0xFA011C,
+    locationnames.cslk2_marisa_214a1:  0xFA011D,
+    locationnames.cslk3_marisa_214a1:  0xFA011E,
+    locationnames.cslk4_marisa_214a1:  0xFA011F,
+    locationnames.cslk1_marisa_214a2:  0xFA0120,
+    locationnames.cslk2_marisa_214a2:  0xFA0121,
+    locationnames.cslk3_marisa_214a2:  0xFA0122,
+    locationnames.cslk4_marisa_214a2:  0xFA0123,
+    locationnames.cslk1_marisa_22d:    0xFA0124,
+    locationnames.cslk2_marisa_22d:    0xFA0125,
+    locationnames.cslk3_marisa_22d:    0xFA0126,
+    locationnames.cslk4_marisa_22d:    0xFA0127,
+    locationnames.cslk1_marisa_22a1:   0xFA0128,
+    locationnames.cslk2_marisa_22a1:   0xFA0129,
+    locationnames.cslk3_marisa_22a1:   0xFA012A,
+    locationnames.cslk4_marisa_22a1:   0xFA012B,
+    locationnames.cslk1_marisa_22a2:   0xFA012C,
+    locationnames.cslk2_marisa_22a2:   0xFA012D,
+    locationnames.cslk3_marisa_22a2:   0xFA012E,
+    locationnames.cslk4_marisa_22a2:   0xFA012F,
 }
 
 marisa_spell_loc_table = { #0xFA0130 - FA0167
@@ -1738,54 +1738,54 @@ marisa_spell_loc_table = { #0xFA0130 - FA0167
 }
 
 sakuya_skill_loc_table = { #0xFA0200 - FA022F
-    locationnames.csl1_sakuya_236d:   0xFA0200, 
-    locationnames.csl2_sakuya_236d:   0xFA0201, 
-    locationnames.csl3_sakuya_236d:   0xFA0202, 
-    locationnames.csl4_sakuya_236d:   0xFA0203, 
-    locationnames.csl1_sakuya_236a1:  0xFA0204, 
-    locationnames.csl2_sakuya_236a1:  0xFA0205, 
-    locationnames.csl3_sakuya_236a1:  0xFA0206, 
-    locationnames.csl4_sakuya_236a1:  0xFA0207, 
-    locationnames.csl1_sakuya_236a2:  0xFA0208, 
-    locationnames.csl2_sakuya_236a2:  0xFA0209, 
-    locationnames.csl3_sakuya_236a2:  0xFA020A, 
-    locationnames.csl4_sakuya_236a2:  0xFA020B, 
-    locationnames.csl1_sakuya_623d:   0xFA020C, 
-    locationnames.csl2_sakuya_623d:   0xFA020D, 
-    locationnames.csl3_sakuya_623d:   0xFA020E, 
-    locationnames.csl4_sakuya_623d:   0xFA020F, 
-    locationnames.csl1_sakuya_623a1:  0xFA0210, 
-    locationnames.csl2_sakuya_623a1:  0xFA0211, 
-    locationnames.csl3_sakuya_623a1:  0xFA0212, 
-    locationnames.csl4_sakuya_623a1:  0xFA0213, 
-    locationnames.csl1_sakuya_623a2:  0xFA0214, 
-    locationnames.csl2_sakuya_623a2:  0xFA0215, 
-    locationnames.csl3_sakuya_623a2:  0xFA0216, 
-    locationnames.csl4_sakuya_623a2:  0xFA0217, 
-    locationnames.csl1_sakuya_214d:   0xFA0218, 
-    locationnames.csl2_sakuya_214d:   0xFA0219, 
-    locationnames.csl3_sakuya_214d:   0xFA021A, 
-    locationnames.csl4_sakuya_214d:   0xFA021B, 
-    locationnames.csl1_sakuya_214a1:  0xFA021C, 
-    locationnames.csl2_sakuya_214a1:  0xFA021D, 
-    locationnames.csl3_sakuya_214a1:  0xFA021E, 
-    locationnames.csl4_sakuya_214a1:  0xFA021F, 
-    locationnames.csl1_sakuya_214a2:  0xFA0220, 
-    locationnames.csl2_sakuya_214a2:  0xFA0221, 
-    locationnames.csl3_sakuya_214a2:  0xFA0222, 
-    locationnames.csl4_sakuya_214a2:  0xFA0223, 
-    locationnames.csl1_sakuya_22d:    0xFA0224, 
-    locationnames.csl2_sakuya_22d:    0xFA0225, 
-    locationnames.csl3_sakuya_22d:    0xFA0226, 
-    locationnames.csl4_sakuya_22d:    0xFA0227, 
-    locationnames.csl1_sakuya_22a1:   0xFA0228, 
-    locationnames.csl2_sakuya_22a1:   0xFA0229, 
-    locationnames.csl3_sakuya_22a1:   0xFA022A, 
-    locationnames.csl4_sakuya_22a1:   0xFA022B, 
-    locationnames.csl1_sakuya_22a2:   0xFA022C, 
-    locationnames.csl2_sakuya_22a2:   0xFA022D, 
-    locationnames.csl3_sakuya_22a2:   0xFA022E, 
-    locationnames.csl4_sakuya_22a2:   0xFA022F, 
+    locationnames.cslk1_sakuya_236d:   0xFA0200, 
+    locationnames.cslk2_sakuya_236d:   0xFA0201, 
+    locationnames.cslk3_sakuya_236d:   0xFA0202, 
+    locationnames.cslk4_sakuya_236d:   0xFA0203, 
+    locationnames.cslk1_sakuya_236a1:  0xFA0204, 
+    locationnames.cslk2_sakuya_236a1:  0xFA0205, 
+    locationnames.cslk3_sakuya_236a1:  0xFA0206, 
+    locationnames.cslk4_sakuya_236a1:  0xFA0207, 
+    locationnames.cslk1_sakuya_236a2:  0xFA0208, 
+    locationnames.cslk2_sakuya_236a2:  0xFA0209, 
+    locationnames.cslk3_sakuya_236a2:  0xFA020A, 
+    locationnames.cslk4_sakuya_236a2:  0xFA020B, 
+    locationnames.cslk1_sakuya_623d:   0xFA020C, 
+    locationnames.cslk2_sakuya_623d:   0xFA020D, 
+    locationnames.cslk3_sakuya_623d:   0xFA020E, 
+    locationnames.cslk4_sakuya_623d:   0xFA020F, 
+    locationnames.cslk1_sakuya_623a1:  0xFA0210, 
+    locationnames.cslk2_sakuya_623a1:  0xFA0211, 
+    locationnames.cslk3_sakuya_623a1:  0xFA0212, 
+    locationnames.cslk4_sakuya_623a1:  0xFA0213, 
+    locationnames.cslk1_sakuya_623a2:  0xFA0214, 
+    locationnames.cslk2_sakuya_623a2:  0xFA0215, 
+    locationnames.cslk3_sakuya_623a2:  0xFA0216, 
+    locationnames.cslk4_sakuya_623a2:  0xFA0217, 
+    locationnames.cslk1_sakuya_214d:   0xFA0218, 
+    locationnames.cslk2_sakuya_214d:   0xFA0219, 
+    locationnames.cslk3_sakuya_214d:   0xFA021A, 
+    locationnames.cslk4_sakuya_214d:   0xFA021B, 
+    locationnames.cslk1_sakuya_214a1:  0xFA021C, 
+    locationnames.cslk2_sakuya_214a1:  0xFA021D, 
+    locationnames.cslk3_sakuya_214a1:  0xFA021E, 
+    locationnames.cslk4_sakuya_214a1:  0xFA021F, 
+    locationnames.cslk1_sakuya_214a2:  0xFA0220, 
+    locationnames.cslk2_sakuya_214a2:  0xFA0221, 
+    locationnames.cslk3_sakuya_214a2:  0xFA0222, 
+    locationnames.cslk4_sakuya_214a2:  0xFA0223, 
+    locationnames.cslk1_sakuya_22d:    0xFA0224, 
+    locationnames.cslk2_sakuya_22d:    0xFA0225, 
+    locationnames.cslk3_sakuya_22d:    0xFA0226, 
+    locationnames.cslk4_sakuya_22d:    0xFA0227, 
+    locationnames.cslk1_sakuya_22a1:   0xFA0228, 
+    locationnames.cslk2_sakuya_22a1:   0xFA0229, 
+    locationnames.cslk3_sakuya_22a1:   0xFA022A, 
+    locationnames.cslk4_sakuya_22a1:   0xFA022B, 
+    locationnames.cslk1_sakuya_22a2:   0xFA022C, 
+    locationnames.cslk2_sakuya_22a2:   0xFA022D, 
+    locationnames.cslk3_sakuya_22a2:   0xFA022E, 
+    locationnames.cslk4_sakuya_22a2:   0xFA022F, 
 }
 
 sakuya_spell_loc_table = { #0xFA0230 - FA0263
@@ -1845,54 +1845,54 @@ sakuya_spell_loc_table = { #0xFA0230 - FA0263
 }
 
 alice_skill_loc_table = { #0xFA0300 - FA032F
-    locationnames.csl1_alice_236d:    0xFA0300,
-    locationnames.csl2_alice_236d:    0xFA0301,
-    locationnames.csl3_alice_236d:    0xFA0302,
-    locationnames.csl4_alice_236d:    0xFA0303,
-    locationnames.csl1_alice_236a1:   0xFA0304,
-    locationnames.csl2_alice_236a1:   0xFA0305,
-    locationnames.csl3_alice_236a1:   0xFA0306,
-    locationnames.csl4_alice_236a1:   0xFA0307,
-    locationnames.csl1_alice_236a2:   0xFA0308,
-    locationnames.csl2_alice_236a2:   0xFA0309,
-    locationnames.csl3_alice_236a2:   0xFA030A,
-    locationnames.csl4_alice_236a2:   0xFA030B,
-    locationnames.csl1_alice_623d:    0xFA030C,
-    locationnames.csl2_alice_623d:    0xFA030D,
-    locationnames.csl3_alice_623d:    0xFA030E,
-    locationnames.csl4_alice_623d:    0xFA030F,
-    locationnames.csl1_alice_623a1:   0xFA0310,
-    locationnames.csl2_alice_623a1:   0xFA0311,
-    locationnames.csl3_alice_623a1:   0xFA0312,
-    locationnames.csl4_alice_623a1:   0xFA0313,
-    locationnames.csl1_alice_623a2:   0xFA0314,
-    locationnames.csl2_alice_623a2:   0xFA0315,
-    locationnames.csl3_alice_623a2:   0xFA0316,
-    locationnames.csl4_alice_623a2:   0xFA0317,
-    locationnames.csl1_alice_214d:    0xFA0318,
-    locationnames.csl2_alice_214d:    0xFA0319,
-    locationnames.csl3_alice_214d:    0xFA031A,
-    locationnames.csl4_alice_214d:    0xFA031B,
-    locationnames.csl1_alice_214a1:   0xFA031C,
-    locationnames.csl2_alice_214a1:   0xFA031D,
-    locationnames.csl3_alice_214a1:   0xFA031E,
-    locationnames.csl4_alice_214a1:   0xFA031F,
-    locationnames.csl1_alice_214a2:   0xFA0320,
-    locationnames.csl2_alice_214a2:   0xFA0321,
-    locationnames.csl3_alice_214a2:   0xFA0322,
-    locationnames.csl4_alice_214a2:   0xFA0323,
-    locationnames.csl1_alice_22d:     0xFA0324,
-    locationnames.csl2_alice_22d:     0xFA0325,
-    locationnames.csl3_alice_22d:     0xFA0326,
-    locationnames.csl4_alice_22d:     0xFA0327,
-    locationnames.csl1_alice_22a1:    0xFA0328,
-    locationnames.csl2_alice_22a1:    0xFA0329,
-    locationnames.csl3_alice_22a1:    0xFA032A,
-    locationnames.csl4_alice_22a1:    0xFA032B,
-    locationnames.csl1_alice_22a2:    0xFA032C,
-    locationnames.csl2_alice_22a2:    0xFA032D,
-    locationnames.csl3_alice_22a2:    0xFA032E,
-    locationnames.csl4_alice_22a2:    0xFA032F,
+    locationnames.cslk1_alice_236d:    0xFA0300,
+    locationnames.cslk2_alice_236d:    0xFA0301,
+    locationnames.cslk3_alice_236d:    0xFA0302,
+    locationnames.cslk4_alice_236d:    0xFA0303,
+    locationnames.cslk1_alice_236a1:   0xFA0304,
+    locationnames.cslk2_alice_236a1:   0xFA0305,
+    locationnames.cslk3_alice_236a1:   0xFA0306,
+    locationnames.cslk4_alice_236a1:   0xFA0307,
+    locationnames.cslk1_alice_236a2:   0xFA0308,
+    locationnames.cslk2_alice_236a2:   0xFA0309,
+    locationnames.cslk3_alice_236a2:   0xFA030A,
+    locationnames.cslk4_alice_236a2:   0xFA030B,
+    locationnames.cslk1_alice_623d:    0xFA030C,
+    locationnames.cslk2_alice_623d:    0xFA030D,
+    locationnames.cslk3_alice_623d:    0xFA030E,
+    locationnames.cslk4_alice_623d:    0xFA030F,
+    locationnames.cslk1_alice_623a1:   0xFA0310,
+    locationnames.cslk2_alice_623a1:   0xFA0311,
+    locationnames.cslk3_alice_623a1:   0xFA0312,
+    locationnames.cslk4_alice_623a1:   0xFA0313,
+    locationnames.cslk1_alice_623a2:   0xFA0314,
+    locationnames.cslk2_alice_623a2:   0xFA0315,
+    locationnames.cslk3_alice_623a2:   0xFA0316,
+    locationnames.cslk4_alice_623a2:   0xFA0317,
+    locationnames.cslk1_alice_214d:    0xFA0318,
+    locationnames.cslk2_alice_214d:    0xFA0319,
+    locationnames.cslk3_alice_214d:    0xFA031A,
+    locationnames.cslk4_alice_214d:    0xFA031B,
+    locationnames.cslk1_alice_214a1:   0xFA031C,
+    locationnames.cslk2_alice_214a1:   0xFA031D,
+    locationnames.cslk3_alice_214a1:   0xFA031E,
+    locationnames.cslk4_alice_214a1:   0xFA031F,
+    locationnames.cslk1_alice_214a2:   0xFA0320,
+    locationnames.cslk2_alice_214a2:   0xFA0321,
+    locationnames.cslk3_alice_214a2:   0xFA0322,
+    locationnames.cslk4_alice_214a2:   0xFA0323,
+    locationnames.cslk1_alice_22d:     0xFA0324,
+    locationnames.cslk2_alice_22d:     0xFA0325,
+    locationnames.cslk3_alice_22d:     0xFA0326,
+    locationnames.cslk4_alice_22d:     0xFA0327,
+    locationnames.cslk1_alice_22a1:    0xFA0328,
+    locationnames.cslk2_alice_22a1:    0xFA0329,
+    locationnames.cslk3_alice_22a1:    0xFA032A,
+    locationnames.cslk4_alice_22a1:    0xFA032B,
+    locationnames.cslk1_alice_22a2:    0xFA032C,
+    locationnames.cslk2_alice_22a2:    0xFA032D,
+    locationnames.cslk3_alice_22a2:    0xFA032E,
+    locationnames.cslk4_alice_22a2:    0xFA032F,
 
 }
 
@@ -1949,66 +1949,66 @@ alice_spell_loc_table = { #0xFA0330 - FA035F
 }
 
 patchouli_skill_loc_table = { #0xFA0400 - FA043B
-    locationnames.csl1_patchouli_236d:    0xFA0400,
-    locationnames.csl2_patchouli_236d:    0xFA0401,
-    locationnames.csl3_patchouli_236d:    0xFA0402,
-    locationnames.csl4_patchouli_236d:    0xFA0403,
-    locationnames.csl1_patchouli_236a1:   0xFA0404,
-    locationnames.csl2_patchouli_236a1:   0xFA0405,
-    locationnames.csl3_patchouli_236a1:   0xFA0406,
-    locationnames.csl4_patchouli_236a1:   0xFA0407,
-    locationnames.csl1_patchouli_236a2:   0xFA0408,
-    locationnames.csl2_patchouli_236a2:   0xFA0409,
-    locationnames.csl3_patchouli_236a2:   0xFA040A,
-    locationnames.csl4_patchouli_236a2:   0xFA040B,
-    locationnames.csl1_patchouli_623d:    0xFA040C,
-    locationnames.csl2_patchouli_623d:    0xFA040D,
-    locationnames.csl3_patchouli_623d:    0xFA040E,
-    locationnames.csl4_patchouli_623d:    0xFA040F,
-    locationnames.csl1_patchouli_623a1:   0xFA0410,
-    locationnames.csl2_patchouli_623a1:   0xFA0411,
-    locationnames.csl3_patchouli_623a1:   0xFA0412,
-    locationnames.csl4_patchouli_623a1:   0xFA0413,
-    locationnames.csl1_patchouli_623a2:   0xFA0414,
-    locationnames.csl2_patchouli_623a2:   0xFA0415,
-    locationnames.csl3_patchouli_623a2:   0xFA0416,
-    locationnames.csl4_patchouli_623a2:   0xFA0417,
-    locationnames.csl1_patchouli_214d:    0xFA0418,
-    locationnames.csl4_patchouli_214d:    0xFA0419,
-    locationnames.csl3_patchouli_214d:    0xFA041A,
-    locationnames.csl4_patchouli_214d:    0xFA041B,
-    locationnames.csl1_patchouli_214a1:   0xFA041C,
-    locationnames.csl2_patchouli_214a1:   0xFA041D,
-    locationnames.csl3_patchouli_214a1:   0xFA041E,
-    locationnames.csl4_patchouli_214a1:   0xFA041F,
-    locationnames.csl1_patchouli_214a2:   0xFA0420,
-    locationnames.csl2_patchouli_214a2:   0xFA0421,
-    locationnames.csl3_patchouli_214a2:   0xFA0422,
-    locationnames.csl4_patchouli_214a2:   0xFA0423,
-    locationnames.csl1_patchouli_421d:    0xFA0424,
-    locationnames.csl2_patchouli_421d:    0xFA0425,
-    locationnames.csl3_patchouli_421d:    0xFA0426,
-    locationnames.csl4_patchouli_421d:    0xFA0427,
-    locationnames.csl1_patchouli_421a1:   0xFA0428,
-    locationnames.csl2_patchouli_421a1:   0xFA0429,
-    locationnames.csl3_patchouli_421a1:   0xFA042A,
-    locationnames.csl4_patchouli_421a1:   0xFA042B,
-    locationnames.csl1_patchouli_421a2:   0xFA042C,
-    locationnames.csl2_patchouli_421a2:   0xFA042D,
-    locationnames.csl3_patchouli_421a2:   0xFA042E,
-    locationnames.csl4_patchouli_421a2:   0xFA042F,
-    locationnames.csl1_patchouli_22d:     0xFA0430,
-    locationnames.csl2_patchouli_22d:     0xFA0431,
-    locationnames.csl3_patchouli_22d:     0xFA0432,
-    locationnames.csl4_patchouli_22d:     0xFA0433,
-    locationnames.csl1_patchouli_22a1:    0xFA0434,
-    locationnames.csl2_patchouli_22a1:    0xFA0435,
-    locationnames.csl3_patchouli_22a1:    0xFA0436,
-    locationnames.csl4_patchouli_22a1:    0xFA0437,
-    locationnames.csl1_patchouli_22a2:    0xFA0438,
-    locationnames.csl2_patchouli_22a2:    0xFA0439,
-    locationnames.csl3_patchouli_22a2:    0xFA043A,
-    locationnames.csl4_patchouli_22a2:    0xFA043B
+    locationnames.cslk1_patchouli_236d:    0xFA0400,
+    locationnames.cslk2_patchouli_236d:    0xFA0401,
+    locationnames.cslk3_patchouli_236d:    0xFA0402,
+    locationnames.cslk4_patchouli_236d:    0xFA0403,
+    locationnames.cslk1_patchouli_236a1:   0xFA0404,
+    locationnames.cslk2_patchouli_236a1:   0xFA0405,
+    locationnames.cslk3_patchouli_236a1:   0xFA0406,
+    locationnames.cslk4_patchouli_236a1:   0xFA0407,
+    locationnames.cslk1_patchouli_236a2:   0xFA0408,
+    locationnames.cslk2_patchouli_236a2:   0xFA0409,
+    locationnames.cslk3_patchouli_236a2:   0xFA040A,
+    locationnames.cslk4_patchouli_236a2:   0xFA040B,
+    locationnames.cslk1_patchouli_623d:    0xFA040C,
+    locationnames.cslk2_patchouli_623d:    0xFA040D,
+    locationnames.cslk3_patchouli_623d:    0xFA040E,
+    locationnames.cslk4_patchouli_623d:    0xFA040F,
+    locationnames.cslk1_patchouli_623a1:   0xFA0410,
+    locationnames.cslk2_patchouli_623a1:   0xFA0411,
+    locationnames.cslk3_patchouli_623a1:   0xFA0412,
+    locationnames.cslk4_patchouli_623a1:   0xFA0413,
+    locationnames.cslk1_patchouli_623a2:   0xFA0414,
+    locationnames.cslk2_patchouli_623a2:   0xFA0415,
+    locationnames.cslk3_patchouli_623a2:   0xFA0416,
+    locationnames.cslk4_patchouli_623a2:   0xFA0417,
+    locationnames.cslk1_patchouli_214d:    0xFA0418,
+    locationnames.cslk4_patchouli_214d:    0xFA0419,
+    locationnames.cslk3_patchouli_214d:    0xFA041A,
+    locationnames.cslk4_patchouli_214d:    0xFA041B,
+    locationnames.cslk1_patchouli_214a1:   0xFA041C,
+    locationnames.cslk2_patchouli_214a1:   0xFA041D,
+    locationnames.cslk3_patchouli_214a1:   0xFA041E,
+    locationnames.cslk4_patchouli_214a1:   0xFA041F,
+    locationnames.cslk1_patchouli_214a2:   0xFA0420,
+    locationnames.cslk2_patchouli_214a2:   0xFA0421,
+    locationnames.cslk3_patchouli_214a2:   0xFA0422,
+    locationnames.cslk4_patchouli_214a2:   0xFA0423,
+    locationnames.cslk1_patchouli_421d:    0xFA0424,
+    locationnames.cslk2_patchouli_421d:    0xFA0425,
+    locationnames.cslk3_patchouli_421d:    0xFA0426,
+    locationnames.cslk4_patchouli_421d:    0xFA0427,
+    locationnames.cslk1_patchouli_421a1:   0xFA0428,
+    locationnames.cslk2_patchouli_421a1:   0xFA0429,
+    locationnames.cslk3_patchouli_421a1:   0xFA042A,
+    locationnames.cslk4_patchouli_421a1:   0xFA042B,
+    locationnames.cslk1_patchouli_421a2:   0xFA042C,
+    locationnames.cslk2_patchouli_421a2:   0xFA042D,
+    locationnames.cslk3_patchouli_421a2:   0xFA042E,
+    locationnames.cslk4_patchouli_421a2:   0xFA042F,
+    locationnames.cslk1_patchouli_22d:     0xFA0430,
+    locationnames.cslk2_patchouli_22d:     0xFA0431,
+    locationnames.cslk3_patchouli_22d:     0xFA0432,
+    locationnames.cslk4_patchouli_22d:     0xFA0433,
+    locationnames.cslk1_patchouli_22a1:    0xFA0434,
+    locationnames.cslk2_patchouli_22a1:    0xFA0435,
+    locationnames.cslk3_patchouli_22a1:    0xFA0436,
+    locationnames.cslk4_patchouli_22a1:    0xFA0437,
+    locationnames.cslk1_patchouli_22a2:    0xFA0438,
+    locationnames.cslk2_patchouli_22a2:    0xFA0439,
+    locationnames.cslk3_patchouli_22a2:    0xFA043A,
+    locationnames.cslk4_patchouli_22a2:    0xFA043B
 
 }
 
@@ -2065,54 +2065,54 @@ patchouli_spell_loc_table = { #0xFA043C - FA046B
 }
 
 youmu_skill_loc_table = { #0xFA0500 - FA052F
-    locationnames.csl1_youmu_236d:   0xFA0500,
-    locationnames.csl2_youmu_236d:   0xFA0501,
-    locationnames.csl3_youmu_236d:   0xFA0502,
-    locationnames.csl4_youmu_236d:   0xFA0503,
-    locationnames.csl1_youmu_236a1:  0xFA0504,
-    locationnames.csl2_youmu_236a1:  0xFA0505,
-    locationnames.csl3_youmu_236a1:  0xFA0506,
-    locationnames.csl4_youmu_236a1:  0xFA0507,
-    locationnames.csl1_youmu_236a2:  0xFA0508,
-    locationnames.csl2_youmu_236a2:  0xFA0509,
-    locationnames.csl3_youmu_236a2:  0xFA050A,
-    locationnames.csl4_youmu_236a2:  0xFA050B,
-    locationnames.csl1_youmu_623d:   0xFA050C,
-    locationnames.csl2_youmu_623d:   0xFA050D,
-    locationnames.csl3_youmu_623d:   0xFA050E,
-    locationnames.csl4_youmu_623d:   0xFA050F,
-    locationnames.csl1_youmu_623a1:  0xFA0510,
-    locationnames.csl2_youmu_623a1:  0xFA0511,
-    locationnames.csl3_youmu_623a1:  0xFA0512,
-    locationnames.csl4_youmu_623a1:  0xFA0513,
-    locationnames.csl1_youmu_623a2:  0xFA0514,
-    locationnames.csl2_youmu_623a2:  0xFA0515,
-    locationnames.csl3_youmu_623a2:  0xFA0516,
-    locationnames.csl4_youmu_623a2:  0xFA0517,
-    locationnames.csl1_youmu_214d:   0xFA0518,
-    locationnames.csl2_youmu_214d:   0xFA0519,
-    locationnames.csl3_youmu_214d:   0xFA051A,
-    locationnames.csl4_youmu_214d:   0xFA051B,
-    locationnames.csl1_youmu_214a1:  0xFA051C,
-    locationnames.csl2_youmu_214a1:  0xFA051D,
-    locationnames.csl3_youmu_214a1:  0xFA051E,
-    locationnames.csl4_youmu_214a1:  0xFA051F,
-    locationnames.csl1_youmu_214a2:  0xFA0520,
-    locationnames.csl2_youmu_214a2:  0xFA0521,
-    locationnames.csl3_youmu_214a2:  0xFA0522,
-    locationnames.csl4_youmu_214a2:  0xFA0523,
-    locationnames.csl1_youmu_22d:    0xFA0524,
-    locationnames.csl2_youmu_22d:    0xFA0525,
-    locationnames.csl3_youmu_22d:    0xFA0526,
-    locationnames.csl4_youmu_22d:    0xFA0527,
-    locationnames.csl1_youmu_22a1:   0xFA0528,
-    locationnames.csl2_youmu_22a1:   0xFA0529,
-    locationnames.csl3_youmu_22a1:   0xFA052A,
-    locationnames.csl4_youmu_22a1:   0xFA052B,
-    locationnames.csl1_youmu_22a2:   0xFA052C,
-    locationnames.csl2_youmu_22a2:   0xFA052D,
-    locationnames.csl3_youmu_22a2:   0xFA052E,
-    locationnames.csl4_youmu_22a2:   0xFA052F,
+    locationnames.cslk1_youmu_236d:   0xFA0500,
+    locationnames.cslk2_youmu_236d:   0xFA0501,
+    locationnames.cslk3_youmu_236d:   0xFA0502,
+    locationnames.cslk4_youmu_236d:   0xFA0503,
+    locationnames.cslk1_youmu_236a1:  0xFA0504,
+    locationnames.cslk2_youmu_236a1:  0xFA0505,
+    locationnames.cslk3_youmu_236a1:  0xFA0506,
+    locationnames.cslk4_youmu_236a1:  0xFA0507,
+    locationnames.cslk1_youmu_236a2:  0xFA0508,
+    locationnames.cslk2_youmu_236a2:  0xFA0509,
+    locationnames.cslk3_youmu_236a2:  0xFA050A,
+    locationnames.cslk4_youmu_236a2:  0xFA050B,
+    locationnames.cslk1_youmu_623d:   0xFA050C,
+    locationnames.cslk2_youmu_623d:   0xFA050D,
+    locationnames.cslk3_youmu_623d:   0xFA050E,
+    locationnames.cslk4_youmu_623d:   0xFA050F,
+    locationnames.cslk1_youmu_623a1:  0xFA0510,
+    locationnames.cslk2_youmu_623a1:  0xFA0511,
+    locationnames.cslk3_youmu_623a1:  0xFA0512,
+    locationnames.cslk4_youmu_623a1:  0xFA0513,
+    locationnames.cslk1_youmu_623a2:  0xFA0514,
+    locationnames.cslk2_youmu_623a2:  0xFA0515,
+    locationnames.cslk3_youmu_623a2:  0xFA0516,
+    locationnames.cslk4_youmu_623a2:  0xFA0517,
+    locationnames.cslk1_youmu_214d:   0xFA0518,
+    locationnames.cslk2_youmu_214d:   0xFA0519,
+    locationnames.cslk3_youmu_214d:   0xFA051A,
+    locationnames.cslk4_youmu_214d:   0xFA051B,
+    locationnames.cslk1_youmu_214a1:  0xFA051C,
+    locationnames.cslk2_youmu_214a1:  0xFA051D,
+    locationnames.cslk3_youmu_214a1:  0xFA051E,
+    locationnames.cslk4_youmu_214a1:  0xFA051F,
+    locationnames.cslk1_youmu_214a2:  0xFA0520,
+    locationnames.cslk2_youmu_214a2:  0xFA0521,
+    locationnames.cslk3_youmu_214a2:  0xFA0522,
+    locationnames.cslk4_youmu_214a2:  0xFA0523,
+    locationnames.cslk1_youmu_22d:    0xFA0524,
+    locationnames.cslk2_youmu_22d:    0xFA0525,
+    locationnames.cslk3_youmu_22d:    0xFA0526,
+    locationnames.cslk4_youmu_22d:    0xFA0527,
+    locationnames.cslk1_youmu_22a1:   0xFA0528,
+    locationnames.cslk2_youmu_22a1:   0xFA0529,
+    locationnames.cslk3_youmu_22a1:   0xFA052A,
+    locationnames.cslk4_youmu_22a1:   0xFA052B,
+    locationnames.cslk1_youmu_22a2:   0xFA052C,
+    locationnames.cslk2_youmu_22a2:   0xFA052D,
+    locationnames.cslk3_youmu_22a2:   0xFA052E,
+    locationnames.cslk4_youmu_22a2:   0xFA052F,
 
 }
 
@@ -2161,54 +2161,54 @@ youmu_spell_loc_table = { #0xFA0530 - FA0557
 }
 
 remilia_skill_loc_table = { #0xFA0600 - FA062F
-    locationnames.csl1_remilia_236d:   0xFA0600,
-    locationnames.csl2_remilia_236d:   0xFA0601,
-    locationnames.csl3_remilia_236d:   0xFA0602,
-    locationnames.csl4_remilia_236d:   0xFA0603,
-    locationnames.csl1_remilia_236a1:  0xFA0604,
-    locationnames.csl2_remilia_236a1:  0xFA0605,
-    locationnames.csl3_remilia_236a1:  0xFA0606,
-    locationnames.csl4_remilia_236a1:  0xFA0607,
-    locationnames.csl1_remilia_236a2:  0xFA0608,
-    locationnames.csl2_remilia_236a2:  0xFA0609,
-    locationnames.csl3_remilia_236a2:  0xFA060A,
-    locationnames.csl4_remilia_236a2:  0xFA060B,
-    locationnames.csl1_remilia_623d:   0xFA060C,
-    locationnames.csl2_remilia_623d:   0xFA060D,
-    locationnames.csl3_remilia_623d:   0xFA060E,
-    locationnames.csl4_remilia_623d:   0xFA060F,
-    locationnames.csl1_remilia_623a1:  0xFA0610,
-    locationnames.csl2_remilia_623a1:  0xFA0611,
-    locationnames.csl3_remilia_623a1:  0xFA0612,
-    locationnames.csl4_remilia_623a1:  0xFA0613,
-    locationnames.csl1_remilia_623a2:  0xFA0614,
-    locationnames.csl2_remilia_623a2:  0xFA0615,
-    locationnames.csl3_remilia_623a2:  0xFA0616,
-    locationnames.csl4_remilia_623a2:  0xFA0617,
-    locationnames.csl1_remilia_214d:   0xFA0618,
-    locationnames.csl2_remilia_214d:   0xFA0619,
-    locationnames.csl3_remilia_214d:   0xFA061A,
-    locationnames.csl4_remilia_214d:   0xFA061B,
-    locationnames.csl1_remilia_214a1:  0xFA061C,
-    locationnames.csl2_remilia_214a1:  0xFA061D,
-    locationnames.csl3_remilia_214a1:  0xFA061E,
-    locationnames.csl4_remilia_214a1:  0xFA061F,
-    locationnames.csl1_remilia_214a2:  0xFA0620,
-    locationnames.csl2_remilia_214a2:  0xFA0621,
-    locationnames.csl3_remilia_214a2:  0xFA0622,
-    locationnames.csl4_remilia_214a2:  0xFA0623,
-    locationnames.csl1_remilia_22d:    0xFA0624,
-    locationnames.csl2_remilia_22d:    0xFA0625,
-    locationnames.csl3_remilia_22d:    0xFA0626,
-    locationnames.csl4_remilia_22d:    0xFA0627,
-    locationnames.csl1_remilia_22a1:   0xFA0628,
-    locationnames.csl2_remilia_22a1:   0xFA0629,
-    locationnames.csl3_remilia_22a1:   0xFA062A,
-    locationnames.csl4_remilia_22a1:   0xFA062B,
-    locationnames.csl1_remilia_22a2:   0xFA062C,
-    locationnames.csl2_remilia_22a2:   0xFA062D,
-    locationnames.csl3_remilia_22a2:   0xFA062E,
-    locationnames.csl4_remilia_22a2:   0xFA062F,
+    locationnames.cslk1_remilia_236d:   0xFA0600,
+    locationnames.cslk2_remilia_236d:   0xFA0601,
+    locationnames.cslk3_remilia_236d:   0xFA0602,
+    locationnames.cslk4_remilia_236d:   0xFA0603,
+    locationnames.cslk1_remilia_236a1:  0xFA0604,
+    locationnames.cslk2_remilia_236a1:  0xFA0605,
+    locationnames.cslk3_remilia_236a1:  0xFA0606,
+    locationnames.cslk4_remilia_236a1:  0xFA0607,
+    locationnames.cslk1_remilia_236a2:  0xFA0608,
+    locationnames.cslk2_remilia_236a2:  0xFA0609,
+    locationnames.cslk3_remilia_236a2:  0xFA060A,
+    locationnames.cslk4_remilia_236a2:  0xFA060B,
+    locationnames.cslk1_remilia_623d:   0xFA060C,
+    locationnames.cslk2_remilia_623d:   0xFA060D,
+    locationnames.cslk3_remilia_623d:   0xFA060E,
+    locationnames.cslk4_remilia_623d:   0xFA060F,
+    locationnames.cslk1_remilia_623a1:  0xFA0610,
+    locationnames.cslk2_remilia_623a1:  0xFA0611,
+    locationnames.cslk3_remilia_623a1:  0xFA0612,
+    locationnames.cslk4_remilia_623a1:  0xFA0613,
+    locationnames.cslk1_remilia_623a2:  0xFA0614,
+    locationnames.cslk2_remilia_623a2:  0xFA0615,
+    locationnames.cslk3_remilia_623a2:  0xFA0616,
+    locationnames.cslk4_remilia_623a2:  0xFA0617,
+    locationnames.cslk1_remilia_214d:   0xFA0618,
+    locationnames.cslk2_remilia_214d:   0xFA0619,
+    locationnames.cslk3_remilia_214d:   0xFA061A,
+    locationnames.cslk4_remilia_214d:   0xFA061B,
+    locationnames.cslk1_remilia_214a1:  0xFA061C,
+    locationnames.cslk2_remilia_214a1:  0xFA061D,
+    locationnames.cslk3_remilia_214a1:  0xFA061E,
+    locationnames.cslk4_remilia_214a1:  0xFA061F,
+    locationnames.cslk1_remilia_214a2:  0xFA0620,
+    locationnames.cslk2_remilia_214a2:  0xFA0621,
+    locationnames.cslk3_remilia_214a2:  0xFA0622,
+    locationnames.cslk4_remilia_214a2:  0xFA0623,
+    locationnames.cslk1_remilia_22d:    0xFA0624,
+    locationnames.cslk2_remilia_22d:    0xFA0625,
+    locationnames.cslk3_remilia_22d:    0xFA0626,
+    locationnames.cslk4_remilia_22d:    0xFA0627,
+    locationnames.cslk1_remilia_22a1:   0xFA0628,
+    locationnames.cslk2_remilia_22a1:   0xFA0629,
+    locationnames.cslk3_remilia_22a1:   0xFA062A,
+    locationnames.cslk4_remilia_22a1:   0xFA062B,
+    locationnames.cslk1_remilia_22a2:   0xFA062C,
+    locationnames.cslk2_remilia_22a2:   0xFA062D,
+    locationnames.cslk3_remilia_22a2:   0xFA062E,
+    locationnames.cslk4_remilia_22a2:   0xFA062F,
 
 }
 
@@ -2257,54 +2257,54 @@ remilia_spell_loc_table = { #0xFA0630 - FA0657
 }
 
 yuyuko_skill_loc_table = { #0xFA0700 - FA072F
-    locationnames.csl1_yuyuko_236d:   0xFA0700,
-    locationnames.csl2_yuyuko_236d:   0xFA0701,
-    locationnames.csl3_yuyuko_236d:   0xFA0702,
-    locationnames.csl4_yuyuko_236d:   0xFA0703,
-    locationnames.csl1_yuyuko_236a1:  0xFA0704,
-    locationnames.csl2_yuyuko_236a1:  0xFA0705,
-    locationnames.csl3_yuyuko_236a1:  0xFA0706,
-    locationnames.csl4_yuyuko_236a1:  0xFA0707,
-    locationnames.csl1_yuyuko_236a2:  0xFA0708,
-    locationnames.csl2_yuyuko_236a2:  0xFA0709,
-    locationnames.csl3_yuyuko_236a2:  0xFA070A,
-    locationnames.csl4_yuyuko_236a2:  0xFA070B,
-    locationnames.csl1_yuyuko_623d:   0xFA070C,
-    locationnames.csl2_yuyuko_623d:   0xFA070D,
-    locationnames.csl3_yuyuko_623d:   0xFA070E,
-    locationnames.csl4_yuyuko_623d:   0xFA070F,
-    locationnames.csl1_yuyuko_623a1:  0xFA0710,
-    locationnames.csl2_yuyuko_623a1:  0xFA0711,
-    locationnames.csl3_yuyuko_623a1:  0xFA0712,
-    locationnames.csl4_yuyuko_623a1:  0xFA0713,
-    locationnames.csl1_yuyuko_623a2:  0xFA0714,
-    locationnames.csl2_yuyuko_623a2:  0xFA0715,
-    locationnames.csl3_yuyuko_623a2:  0xFA0716,
-    locationnames.csl4_yuyuko_623a2:  0xFA0717,
-    locationnames.csl1_yuyuko_214d:   0xFA0718,
-    locationnames.csl2_yuyuko_214d:   0xFA0719,
-    locationnames.csl3_yuyuko_214d:   0xFA071A,
-    locationnames.csl4_yuyuko_214d:   0xFA071B,
-    locationnames.csl1_yuyuko_214a1:  0xFA071C,
-    locationnames.csl2_yuyuko_214a1:  0xFA071D,
-    locationnames.csl3_yuyuko_214a1:  0xFA071E,
-    locationnames.csl4_yuyuko_214a1:  0xFA071F,
-    locationnames.csl1_yuyuko_214a2:  0xFA0720,
-    locationnames.csl2_yuyuko_214a2:  0xFA0721,
-    locationnames.csl3_yuyuko_214a2:  0xFA0722,
-    locationnames.csl4_yuyuko_214a2:  0xFA0723,
-    locationnames.csl1_yuyuko_421d:   0xFA0724,
-    locationnames.csl2_yuyuko_421d:   0xFA0725,
-    locationnames.csl3_yuyuko_421d:   0xFA0726,
-    locationnames.csl4_yuyuko_421d:   0xFA0727,
-    locationnames.csl1_yuyuko_421a1:  0xFA0728,
-    locationnames.csl2_yuyuko_421a1:  0xFA0729,
-    locationnames.csl3_yuyuko_421a1:  0xFA072A,
-    locationnames.csl4_yuyuko_421a1:  0xFA072B,
-    locationnames.csl1_yuyuko_421a2:  0xFA072C,
-    locationnames.csl2_yuyuko_421a2:  0xFA072D,
-    locationnames.csl3_yuyuko_421a2:  0xFA072E,
-    locationnames.csl4_yuyuko_421a2:  0xFA072F,
+    locationnames.cslk1_yuyuko_236d:   0xFA0700,
+    locationnames.cslk2_yuyuko_236d:   0xFA0701,
+    locationnames.cslk3_yuyuko_236d:   0xFA0702,
+    locationnames.cslk4_yuyuko_236d:   0xFA0703,
+    locationnames.cslk1_yuyuko_236a1:  0xFA0704,
+    locationnames.cslk2_yuyuko_236a1:  0xFA0705,
+    locationnames.cslk3_yuyuko_236a1:  0xFA0706,
+    locationnames.cslk4_yuyuko_236a1:  0xFA0707,
+    locationnames.cslk1_yuyuko_236a2:  0xFA0708,
+    locationnames.cslk2_yuyuko_236a2:  0xFA0709,
+    locationnames.cslk3_yuyuko_236a2:  0xFA070A,
+    locationnames.cslk4_yuyuko_236a2:  0xFA070B,
+    locationnames.cslk1_yuyuko_623d:   0xFA070C,
+    locationnames.cslk2_yuyuko_623d:   0xFA070D,
+    locationnames.cslk3_yuyuko_623d:   0xFA070E,
+    locationnames.cslk4_yuyuko_623d:   0xFA070F,
+    locationnames.cslk1_yuyuko_623a1:  0xFA0710,
+    locationnames.cslk2_yuyuko_623a1:  0xFA0711,
+    locationnames.cslk3_yuyuko_623a1:  0xFA0712,
+    locationnames.cslk4_yuyuko_623a1:  0xFA0713,
+    locationnames.cslk1_yuyuko_623a2:  0xFA0714,
+    locationnames.cslk2_yuyuko_623a2:  0xFA0715,
+    locationnames.cslk3_yuyuko_623a2:  0xFA0716,
+    locationnames.cslk4_yuyuko_623a2:  0xFA0717,
+    locationnames.cslk1_yuyuko_214d:   0xFA0718,
+    locationnames.cslk2_yuyuko_214d:   0xFA0719,
+    locationnames.cslk3_yuyuko_214d:   0xFA071A,
+    locationnames.cslk4_yuyuko_214d:   0xFA071B,
+    locationnames.cslk1_yuyuko_214a1:  0xFA071C,
+    locationnames.cslk2_yuyuko_214a1:  0xFA071D,
+    locationnames.cslk3_yuyuko_214a1:  0xFA071E,
+    locationnames.cslk4_yuyuko_214a1:  0xFA071F,
+    locationnames.cslk1_yuyuko_214a2:  0xFA0720,
+    locationnames.cslk2_yuyuko_214a2:  0xFA0721,
+    locationnames.cslk3_yuyuko_214a2:  0xFA0722,
+    locationnames.cslk4_yuyuko_214a2:  0xFA0723,
+    locationnames.cslk1_yuyuko_421d:   0xFA0724,
+    locationnames.cslk2_yuyuko_421d:   0xFA0725,
+    locationnames.cslk3_yuyuko_421d:   0xFA0726,
+    locationnames.cslk4_yuyuko_421d:   0xFA0727,
+    locationnames.cslk1_yuyuko_421a1:  0xFA0728,
+    locationnames.cslk2_yuyuko_421a1:  0xFA0729,
+    locationnames.cslk3_yuyuko_421a1:  0xFA072A,
+    locationnames.cslk4_yuyuko_421a1:  0xFA072B,
+    locationnames.cslk1_yuyuko_421a2:  0xFA072C,
+    locationnames.cslk2_yuyuko_421a2:  0xFA072D,
+    locationnames.cslk3_yuyuko_421a2:  0xFA072E,
+    locationnames.cslk4_yuyuko_421a2:  0xFA072F,
 
 }
 
@@ -2357,54 +2357,54 @@ yuyuko_spell_loc_table = { #0xFA0730 - FA075B
 }
 
 yukari_skill_loc_table = { #0xFA0800 - FA082F
-    locationnames.csl1_yukari_236d:   0xFA0800,
-    locationnames.csl2_yukari_236d:   0xFA0801,
-    locationnames.csl3_yukari_236d:   0xFA0802,
-    locationnames.csl4_yukari_236d:   0xFA0803,
-    locationnames.csl1_yukari_236a1:  0xFA0804,
-    locationnames.csl2_yukari_236a1:  0xFA0805,
-    locationnames.csl3_yukari_236a1:  0xFA0806,
-    locationnames.csl4_yukari_236a1:  0xFA0807,
-    locationnames.csl1_yukari_236a2:  0xFA0808,
-    locationnames.csl2_yukari_236a2:  0xFA0809,
-    locationnames.csl3_yukari_236a2:  0xFA080A,
-    locationnames.csl4_yukari_236a2:  0xFA080B,
-    locationnames.csl1_yukari_623d:   0xFA080C,
-    locationnames.csl2_yukari_623d:   0xFA080D,
-    locationnames.csl3_yukari_623d:   0xFA080E,
-    locationnames.csl4_yukari_623d:   0xFA080F,
-    locationnames.csl1_yukari_623a1:  0xFA0810,
-    locationnames.csl2_yukari_623a1:  0xFA0811,
-    locationnames.csl3_yukari_623a1:  0xFA0812,
-    locationnames.csl4_yukari_623a1:  0xFA0813,
-    locationnames.csl1_yukari_623a2:  0xFA0814,
-    locationnames.csl2_yukari_623a2:  0xFA0815,
-    locationnames.csl3_yukari_623a2:  0xFA0816,
-    locationnames.csl4_yukari_623a2:  0xFA0817,
-    locationnames.csl1_yukari_214d:   0xFA0818,
-    locationnames.csl2_yukari_214d:   0xFA0819,
-    locationnames.csl3_yukari_214d:   0xFA081A,
-    locationnames.csl4_yukari_214d:   0xFA081B,
-    locationnames.csl1_yukari_214a1:  0xFA081C,
-    locationnames.csl2_yukari_214a1:  0xFA081D,
-    locationnames.csl3_yukari_214a1:  0xFA081E,
-    locationnames.csl4_yukari_214a1:  0xFA081F,
-    locationnames.csl1_yukari_214a2:  0xFA0820,
-    locationnames.csl2_yukari_214a2:  0xFA0821,
-    locationnames.csl3_yukari_214a2:  0xFA0822,
-    locationnames.csl4_yukari_214a2:  0xFA0823,
-    locationnames.csl1_yukari_421d:   0xFA0824,
-    locationnames.csl2_yukari_421d:   0xFA0825,
-    locationnames.csl3_yukari_421d:   0xFA0826,
-    locationnames.csl4_yukari_421d:   0xFA0827,
-    locationnames.csl1_yukari_421a1:  0xFA0828,
-    locationnames.csl2_yukari_421a1:  0xFA0829,
-    locationnames.csl3_yukari_421a1:  0xFA082A,
-    locationnames.csl4_yukari_421a1:  0xFA082B,
-    locationnames.csl1_yukari_421a2:  0xFA082C,
-    locationnames.csl2_yukari_421a2:  0xFA082D,
-    locationnames.csl3_yukari_421a2:  0xFA082E,
-    locationnames.csl4_yukari_421a2:  0xFA082F,
+    locationnames.cslk1_yukari_236d:   0xFA0800,
+    locationnames.cslk2_yukari_236d:   0xFA0801,
+    locationnames.cslk3_yukari_236d:   0xFA0802,
+    locationnames.cslk4_yukari_236d:   0xFA0803,
+    locationnames.cslk1_yukari_236a1:  0xFA0804,
+    locationnames.cslk2_yukari_236a1:  0xFA0805,
+    locationnames.cslk3_yukari_236a1:  0xFA0806,
+    locationnames.cslk4_yukari_236a1:  0xFA0807,
+    locationnames.cslk1_yukari_236a2:  0xFA0808,
+    locationnames.cslk2_yukari_236a2:  0xFA0809,
+    locationnames.cslk3_yukari_236a2:  0xFA080A,
+    locationnames.cslk4_yukari_236a2:  0xFA080B,
+    locationnames.cslk1_yukari_623d:   0xFA080C,
+    locationnames.cslk2_yukari_623d:   0xFA080D,
+    locationnames.cslk3_yukari_623d:   0xFA080E,
+    locationnames.cslk4_yukari_623d:   0xFA080F,
+    locationnames.cslk1_yukari_623a1:  0xFA0810,
+    locationnames.cslk2_yukari_623a1:  0xFA0811,
+    locationnames.cslk3_yukari_623a1:  0xFA0812,
+    locationnames.cslk4_yukari_623a1:  0xFA0813,
+    locationnames.cslk1_yukari_623a2:  0xFA0814,
+    locationnames.cslk2_yukari_623a2:  0xFA0815,
+    locationnames.cslk3_yukari_623a2:  0xFA0816,
+    locationnames.cslk4_yukari_623a2:  0xFA0817,
+    locationnames.cslk1_yukari_214d:   0xFA0818,
+    locationnames.cslk2_yukari_214d:   0xFA0819,
+    locationnames.cslk3_yukari_214d:   0xFA081A,
+    locationnames.cslk4_yukari_214d:   0xFA081B,
+    locationnames.cslk1_yukari_214a1:  0xFA081C,
+    locationnames.cslk2_yukari_214a1:  0xFA081D,
+    locationnames.cslk3_yukari_214a1:  0xFA081E,
+    locationnames.cslk4_yukari_214a1:  0xFA081F,
+    locationnames.cslk1_yukari_214a2:  0xFA0820,
+    locationnames.cslk2_yukari_214a2:  0xFA0821,
+    locationnames.cslk3_yukari_214a2:  0xFA0822,
+    locationnames.cslk4_yukari_214a2:  0xFA0823,
+    locationnames.cslk1_yukari_421d:   0xFA0824,
+    locationnames.cslk2_yukari_421d:   0xFA0825,
+    locationnames.cslk3_yukari_421d:   0xFA0826,
+    locationnames.cslk4_yukari_421d:   0xFA0827,
+    locationnames.cslk1_yukari_421a1:  0xFA0828,
+    locationnames.cslk2_yukari_421a1:  0xFA0829,
+    locationnames.cslk3_yukari_421a1:  0xFA082A,
+    locationnames.cslk4_yukari_421a1:  0xFA082B,
+    locationnames.cslk1_yukari_421a2:  0xFA082C,
+    locationnames.cslk2_yukari_421a2:  0xFA082D,
+    locationnames.cslk3_yukari_421a2:  0xFA082E,
+    locationnames.cslk4_yukari_421a2:  0xFA082F,
 
 }
 
@@ -2453,54 +2453,54 @@ yukari_spell_loc_table = { #0xFA0830 - FA0857
 }
 
 suika_skill_loc_table = { #0xFA0900 - FA092F
-    locationnames.csl1_suika_236d:   0xFA0900,
-    locationnames.csl2_suika_236d:   0xFA0901,
-    locationnames.csl3_suika_236d:   0xFA0902,
-    locationnames.csl4_suika_236d:   0xFA0903,
-    locationnames.csl1_suika_236a1:  0xFA0904,
-    locationnames.csl2_suika_236a1:  0xFA0905,
-    locationnames.csl3_suika_236a1:  0xFA0906,
-    locationnames.csl4_suika_236a1:  0xFA0907,
-    locationnames.csl1_suika_236a2:  0xFA0908,
-    locationnames.csl2_suika_236a2:  0xFA0909,
-    locationnames.csl3_suika_236a2:  0xFA090A,
-    locationnames.csl4_suika_236a2:  0xFA090B,
-    locationnames.csl1_suika_623d:   0xFA090C,
-    locationnames.csl2_suika_623d:   0xFA090D,
-    locationnames.csl3_suika_623d:   0xFA090E,
-    locationnames.csl4_suika_623d:   0xFA090F,
-    locationnames.csl1_suika_623a1:  0xFA0910,
-    locationnames.csl2_suika_623a1:  0xFA0911,
-    locationnames.csl3_suika_623a1:  0xFA0912,
-    locationnames.csl4_suika_623a1:  0xFA0913,
-    locationnames.csl1_suika_623a2:  0xFA0914,
-    locationnames.csl2_suika_623a2:  0xFA0915,
-    locationnames.csl3_suika_623a2:  0xFA0916,
-    locationnames.csl4_suika_623a2:  0xFA0917,
-    locationnames.csl1_suika_214d:   0xFA0918,
-    locationnames.csl2_suika_214d:   0xFA0919,
-    locationnames.csl3_suika_214d:   0xFA091A,
-    locationnames.csl4_suika_214d:   0xFA091B,
-    locationnames.csl1_suika_214a1:  0xFA091C,
-    locationnames.csl2_suika_214a1:  0xFA091D,
-    locationnames.csl3_suika_214a1:  0xFA091E,
-    locationnames.csl4_suika_214a1:  0xFA091F,
-    locationnames.csl1_suika_214a2:  0xFA0920,
-    locationnames.csl2_suika_214a2:  0xFA0921,
-    locationnames.csl3_suika_214a2:  0xFA0922,
-    locationnames.csl4_suika_214a2:  0xFA0923,
-    locationnames.csl1_suika_22d:    0xFA0924,
-    locationnames.csl2_suika_22d:    0xFA0925,
-    locationnames.csl3_suika_22d:    0xFA0926,
-    locationnames.csl4_suika_22d:    0xFA0927,
-    locationnames.csl1_suika_22a1:   0xFA0928,
-    locationnames.csl2_suika_22a1:   0xFA0929,
-    locationnames.csl3_suika_22a1:   0xFA092A,
-    locationnames.csl4_suika_22a1:   0xFA092B,
-    locationnames.csl1_suika_22a2:   0xFA092C,
-    locationnames.csl2_suika_22a2:   0xFA092D,
-    locationnames.csl3_suika_22a2:   0xFA092E,
-    locationnames.csl4_suika_22a2:   0xFA092F,
+    locationnames.cslk1_suika_236d:   0xFA0900,
+    locationnames.cslk2_suika_236d:   0xFA0901,
+    locationnames.cslk3_suika_236d:   0xFA0902,
+    locationnames.cslk4_suika_236d:   0xFA0903,
+    locationnames.cslk1_suika_236a1:  0xFA0904,
+    locationnames.cslk2_suika_236a1:  0xFA0905,
+    locationnames.cslk3_suika_236a1:  0xFA0906,
+    locationnames.cslk4_suika_236a1:  0xFA0907,
+    locationnames.cslk1_suika_236a2:  0xFA0908,
+    locationnames.cslk2_suika_236a2:  0xFA0909,
+    locationnames.cslk3_suika_236a2:  0xFA090A,
+    locationnames.cslk4_suika_236a2:  0xFA090B,
+    locationnames.cslk1_suika_623d:   0xFA090C,
+    locationnames.cslk2_suika_623d:   0xFA090D,
+    locationnames.cslk3_suika_623d:   0xFA090E,
+    locationnames.cslk4_suika_623d:   0xFA090F,
+    locationnames.cslk1_suika_623a1:  0xFA0910,
+    locationnames.cslk2_suika_623a1:  0xFA0911,
+    locationnames.cslk3_suika_623a1:  0xFA0912,
+    locationnames.cslk4_suika_623a1:  0xFA0913,
+    locationnames.cslk1_suika_623a2:  0xFA0914,
+    locationnames.cslk2_suika_623a2:  0xFA0915,
+    locationnames.cslk3_suika_623a2:  0xFA0916,
+    locationnames.cslk4_suika_623a2:  0xFA0917,
+    locationnames.cslk1_suika_214d:   0xFA0918,
+    locationnames.cslk2_suika_214d:   0xFA0919,
+    locationnames.cslk3_suika_214d:   0xFA091A,
+    locationnames.cslk4_suika_214d:   0xFA091B,
+    locationnames.cslk1_suika_214a1:  0xFA091C,
+    locationnames.cslk2_suika_214a1:  0xFA091D,
+    locationnames.cslk3_suika_214a1:  0xFA091E,
+    locationnames.cslk4_suika_214a1:  0xFA091F,
+    locationnames.cslk1_suika_214a2:  0xFA0920,
+    locationnames.cslk2_suika_214a2:  0xFA0921,
+    locationnames.cslk3_suika_214a2:  0xFA0922,
+    locationnames.cslk4_suika_214a2:  0xFA0923,
+    locationnames.cslk1_suika_22d:    0xFA0924,
+    locationnames.cslk2_suika_22d:    0xFA0925,
+    locationnames.cslk3_suika_22d:    0xFA0926,
+    locationnames.cslk4_suika_22d:    0xFA0927,
+    locationnames.cslk1_suika_22a1:   0xFA0928,
+    locationnames.cslk2_suika_22a1:   0xFA0929,
+    locationnames.cslk3_suika_22a1:   0xFA092A,
+    locationnames.cslk4_suika_22a1:   0xFA092B,
+    locationnames.cslk1_suika_22a2:   0xFA092C,
+    locationnames.cslk2_suika_22a2:   0xFA092D,
+    locationnames.cslk3_suika_22a2:   0xFA092E,
+    locationnames.cslk4_suika_22a2:   0xFA092F,
 
 }
 
@@ -2549,54 +2549,54 @@ suika_spell_loc_table = { #0xFA0930 - FA0957
 }
 
 reisen_skill_loc_table = { #0xFA0A00 - FA0A2F
-    locationnames.csl1_reisen_236d:   0xFA0A00,
-    locationnames.csl2_reisen_236d:   0xFA0A01,
-    locationnames.csl3_reisen_236d:   0xFA0A02,
-    locationnames.csl4_reisen_236d:   0xFA0A03,
-    locationnames.csl1_reisen_236a1:  0xFA0A04,
-    locationnames.csl2_reisen_236a1:  0xFA0A05,
-    locationnames.csl3_reisen_236a1:  0xFA0A06,
-    locationnames.csl4_reisen_236a1:  0xFA0A07,
-    locationnames.csl1_reisen_236a2:  0xFA0A08,
-    locationnames.csl2_reisen_236a2:  0xFA0A09,
-    locationnames.csl3_reisen_236a2:  0xFA0A0A,
-    locationnames.csl4_reisen_236a2:  0xFA0A0B,
-    locationnames.csl1_reisen_623d:   0xFA0A0C,
-    locationnames.csl2_reisen_623d:   0xFA0A0D,
-    locationnames.csl3_reisen_623d:   0xFA0A0E,
-    locationnames.csl4_reisen_623d:   0xFA0A0F,
-    locationnames.csl1_reisen_623a1:  0xFA0A10,
-    locationnames.csl2_reisen_623a1:  0xFA0A11,
-    locationnames.csl3_reisen_623a1:  0xFA0A12,
-    locationnames.csl4_reisen_623a1:  0xFA0A13,
-    locationnames.csl1_reisen_623a2:  0xFA0A14,
-    locationnames.csl2_reisen_623a2:  0xFA0A15,
-    locationnames.csl3_reisen_623a2:  0xFA0A16,
-    locationnames.csl4_reisen_623a2:  0xFA0A17,
-    locationnames.csl1_reisen_214d:   0xFA0A18,
-    locationnames.csl2_reisen_214d:   0xFA0A19,
-    locationnames.csl3_reisen_214d:   0xFA0A1A,
-    locationnames.csl4_reisen_214d:   0xFA0A1B,
-    locationnames.csl1_reisen_214a1:  0xFA0A1C,
-    locationnames.csl2_reisen_214a1:  0xFA0A1D,
-    locationnames.csl3_reisen_214a1:  0xFA0A1E,
-    locationnames.csl4_reisen_214a1:  0xFA0A1F,
-    locationnames.csl1_reisen_214a2:  0xFA0A20,
-    locationnames.csl2_reisen_214a2:  0xFA0A21,
-    locationnames.csl3_reisen_214a2:  0xFA0A22,
-    locationnames.csl4_reisen_214a2:  0xFA0A23,
-    locationnames.csl1_reisen_22d:    0xFA0A24,
-    locationnames.csl2_reisen_22d:    0xFA0A25,
-    locationnames.csl3_reisen_22d:    0xFA0A26,
-    locationnames.csl4_reisen_22d:    0xFA0A27,
-    locationnames.csl1_reisen_22a1:   0xFA0A28,
-    locationnames.csl2_reisen_22a1:   0xFA0A29,
-    locationnames.csl3_reisen_22a1:   0xFA0A2A,
-    locationnames.csl4_reisen_22a1:   0xFA0A2B,
-    locationnames.csl1_reisen_22a2:   0xFA0A2C,
-    locationnames.csl2_reisen_22a2:   0xFA0A2D,
-    locationnames.csl3_reisen_22a2:   0xFA0A2E,
-    locationnames.csl4_reisen_22a2:   0xFA0A2F
+    locationnames.cslk1_reisen_236d:   0xFA0A00,
+    locationnames.cslk2_reisen_236d:   0xFA0A01,
+    locationnames.cslk3_reisen_236d:   0xFA0A02,
+    locationnames.cslk4_reisen_236d:   0xFA0A03,
+    locationnames.cslk1_reisen_236a1:  0xFA0A04,
+    locationnames.cslk2_reisen_236a1:  0xFA0A05,
+    locationnames.cslk3_reisen_236a1:  0xFA0A06,
+    locationnames.cslk4_reisen_236a1:  0xFA0A07,
+    locationnames.cslk1_reisen_236a2:  0xFA0A08,
+    locationnames.cslk2_reisen_236a2:  0xFA0A09,
+    locationnames.cslk3_reisen_236a2:  0xFA0A0A,
+    locationnames.cslk4_reisen_236a2:  0xFA0A0B,
+    locationnames.cslk1_reisen_623d:   0xFA0A0C,
+    locationnames.cslk2_reisen_623d:   0xFA0A0D,
+    locationnames.cslk3_reisen_623d:   0xFA0A0E,
+    locationnames.cslk4_reisen_623d:   0xFA0A0F,
+    locationnames.cslk1_reisen_623a1:  0xFA0A10,
+    locationnames.cslk2_reisen_623a1:  0xFA0A11,
+    locationnames.cslk3_reisen_623a1:  0xFA0A12,
+    locationnames.cslk4_reisen_623a1:  0xFA0A13,
+    locationnames.cslk1_reisen_623a2:  0xFA0A14,
+    locationnames.cslk2_reisen_623a2:  0xFA0A15,
+    locationnames.cslk3_reisen_623a2:  0xFA0A16,
+    locationnames.cslk4_reisen_623a2:  0xFA0A17,
+    locationnames.cslk1_reisen_214d:   0xFA0A18,
+    locationnames.cslk2_reisen_214d:   0xFA0A19,
+    locationnames.cslk3_reisen_214d:   0xFA0A1A,
+    locationnames.cslk4_reisen_214d:   0xFA0A1B,
+    locationnames.cslk1_reisen_214a1:  0xFA0A1C,
+    locationnames.cslk2_reisen_214a1:  0xFA0A1D,
+    locationnames.cslk3_reisen_214a1:  0xFA0A1E,
+    locationnames.cslk4_reisen_214a1:  0xFA0A1F,
+    locationnames.cslk1_reisen_214a2:  0xFA0A20,
+    locationnames.cslk2_reisen_214a2:  0xFA0A21,
+    locationnames.cslk3_reisen_214a2:  0xFA0A22,
+    locationnames.cslk4_reisen_214a2:  0xFA0A23,
+    locationnames.cslk1_reisen_22d:    0xFA0A24,
+    locationnames.cslk2_reisen_22d:    0xFA0A25,
+    locationnames.cslk3_reisen_22d:    0xFA0A26,
+    locationnames.cslk4_reisen_22d:    0xFA0A27,
+    locationnames.cslk1_reisen_22a1:   0xFA0A28,
+    locationnames.cslk2_reisen_22a1:   0xFA0A29,
+    locationnames.cslk3_reisen_22a1:   0xFA0A2A,
+    locationnames.cslk4_reisen_22a1:   0xFA0A2B,
+    locationnames.cslk1_reisen_22a2:   0xFA0A2C,
+    locationnames.cslk2_reisen_22a2:   0xFA0A2D,
+    locationnames.cslk3_reisen_22a2:   0xFA0A2E,
+    locationnames.cslk4_reisen_22a2:   0xFA0A2F
 
 }
 
@@ -2649,54 +2649,54 @@ reisen_spell_loc_table = {
 }
 
 aya_skill_loc_table = { #0xFA0B00 - FA0B2F
-    locationnames.csl1_aya_236d:   0xFA0B00,
-    locationnames.csl2_aya_236d:   0xFA0B01,
-    locationnames.csl3_aya_236d:   0xFA0B02,
-    locationnames.csl4_aya_236d:   0xFA0B03,
-    locationnames.csl1_aya_236a1:  0xFA0B04,
-    locationnames.csl2_aya_236a1:  0xFA0B05,
-    locationnames.csl3_aya_236a1:  0xFA0B06,
-    locationnames.csl4_aya_236a1:  0xFA0B07,
-    locationnames.csl1_aya_236a2:  0xFA0B08,
-    locationnames.csl2_aya_236a2:  0xFA0B09,
-    locationnames.csl3_aya_236a2:  0xFA0B0A,
-    locationnames.csl4_aya_236a2:  0xFA0B0B,
-    locationnames.csl1_aya_214d:   0xFA0B0C,
-    locationnames.csl2_aya_214d:   0xFA0B0D,
-    locationnames.csl3_aya_214d:   0xFA0B0E,
-    locationnames.csl4_aya_214d:   0xFA0B0F,
-    locationnames.csl1_aya_214a1:  0xFA0B10,
-    locationnames.csl2_aya_214a1:  0xFA0B11,
-    locationnames.csl3_aya_214a1:  0xFA0B12,
-    locationnames.csl4_aya_214a1:  0xFA0B13,
-    locationnames.csl1_aya_214a2:  0xFA0B14,
-    locationnames.csl2_aya_214a2:  0xFA0B15,
-    locationnames.csl3_aya_214a2:  0xFA0B16,
-    locationnames.csl4_aya_214a2:  0xFA0B17,
-    locationnames.csl1_aya_421d:   0xFA0B18,
-    locationnames.csl2_aya_421d:   0xFA0B19,
-    locationnames.csl3_aya_421d:   0xFA0B1A,
-    locationnames.csl4_aya_421d:   0xFA0B1B,
-    locationnames.csl1_aya_421a1:  0xFA0B1C,
-    locationnames.csl2_aya_421a1:  0xFA0B1D,
-    locationnames.csl3_aya_421a1:  0xFA0B1E,
-    locationnames.csl4_aya_421a1:  0xFA0B1F,
-    locationnames.csl1_aya_421a2:  0xFA0B20,
-    locationnames.csl2_aya_421a2:  0xFA0B21,
-    locationnames.csl3_aya_421a2:  0xFA0B22,
-    locationnames.csl4_aya_421a2:  0xFA0B23,
-    locationnames.csl1_aya_22d:    0xFA0B24,
-    locationnames.csl2_aya_22d:    0xFA0B25,
-    locationnames.csl3_aya_22d:    0xFA0B26,
-    locationnames.csl4_aya_22d:    0xFA0B27,
-    locationnames.csl1_aya_22a1:   0xFA0B28,
-    locationnames.csl2_aya_22a1:   0xFA0B29,
-    locationnames.csl3_aya_22a1:   0xFA0B2A,
-    locationnames.csl4_aya_22a1:   0xFA0B2B,
-    locationnames.csl1_aya_22a2:   0xFA0B2C,
-    locationnames.csl2_aya_22a2:   0xFA0B2D,
-    locationnames.csl3_aya_22a2:   0xFA0B2E,
-    locationnames.csl4_aya_22a2:   0xFA0B2F
+    locationnames.cslk1_aya_236d:   0xFA0B00,
+    locationnames.cslk2_aya_236d:   0xFA0B01,
+    locationnames.cslk3_aya_236d:   0xFA0B02,
+    locationnames.cslk4_aya_236d:   0xFA0B03,
+    locationnames.cslk1_aya_236a1:  0xFA0B04,
+    locationnames.cslk2_aya_236a1:  0xFA0B05,
+    locationnames.cslk3_aya_236a1:  0xFA0B06,
+    locationnames.cslk4_aya_236a1:  0xFA0B07,
+    locationnames.cslk1_aya_236a2:  0xFA0B08,
+    locationnames.cslk2_aya_236a2:  0xFA0B09,
+    locationnames.cslk3_aya_236a2:  0xFA0B0A,
+    locationnames.cslk4_aya_236a2:  0xFA0B0B,
+    locationnames.cslk1_aya_214d:   0xFA0B0C,
+    locationnames.cslk2_aya_214d:   0xFA0B0D,
+    locationnames.cslk3_aya_214d:   0xFA0B0E,
+    locationnames.cslk4_aya_214d:   0xFA0B0F,
+    locationnames.cslk1_aya_214a1:  0xFA0B10,
+    locationnames.cslk2_aya_214a1:  0xFA0B11,
+    locationnames.cslk3_aya_214a1:  0xFA0B12,
+    locationnames.cslk4_aya_214a1:  0xFA0B13,
+    locationnames.cslk1_aya_214a2:  0xFA0B14,
+    locationnames.cslk2_aya_214a2:  0xFA0B15,
+    locationnames.cslk3_aya_214a2:  0xFA0B16,
+    locationnames.cslk4_aya_214a2:  0xFA0B17,
+    locationnames.cslk1_aya_421d:   0xFA0B18,
+    locationnames.cslk2_aya_421d:   0xFA0B19,
+    locationnames.cslk3_aya_421d:   0xFA0B1A,
+    locationnames.cslk4_aya_421d:   0xFA0B1B,
+    locationnames.cslk1_aya_421a1:  0xFA0B1C,
+    locationnames.cslk2_aya_421a1:  0xFA0B1D,
+    locationnames.cslk3_aya_421a1:  0xFA0B1E,
+    locationnames.cslk4_aya_421a1:  0xFA0B1F,
+    locationnames.cslk1_aya_421a2:  0xFA0B20,
+    locationnames.cslk2_aya_421a2:  0xFA0B21,
+    locationnames.cslk3_aya_421a2:  0xFA0B22,
+    locationnames.cslk4_aya_421a2:  0xFA0B23,
+    locationnames.cslk1_aya_22d:    0xFA0B24,
+    locationnames.cslk2_aya_22d:    0xFA0B25,
+    locationnames.cslk3_aya_22d:    0xFA0B26,
+    locationnames.cslk4_aya_22d:    0xFA0B27,
+    locationnames.cslk1_aya_22a1:   0xFA0B28,
+    locationnames.cslk2_aya_22a1:   0xFA0B29,
+    locationnames.cslk3_aya_22a1:   0xFA0B2A,
+    locationnames.cslk4_aya_22a1:   0xFA0B2B,
+    locationnames.cslk1_aya_22a2:   0xFA0B2C,
+    locationnames.cslk2_aya_22a2:   0xFA0B2D,
+    locationnames.cslk3_aya_22a2:   0xFA0B2E,
+    locationnames.cslk4_aya_22a2:   0xFA0B2F
 
 }
 
@@ -2745,54 +2745,54 @@ aya_spell_loc_table = { #FA0B30 - FA0B57
 }
 
 komachi_skill_loc_table = { #0xFA0C00 - FA0C2F
-    locationnames.csl1_komachi_236d:   0xFA0C00,
-    locationnames.csl2_komachi_236d:   0xFA0C01,
-    locationnames.csl3_komachi_236d:   0xFA0C02,
-    locationnames.csl4_komachi_236d:   0xFA0C03,
-    locationnames.csl1_komachi_236a1:  0xFA0C04,
-    locationnames.csl2_komachi_236a1:  0xFA0C05,
-    locationnames.csl3_komachi_236a1:  0xFA0C06,
-    locationnames.csl4_komachi_236a1:  0xFA0C07,
-    locationnames.csl1_komachi_236a2:  0xFA0C08,
-    locationnames.csl2_komachi_236a2:  0xFA0C09,
-    locationnames.csl3_komachi_236a2:  0xFA0C0A,
-    locationnames.csl4_komachi_236a2:  0xFA0C0B,
-    locationnames.csl1_komachi_623d:   0xFA0C0C,
-    locationnames.csl2_komachi_623d:   0xFA0C0D,
-    locationnames.csl3_komachi_623d:   0xFA0C0E,
-    locationnames.csl4_komachi_623d:   0xFA0C0F,
-    locationnames.csl1_komachi_623a1:  0xFA0C10,
-    locationnames.csl2_komachi_623a1:  0xFA0C11,
-    locationnames.csl3_komachi_623a1:  0xFA0C12,
-    locationnames.csl4_komachi_623a1:  0xFA0C13,
-    locationnames.csl1_komachi_623a2:  0xFA0C14,
-    locationnames.csl2_komachi_623a2:  0xFA0C15,
-    locationnames.csl3_komachi_623a2:  0xFA0C16,
-    locationnames.csl4_komachi_623a2:  0xFA0C17,
-    locationnames.csl1_komachi_214d:   0xFA0C18,
-    locationnames.csl2_komachi_214d:   0xFA0C19,
-    locationnames.csl3_komachi_214d:   0xFA0C1A,
-    locationnames.csl4_komachi_214d:   0xFA0C1B,
-    locationnames.csl1_komachi_214a1:  0xFA0C1C,
-    locationnames.csl2_komachi_214a1:  0xFA0C1D,
-    locationnames.csl3_komachi_214a1:  0xFA0C1E,
-    locationnames.csl4_komachi_214a1:  0xFA0C1F,
-    locationnames.csl1_komachi_214a2:  0xFA0C20,
-    locationnames.csl2_komachi_214a2:  0xFA0C21,
-    locationnames.csl3_komachi_214a2:  0xFA0C22,
-    locationnames.csl4_komachi_214a2:  0xFA0C23,
-    locationnames.csl1_komachi_22d:    0xFA0C24,
-    locationnames.csl2_komachi_22d:    0xFA0C25,
-    locationnames.csl3_komachi_22d:    0xFA0C26,
-    locationnames.csl4_komachi_22d:    0xFA0C27,
-    locationnames.csl1_komachi_22a1:   0xFA0C28,
-    locationnames.csl2_komachi_22a1:   0xFA0C29,
-    locationnames.csl3_komachi_22a1:   0xFA0C2A,
-    locationnames.csl4_komachi_22a1:   0xFA0C2B,
-    locationnames.csl1_komachi_22a2:   0xFA0C2C,
-    locationnames.csl2_komachi_22a2:   0xFA0C2D,
-    locationnames.csl3_komachi_22a2:   0xFA0C2E,
-    locationnames.csl4_komachi_22a2:   0xFA0C2F
+    locationnames.cslk1_komachi_236d:   0xFA0C00,
+    locationnames.cslk2_komachi_236d:   0xFA0C01,
+    locationnames.cslk3_komachi_236d:   0xFA0C02,
+    locationnames.cslk4_komachi_236d:   0xFA0C03,
+    locationnames.cslk1_komachi_236a1:  0xFA0C04,
+    locationnames.cslk2_komachi_236a1:  0xFA0C05,
+    locationnames.cslk3_komachi_236a1:  0xFA0C06,
+    locationnames.cslk4_komachi_236a1:  0xFA0C07,
+    locationnames.cslk1_komachi_236a2:  0xFA0C08,
+    locationnames.cslk2_komachi_236a2:  0xFA0C09,
+    locationnames.cslk3_komachi_236a2:  0xFA0C0A,
+    locationnames.cslk4_komachi_236a2:  0xFA0C0B,
+    locationnames.cslk1_komachi_623d:   0xFA0C0C,
+    locationnames.cslk2_komachi_623d:   0xFA0C0D,
+    locationnames.cslk3_komachi_623d:   0xFA0C0E,
+    locationnames.cslk4_komachi_623d:   0xFA0C0F,
+    locationnames.cslk1_komachi_623a1:  0xFA0C10,
+    locationnames.cslk2_komachi_623a1:  0xFA0C11,
+    locationnames.cslk3_komachi_623a1:  0xFA0C12,
+    locationnames.cslk4_komachi_623a1:  0xFA0C13,
+    locationnames.cslk1_komachi_623a2:  0xFA0C14,
+    locationnames.cslk2_komachi_623a2:  0xFA0C15,
+    locationnames.cslk3_komachi_623a2:  0xFA0C16,
+    locationnames.cslk4_komachi_623a2:  0xFA0C17,
+    locationnames.cslk1_komachi_214d:   0xFA0C18,
+    locationnames.cslk2_komachi_214d:   0xFA0C19,
+    locationnames.cslk3_komachi_214d:   0xFA0C1A,
+    locationnames.cslk4_komachi_214d:   0xFA0C1B,
+    locationnames.cslk1_komachi_214a1:  0xFA0C1C,
+    locationnames.cslk2_komachi_214a1:  0xFA0C1D,
+    locationnames.cslk3_komachi_214a1:  0xFA0C1E,
+    locationnames.cslk4_komachi_214a1:  0xFA0C1F,
+    locationnames.cslk1_komachi_214a2:  0xFA0C20,
+    locationnames.cslk2_komachi_214a2:  0xFA0C21,
+    locationnames.cslk3_komachi_214a2:  0xFA0C22,
+    locationnames.cslk4_komachi_214a2:  0xFA0C23,
+    locationnames.cslk1_komachi_22d:    0xFA0C24,
+    locationnames.cslk2_komachi_22d:    0xFA0C25,
+    locationnames.cslk3_komachi_22d:    0xFA0C26,
+    locationnames.cslk4_komachi_22d:    0xFA0C27,
+    locationnames.cslk1_komachi_22a1:   0xFA0C28,
+    locationnames.cslk2_komachi_22a1:   0xFA0C29,
+    locationnames.cslk3_komachi_22a1:   0xFA0C2A,
+    locationnames.cslk4_komachi_22a1:   0xFA0C2B,
+    locationnames.cslk1_komachi_22a2:   0xFA0C2C,
+    locationnames.cslk2_komachi_22a2:   0xFA0C2D,
+    locationnames.cslk3_komachi_22a2:   0xFA0C2E,
+    locationnames.cslk4_komachi_22a2:   0xFA0C2F
 
 }
 
@@ -2837,54 +2837,54 @@ komachi_spell_loc_table = { #0xFA0C30 - FA0C53
 }
 
 iku_skill_loc_table = { #0xFA0D00 - FA0D2F
-    locationnames.csl1_iku_236d:   0xFA0D00,
-    locationnames.csl2_iku_236d:   0xFA0D01,
-    locationnames.csl3_iku_236d:   0xFA0D02,
-    locationnames.csl4_iku_236d:   0xFA0D03,
-    locationnames.csl1_iku_236a1:  0xFA0D04,
-    locationnames.csl2_iku_236a1:  0xFA0D05,
-    locationnames.csl3_iku_236a1:  0xFA0D06,
-    locationnames.csl4_iku_236a1:  0xFA0D07,
-    locationnames.csl1_iku_236a2:  0xFA0D08,
-    locationnames.csl2_iku_236a2:  0xFA0D09,
-    locationnames.csl3_iku_236a2:  0xFA0D0A,
-    locationnames.csl4_iku_236a2:  0xFA0D0B,
-    locationnames.csl1_iku_623d:   0xFA0D0C,
-    locationnames.csl2_iku_623d:   0xFA0D0D,
-    locationnames.csl3_iku_623d:   0xFA0D0E,
-    locationnames.csl4_iku_623d:   0xFA0D0F,
-    locationnames.csl1_iku_623a1:  0xFA0D10,
-    locationnames.csl2_iku_623a1:  0xFA0D11,
-    locationnames.csl3_iku_623a1:  0xFA0D12,
-    locationnames.csl4_iku_623a1:  0xFA0D13,
-    locationnames.csl1_iku_623a2:  0xFA0D14,
-    locationnames.csl2_iku_623a2:  0xFA0D15,
-    locationnames.csl3_iku_623a2:  0xFA0D16,
-    locationnames.csl4_iku_623a2:  0xFA0D17,
-    locationnames.csl1_iku_214d:   0xFA0D18,
-    locationnames.csl2_iku_214d:   0xFA0D19,
-    locationnames.csl3_iku_214d:   0xFA0D1A,
-    locationnames.csl4_iku_214d:   0xFA0D1B,
-    locationnames.csl1_iku_214a1:  0xFA0D1C,
-    locationnames.csl2_iku_214a1:  0xFA0D1D,
-    locationnames.csl3_iku_214a1:  0xFA0D1E,
-    locationnames.csl4_iku_214a1:  0xFA0D1F,
-    locationnames.csl1_iku_214a2:  0xFA0D20,
-    locationnames.csl2_iku_214a2:  0xFA0D21,
-    locationnames.csl3_iku_214a2:  0xFA0D22,
-    locationnames.csl4_iku_214a2:  0xFA0D23,
-    locationnames.csl1_iku_22d:    0xFA0D24,
-    locationnames.csl2_iku_22d:    0xFA0D25,
-    locationnames.csl3_iku_22d:    0xFA0D26,
-    locationnames.csl4_iku_22d:    0xFA0D27,
-    locationnames.csl1_iku_22a1:   0xFA0D28,
-    locationnames.csl2_iku_22a1:   0xFA0D29,
-    locationnames.csl3_iku_22a1:   0xFA0D2A,
-    locationnames.csl4_iku_22a1:   0xFA0D2B,
-    locationnames.csl1_iku_22a2:   0xFA0D2C,
-    locationnames.csl2_iku_22a2:   0xFA0D2D,
-    locationnames.csl3_iku_22a2:   0xFA0D2E,
-    locationnames.csl4_iku_22a2:   0xFA0D2F,
+    locationnames.cslk1_iku_236d:   0xFA0D00,
+    locationnames.cslk2_iku_236d:   0xFA0D01,
+    locationnames.cslk3_iku_236d:   0xFA0D02,
+    locationnames.cslk4_iku_236d:   0xFA0D03,
+    locationnames.cslk1_iku_236a1:  0xFA0D04,
+    locationnames.cslk2_iku_236a1:  0xFA0D05,
+    locationnames.cslk3_iku_236a1:  0xFA0D06,
+    locationnames.cslk4_iku_236a1:  0xFA0D07,
+    locationnames.cslk1_iku_236a2:  0xFA0D08,
+    locationnames.cslk2_iku_236a2:  0xFA0D09,
+    locationnames.cslk3_iku_236a2:  0xFA0D0A,
+    locationnames.cslk4_iku_236a2:  0xFA0D0B,
+    locationnames.cslk1_iku_623d:   0xFA0D0C,
+    locationnames.cslk2_iku_623d:   0xFA0D0D,
+    locationnames.cslk3_iku_623d:   0xFA0D0E,
+    locationnames.cslk4_iku_623d:   0xFA0D0F,
+    locationnames.cslk1_iku_623a1:  0xFA0D10,
+    locationnames.cslk2_iku_623a1:  0xFA0D11,
+    locationnames.cslk3_iku_623a1:  0xFA0D12,
+    locationnames.cslk4_iku_623a1:  0xFA0D13,
+    locationnames.cslk1_iku_623a2:  0xFA0D14,
+    locationnames.cslk2_iku_623a2:  0xFA0D15,
+    locationnames.cslk3_iku_623a2:  0xFA0D16,
+    locationnames.cslk4_iku_623a2:  0xFA0D17,
+    locationnames.cslk1_iku_214d:   0xFA0D18,
+    locationnames.cslk2_iku_214d:   0xFA0D19,
+    locationnames.cslk3_iku_214d:   0xFA0D1A,
+    locationnames.cslk4_iku_214d:   0xFA0D1B,
+    locationnames.cslk1_iku_214a1:  0xFA0D1C,
+    locationnames.cslk2_iku_214a1:  0xFA0D1D,
+    locationnames.cslk3_iku_214a1:  0xFA0D1E,
+    locationnames.cslk4_iku_214a1:  0xFA0D1F,
+    locationnames.cslk1_iku_214a2:  0xFA0D20,
+    locationnames.cslk2_iku_214a2:  0xFA0D21,
+    locationnames.cslk3_iku_214a2:  0xFA0D22,
+    locationnames.cslk4_iku_214a2:  0xFA0D23,
+    locationnames.cslk1_iku_22d:    0xFA0D24,
+    locationnames.cslk2_iku_22d:    0xFA0D25,
+    locationnames.cslk3_iku_22d:    0xFA0D26,
+    locationnames.cslk4_iku_22d:    0xFA0D27,
+    locationnames.cslk1_iku_22a1:   0xFA0D28,
+    locationnames.cslk2_iku_22a1:   0xFA0D29,
+    locationnames.cslk3_iku_22a1:   0xFA0D2A,
+    locationnames.cslk4_iku_22a1:   0xFA0D2B,
+    locationnames.cslk1_iku_22a2:   0xFA0D2C,
+    locationnames.cslk2_iku_22a2:   0xFA0D2D,
+    locationnames.cslk3_iku_22a2:   0xFA0D2E,
+    locationnames.cslk4_iku_22a2:   0xFA0D2F,
 
 }
 
@@ -2933,54 +2933,54 @@ iku_spell_loc_table = { #0xFA0D30 - FA0D57
 }
 
 tenshi_skill_loc_table = { #0xFA0E00 - FA0E2F
-    locationnames.csl1_tenshi_236d:   0xFA0E00,
-    locationnames.csl2_tenshi_236d:   0xFA0E01,
-    locationnames.csl3_tenshi_236d:   0xFA0E02,
-    locationnames.csl4_tenshi_236d:   0xFA0E03,
-    locationnames.csl1_tenshi_236a1:  0xFA0E04,
-    locationnames.csl2_tenshi_236a1:  0xFA0E05,
-    locationnames.csl3_tenshi_236a1:  0xFA0E06,
-    locationnames.csl4_tenshi_236a1:  0xFA0E07,
-    locationnames.csl1_tenshi_236a2:  0xFA0E08,
-    locationnames.csl2_tenshi_236a2:  0xFA0E09,
-    locationnames.csl3_tenshi_236a2:  0xFA0E0A,
-    locationnames.csl4_tenshi_236a2:  0xFA0E0B,
-    locationnames.csl1_tenshi_623d:   0xFA0E0C,
-    locationnames.csl2_tenshi_623d:   0xFA0E0D,
-    locationnames.csl3_tenshi_623d:   0xFA0E0E,
-    locationnames.csl4_tenshi_623d:   0xFA0E0F,
-    locationnames.csl1_tenshi_623a1:  0xFA0E10,
-    locationnames.csl2_tenshi_623a1:  0xFA0E11,
-    locationnames.csl3_tenshi_623a1:  0xFA0E12,
-    locationnames.csl4_tenshi_623a1:  0xFA0E13,
-    locationnames.csl1_tenshi_623a2:  0xFA0E14,
-    locationnames.csl2_tenshi_623a2:  0xFA0E15,
-    locationnames.csl3_tenshi_623a2:  0xFA0E16,
-    locationnames.csl4_tenshi_623a2:  0xFA0E17,
-    locationnames.csl1_tenshi_214d:   0xFA0E18,
-    locationnames.csl2_tenshi_214d:   0xFA0E19,
-    locationnames.csl3_tenshi_214d:   0xFA0E1A,
-    locationnames.csl4_tenshi_214d:   0xFA0E1B,
-    locationnames.csl1_tenshi_214a1:  0xFA0E1C,
-    locationnames.csl2_tenshi_214a1:  0xFA0E1D,
-    locationnames.csl3_tenshi_214a1:  0xFA0E1E,
-    locationnames.csl4_tenshi_214a1:  0xFA0E1F,
-    locationnames.csl1_tenshi_214a2:  0xFA0E20,
-    locationnames.csl2_tenshi_214a2:  0xFA0E21,
-    locationnames.csl3_tenshi_214a2:  0xFA0E22,
-    locationnames.csl4_tenshi_214a2:  0xFA0E23,
-    locationnames.csl1_tenshi_22d:    0xFA0E24,
-    locationnames.csl2_tenshi_22d:    0xFA0E25,
-    locationnames.csl3_tenshi_22d:    0xFA0E26,
-    locationnames.csl4_tenshi_22d:    0xFA0E27,
-    locationnames.csl1_tenshi_22a1:   0xFA0E28,
-    locationnames.csl2_tenshi_22a1:   0xFA0E29,
-    locationnames.csl3_tenshi_22a1:   0xFA0E2A,
-    locationnames.csl4_tenshi_22a1:   0xFA0E2B,
-    locationnames.csl1_tenshi_22a2:   0xFA0E2C,
-    locationnames.csl2_tenshi_22a2:   0xFA0E2D,
-    locationnames.csl3_tenshi_22a2:   0xFA0E2E,
-    locationnames.csl4_tenshi_22a2:   0xFA0E2F,
+    locationnames.cslk1_tenshi_236d:   0xFA0E00,
+    locationnames.cslk2_tenshi_236d:   0xFA0E01,
+    locationnames.cslk3_tenshi_236d:   0xFA0E02,
+    locationnames.cslk4_tenshi_236d:   0xFA0E03,
+    locationnames.cslk1_tenshi_236a1:  0xFA0E04,
+    locationnames.cslk2_tenshi_236a1:  0xFA0E05,
+    locationnames.cslk3_tenshi_236a1:  0xFA0E06,
+    locationnames.cslk4_tenshi_236a1:  0xFA0E07,
+    locationnames.cslk1_tenshi_236a2:  0xFA0E08,
+    locationnames.cslk2_tenshi_236a2:  0xFA0E09,
+    locationnames.cslk3_tenshi_236a2:  0xFA0E0A,
+    locationnames.cslk4_tenshi_236a2:  0xFA0E0B,
+    locationnames.cslk1_tenshi_623d:   0xFA0E0C,
+    locationnames.cslk2_tenshi_623d:   0xFA0E0D,
+    locationnames.cslk3_tenshi_623d:   0xFA0E0E,
+    locationnames.cslk4_tenshi_623d:   0xFA0E0F,
+    locationnames.cslk1_tenshi_623a1:  0xFA0E10,
+    locationnames.cslk2_tenshi_623a1:  0xFA0E11,
+    locationnames.cslk3_tenshi_623a1:  0xFA0E12,
+    locationnames.cslk4_tenshi_623a1:  0xFA0E13,
+    locationnames.cslk1_tenshi_623a2:  0xFA0E14,
+    locationnames.cslk2_tenshi_623a2:  0xFA0E15,
+    locationnames.cslk3_tenshi_623a2:  0xFA0E16,
+    locationnames.cslk4_tenshi_623a2:  0xFA0E17,
+    locationnames.cslk1_tenshi_214d:   0xFA0E18,
+    locationnames.cslk2_tenshi_214d:   0xFA0E19,
+    locationnames.cslk3_tenshi_214d:   0xFA0E1A,
+    locationnames.cslk4_tenshi_214d:   0xFA0E1B,
+    locationnames.cslk1_tenshi_214a1:  0xFA0E1C,
+    locationnames.cslk2_tenshi_214a1:  0xFA0E1D,
+    locationnames.cslk3_tenshi_214a1:  0xFA0E1E,
+    locationnames.cslk4_tenshi_214a1:  0xFA0E1F,
+    locationnames.cslk1_tenshi_214a2:  0xFA0E20,
+    locationnames.cslk2_tenshi_214a2:  0xFA0E21,
+    locationnames.cslk3_tenshi_214a2:  0xFA0E22,
+    locationnames.cslk4_tenshi_214a2:  0xFA0E23,
+    locationnames.cslk1_tenshi_22d:    0xFA0E24,
+    locationnames.cslk2_tenshi_22d:    0xFA0E25,
+    locationnames.cslk3_tenshi_22d:    0xFA0E26,
+    locationnames.cslk4_tenshi_22d:    0xFA0E27,
+    locationnames.cslk1_tenshi_22a1:   0xFA0E28,
+    locationnames.cslk2_tenshi_22a1:   0xFA0E29,
+    locationnames.cslk3_tenshi_22a1:   0xFA0E2A,
+    locationnames.cslk4_tenshi_22a1:   0xFA0E2B,
+    locationnames.cslk1_tenshi_22a2:   0xFA0E2C,
+    locationnames.cslk2_tenshi_22a2:   0xFA0E2D,
+    locationnames.cslk3_tenshi_22a2:   0xFA0E2E,
+    locationnames.cslk4_tenshi_22a2:   0xFA0E2F,
 
 }
 
@@ -3029,54 +3029,54 @@ tenshi_spell_loc_table = { #0xFA0E30 - FA0E57
 }
 
 sanae_skill_loc_table = { #0xFA0F00 - FA0F2F
-    locationnames.csl1_sanae_236d:   0xFA0F00,
-    locationnames.csl2_sanae_236d:   0xFA0F01,
-    locationnames.csl3_sanae_236d:   0xFA0F02,
-    locationnames.csl4_sanae_236d:   0xFA0F03,
-    locationnames.csl1_sanae_236a1:  0xFA0F04,
-    locationnames.csl2_sanae_236a1:  0xFA0F05,
-    locationnames.csl3_sanae_236a1:  0xFA0F06,
-    locationnames.csl4_sanae_236a1:  0xFA0F07,
-    locationnames.csl1_sanae_236a2:  0xFA0F08,
-    locationnames.csl2_sanae_236a2:  0xFA0F09,
-    locationnames.csl3_sanae_236a2:  0xFA0F0A,
-    locationnames.csl4_sanae_236a2:  0xFA0F0B,
-    locationnames.csl1_sanae_623d:   0xFA0F0C,
-    locationnames.csl2_sanae_623d:   0xFA0F0D,
-    locationnames.csl3_sanae_623d:   0xFA0F0E,
-    locationnames.csl4_sanae_623d:   0xFA0F0F,
-    locationnames.csl1_sanae_623a1:  0xFA0F10,
-    locationnames.csl2_sanae_623a1:  0xFA0F11,
-    locationnames.csl3_sanae_623a1:  0xFA0F12,
-    locationnames.csl4_sanae_623a1:  0xFA0F13,
-    locationnames.csl1_sanae_623a2:  0xFA0F14,
-    locationnames.csl2_sanae_623a2:  0xFA0F15,
-    locationnames.csl3_sanae_623a2:  0xFA0F16,
-    locationnames.csl4_sanae_623a2:  0xFA0F17,
-    locationnames.csl1_sanae_214d:   0xFA0F18,
-    locationnames.csl2_sanae_214d:   0xFA0F19,
-    locationnames.csl3_sanae_214d:   0xFA0F1A,
-    locationnames.csl4_sanae_214d:   0xFA0F1B,
-    locationnames.csl1_sanae_214a1:  0xFA0F1C,
-    locationnames.csl2_sanae_214a1:  0xFA0F1D,
-    locationnames.csl3_sanae_214a1:  0xFA0F1E,
-    locationnames.csl4_sanae_214a1:  0xFA0F1F,
-    locationnames.csl1_sanae_214a2:  0xFA0F20,
-    locationnames.csl2_sanae_214a2:  0xFA0F21,
-    locationnames.csl3_sanae_214a2:  0xFA0F22,
-    locationnames.csl4_sanae_214a2:  0xFA0F23,
-    locationnames.csl1_sanae_22d:    0xFA0F24,
-    locationnames.csl2_sanae_22d:    0xFA0F25,
-    locationnames.csl3_sanae_22d:    0xFA0F26,
-    locationnames.csl4_sanae_22d:    0xFA0F27,
-    locationnames.csl1_sanae_22a1:   0xFA0F28,
-    locationnames.csl2_sanae_22a1:   0xFA0F29,
-    locationnames.csl3_sanae_22a1:   0xFA0F2A,
-    locationnames.csl4_sanae_22a1:   0xFA0F2B,
-    locationnames.csl1_sanae_22a2:   0xFA0F2C,
-    locationnames.csl2_sanae_22a2:   0xFA0F2D,
-    locationnames.csl3_sanae_22a2:   0xFA0F2E,
-    locationnames.csl4_sanae_22a2:   0xFA0F2F,
+    locationnames.cslk1_sanae_236d:   0xFA0F00,
+    locationnames.cslk2_sanae_236d:   0xFA0F01,
+    locationnames.cslk3_sanae_236d:   0xFA0F02,
+    locationnames.cslk4_sanae_236d:   0xFA0F03,
+    locationnames.cslk1_sanae_236a1:  0xFA0F04,
+    locationnames.cslk2_sanae_236a1:  0xFA0F05,
+    locationnames.cslk3_sanae_236a1:  0xFA0F06,
+    locationnames.cslk4_sanae_236a1:  0xFA0F07,
+    locationnames.cslk1_sanae_236a2:  0xFA0F08,
+    locationnames.cslk2_sanae_236a2:  0xFA0F09,
+    locationnames.cslk3_sanae_236a2:  0xFA0F0A,
+    locationnames.cslk4_sanae_236a2:  0xFA0F0B,
+    locationnames.cslk1_sanae_623d:   0xFA0F0C,
+    locationnames.cslk2_sanae_623d:   0xFA0F0D,
+    locationnames.cslk3_sanae_623d:   0xFA0F0E,
+    locationnames.cslk4_sanae_623d:   0xFA0F0F,
+    locationnames.cslk1_sanae_623a1:  0xFA0F10,
+    locationnames.cslk2_sanae_623a1:  0xFA0F11,
+    locationnames.cslk3_sanae_623a1:  0xFA0F12,
+    locationnames.cslk4_sanae_623a1:  0xFA0F13,
+    locationnames.cslk1_sanae_623a2:  0xFA0F14,
+    locationnames.cslk2_sanae_623a2:  0xFA0F15,
+    locationnames.cslk3_sanae_623a2:  0xFA0F16,
+    locationnames.cslk4_sanae_623a2:  0xFA0F17,
+    locationnames.cslk1_sanae_214d:   0xFA0F18,
+    locationnames.cslk2_sanae_214d:   0xFA0F19,
+    locationnames.cslk3_sanae_214d:   0xFA0F1A,
+    locationnames.cslk4_sanae_214d:   0xFA0F1B,
+    locationnames.cslk1_sanae_214a1:  0xFA0F1C,
+    locationnames.cslk2_sanae_214a1:  0xFA0F1D,
+    locationnames.cslk3_sanae_214a1:  0xFA0F1E,
+    locationnames.cslk4_sanae_214a1:  0xFA0F1F,
+    locationnames.cslk1_sanae_214a2:  0xFA0F20,
+    locationnames.cslk2_sanae_214a2:  0xFA0F21,
+    locationnames.cslk3_sanae_214a2:  0xFA0F22,
+    locationnames.cslk4_sanae_214a2:  0xFA0F23,
+    locationnames.cslk1_sanae_22d:    0xFA0F24,
+    locationnames.cslk2_sanae_22d:    0xFA0F25,
+    locationnames.cslk3_sanae_22d:    0xFA0F26,
+    locationnames.cslk4_sanae_22d:    0xFA0F27,
+    locationnames.cslk1_sanae_22a1:   0xFA0F28,
+    locationnames.cslk2_sanae_22a1:   0xFA0F29,
+    locationnames.cslk3_sanae_22a1:   0xFA0F2A,
+    locationnames.cslk4_sanae_22a1:   0xFA0F2B,
+    locationnames.cslk1_sanae_22a2:   0xFA0F2C,
+    locationnames.cslk2_sanae_22a2:   0xFA0F2D,
+    locationnames.cslk3_sanae_22a2:   0xFA0F2E,
+    locationnames.cslk4_sanae_22a2:   0xFA0F2F,
 
 }
 
@@ -3121,54 +3121,54 @@ sanae_spell_loc_table = { #0xFA0F30 - FA0F53
 }
 
 cirno_skill_loc_table = { #0xFA1000 - FA102F
-    locationnames.csl1_cirno_236d:   0xFA1000,
-    locationnames.csl2_cirno_236d:   0xFA1001,
-    locationnames.csl3_cirno_236d:   0xFA1002,
-    locationnames.csl4_cirno_236d:   0xFA1003,
-    locationnames.csl1_cirno_236a1:  0xFA1004,
-    locationnames.csl2_cirno_236a1:  0xFA1005,
-    locationnames.csl3_cirno_236a1:  0xFA1006,
-    locationnames.csl4_cirno_236a1:  0xFA1007,
-    locationnames.csl1_cirno_236a2:  0xFA1008,
-    locationnames.csl2_cirno_236a2:  0xFA1009,
-    locationnames.csl3_cirno_236a2:  0xFA100A,
-    locationnames.csl4_cirno_236a2:  0xFA100B,
-    locationnames.csl1_cirno_623d:   0xFA100C,
-    locationnames.csl2_cirno_623d:   0xFA100D,
-    locationnames.csl3_cirno_623d:   0xFA100E,
-    locationnames.csl4_cirno_623d:   0xFA100F,
-    locationnames.csl1_cirno_623a1:  0xFA1010,
-    locationnames.csl2_cirno_623a1:  0xFA1011,
-    locationnames.csl3_cirno_623a1:  0xFA1012,
-    locationnames.csl4_cirno_623a1:  0xFA1013,
-    locationnames.csl1_cirno_623a2:  0xFA1014,
-    locationnames.csl2_cirno_623a2:  0xFA1015,
-    locationnames.csl3_cirno_623a2:  0xFA1016,
-    locationnames.csl4_cirno_623a2:  0xFA1017,
-    locationnames.csl1_cirno_214d:   0xFA1018,
-    locationnames.csl2_cirno_214d:   0xFA1019,
-    locationnames.csl3_cirno_214d:   0xFA101A,
-    locationnames.csl4_cirno_214d:   0xFA101B,
-    locationnames.csl1_cirno_214a1:  0xFA101C,
-    locationnames.csl2_cirno_214a1:  0xFA101D,
-    locationnames.csl3_cirno_214a1:  0xFA101E,
-    locationnames.csl4_cirno_214a1:  0xFA101F,
-    locationnames.csl1_cirno_214a2:  0xFA1020,
-    locationnames.csl2_cirno_214a2:  0xFA1021,
-    locationnames.csl3_cirno_214a2:  0xFA1022,
-    locationnames.csl4_cirno_214a2:  0xFA1023,
-    locationnames.csl1_cirno_22d:    0xFA1024,
-    locationnames.csl2_cirno_22d:    0xFA1025,
-    locationnames.csl3_cirno_22d:    0xFA1026,
-    locationnames.csl4_cirno_22d:    0xFA1027,
-    locationnames.csl1_cirno_22a1:   0xFA1028,
-    locationnames.csl2_cirno_22a1:   0xFA1029,
-    locationnames.csl3_cirno_22a1:   0xFA102A,
-    locationnames.csl4_cirno_22a1:   0xFA102B,
-    locationnames.csl1_cirno_22a2:   0xFA102C,
-    locationnames.csl2_cirno_22a2:   0xFA102D,
-    locationnames.csl3_cirno_22a2:   0xFA102E,
-    locationnames.csl4_cirno_22a2:   0xFA102F,
+    locationnames.cslk1_cirno_236d:   0xFA1000,
+    locationnames.cslk2_cirno_236d:   0xFA1001,
+    locationnames.cslk3_cirno_236d:   0xFA1002,
+    locationnames.cslk4_cirno_236d:   0xFA1003,
+    locationnames.cslk1_cirno_236a1:  0xFA1004,
+    locationnames.cslk2_cirno_236a1:  0xFA1005,
+    locationnames.cslk3_cirno_236a1:  0xFA1006,
+    locationnames.cslk4_cirno_236a1:  0xFA1007,
+    locationnames.cslk1_cirno_236a2:  0xFA1008,
+    locationnames.cslk2_cirno_236a2:  0xFA1009,
+    locationnames.cslk3_cirno_236a2:  0xFA100A,
+    locationnames.cslk4_cirno_236a2:  0xFA100B,
+    locationnames.cslk1_cirno_623d:   0xFA100C,
+    locationnames.cslk2_cirno_623d:   0xFA100D,
+    locationnames.cslk3_cirno_623d:   0xFA100E,
+    locationnames.cslk4_cirno_623d:   0xFA100F,
+    locationnames.cslk1_cirno_623a1:  0xFA1010,
+    locationnames.cslk2_cirno_623a1:  0xFA1011,
+    locationnames.cslk3_cirno_623a1:  0xFA1012,
+    locationnames.cslk4_cirno_623a1:  0xFA1013,
+    locationnames.cslk1_cirno_623a2:  0xFA1014,
+    locationnames.cslk2_cirno_623a2:  0xFA1015,
+    locationnames.cslk3_cirno_623a2:  0xFA1016,
+    locationnames.cslk4_cirno_623a2:  0xFA1017,
+    locationnames.cslk1_cirno_214d:   0xFA1018,
+    locationnames.cslk2_cirno_214d:   0xFA1019,
+    locationnames.cslk3_cirno_214d:   0xFA101A,
+    locationnames.cslk4_cirno_214d:   0xFA101B,
+    locationnames.cslk1_cirno_214a1:  0xFA101C,
+    locationnames.cslk2_cirno_214a1:  0xFA101D,
+    locationnames.cslk3_cirno_214a1:  0xFA101E,
+    locationnames.cslk4_cirno_214a1:  0xFA101F,
+    locationnames.cslk1_cirno_214a2:  0xFA1020,
+    locationnames.cslk2_cirno_214a2:  0xFA1021,
+    locationnames.cslk3_cirno_214a2:  0xFA1022,
+    locationnames.cslk4_cirno_214a2:  0xFA1023,
+    locationnames.cslk1_cirno_22d:    0xFA1024,
+    locationnames.cslk2_cirno_22d:    0xFA1025,
+    locationnames.cslk3_cirno_22d:    0xFA1026,
+    locationnames.cslk4_cirno_22d:    0xFA1027,
+    locationnames.cslk1_cirno_22a1:   0xFA1028,
+    locationnames.cslk2_cirno_22a1:   0xFA1029,
+    locationnames.cslk3_cirno_22a1:   0xFA102A,
+    locationnames.cslk4_cirno_22a1:   0xFA102B,
+    locationnames.cslk1_cirno_22a2:   0xFA102C,
+    locationnames.cslk2_cirno_22a2:   0xFA102D,
+    locationnames.cslk3_cirno_22a2:   0xFA102E,
+    locationnames.cslk4_cirno_22a2:   0xFA102F,
 
 }
 
@@ -3221,54 +3221,54 @@ cirno_spell_loc_table = { #0xFA1030 - FA105B
 }
 
 meiling_skill_loc_table = { #0xFA1100 - FA112F
-    locationnames.csl1_meiling_236d:   0xFA1100,
-    locationnames.csl2_meiling_236d:   0xFA1101,
-    locationnames.csl3_meiling_236d:   0xFA1102,
-    locationnames.csl4_meiling_236d:   0xFA1103,
-    locationnames.csl1_meiling_236a1:  0xFA1104,
-    locationnames.csl2_meiling_236a1:  0xFA1105,
-    locationnames.csl3_meiling_236a1:  0xFA1106,
-    locationnames.csl4_meiling_236a1:  0xFA1107,
-    locationnames.csl1_meiling_236a2:  0xFA1108,
-    locationnames.csl2_meiling_236a2:  0xFA1109,
-    locationnames.csl3_meiling_236a2:  0xFA110A,
-    locationnames.csl4_meiling_236a2:  0xFA110B,
-    locationnames.csl1_meiling_623d:   0xFA110C,
-    locationnames.csl2_meiling_623d:   0xFA110D,
-    locationnames.csl3_meiling_623d:   0xFA110E,
-    locationnames.csl4_meiling_623d:   0xFA110F,
-    locationnames.csl1_meiling_623a1:  0xFA1110,
-    locationnames.csl2_meiling_623a1:  0xFA1111,
-    locationnames.csl3_meiling_623a1:  0xFA1112,
-    locationnames.csl4_meiling_623a1:  0xFA1113,
-    locationnames.csl1_meiling_623a2:  0xFA1114,
-    locationnames.csl2_meiling_623a2:  0xFA1115,
-    locationnames.csl3_meiling_623a2:  0xFA1116,
-    locationnames.csl4_meiling_623a2:  0xFA1117,
-    locationnames.csl1_meiling_214d:   0xFA1118,
-    locationnames.csl2_meiling_214d:   0xFA1119,
-    locationnames.csl3_meiling_214d:   0xFA111A,
-    locationnames.csl4_meiling_214d:   0xFA111B,
-    locationnames.csl1_meiling_214a1:  0xFA111C,
-    locationnames.csl2_meiling_214a1:  0xFA111D,
-    locationnames.csl3_meiling_214a1:  0xFA111E,
-    locationnames.csl4_meiling_214a1:  0xFA111F,
-    locationnames.csl1_meiling_214a2:  0xFA1120,
-    locationnames.csl2_meiling_214a2:  0xFA1121,
-    locationnames.csl3_meiling_214a2:  0xFA1122,
-    locationnames.csl4_meiling_214a2:  0xFA1123,
-    locationnames.csl1_meiling_22d:    0xFA1124,
-    locationnames.csl2_meiling_22d:    0xFA1125,
-    locationnames.csl3_meiling_22d:    0xFA1126,
-    locationnames.csl4_meiling_22d:    0xFA1127,
-    locationnames.csl1_meiling_22a1:   0xFA1128,
-    locationnames.csl2_meiling_22a1:   0xFA1129,
-    locationnames.csl3_meiling_22a1:   0xFA112A,
-    locationnames.csl4_meiling_22a1:   0xFA112B,
-    locationnames.csl1_meiling_22a2:   0xFA112C,
-    locationnames.csl2_meiling_22a2:   0xFA112D,
-    locationnames.csl3_meiling_22a2:   0xFA112E,
-    locationnames.csl4_meiling_22a2:   0xFA112F,
+    locationnames.cslk1_meiling_236d:   0xFA1100,
+    locationnames.cslk2_meiling_236d:   0xFA1101,
+    locationnames.cslk3_meiling_236d:   0xFA1102,
+    locationnames.cslk4_meiling_236d:   0xFA1103,
+    locationnames.cslk1_meiling_236a1:  0xFA1104,
+    locationnames.cslk2_meiling_236a1:  0xFA1105,
+    locationnames.cslk3_meiling_236a1:  0xFA1106,
+    locationnames.cslk4_meiling_236a1:  0xFA1107,
+    locationnames.cslk1_meiling_236a2:  0xFA1108,
+    locationnames.cslk2_meiling_236a2:  0xFA1109,
+    locationnames.cslk3_meiling_236a2:  0xFA110A,
+    locationnames.cslk4_meiling_236a2:  0xFA110B,
+    locationnames.cslk1_meiling_623d:   0xFA110C,
+    locationnames.cslk2_meiling_623d:   0xFA110D,
+    locationnames.cslk3_meiling_623d:   0xFA110E,
+    locationnames.cslk4_meiling_623d:   0xFA110F,
+    locationnames.cslk1_meiling_623a1:  0xFA1110,
+    locationnames.cslk2_meiling_623a1:  0xFA1111,
+    locationnames.cslk3_meiling_623a1:  0xFA1112,
+    locationnames.cslk4_meiling_623a1:  0xFA1113,
+    locationnames.cslk1_meiling_623a2:  0xFA1114,
+    locationnames.cslk2_meiling_623a2:  0xFA1115,
+    locationnames.cslk3_meiling_623a2:  0xFA1116,
+    locationnames.cslk4_meiling_623a2:  0xFA1117,
+    locationnames.cslk1_meiling_214d:   0xFA1118,
+    locationnames.cslk2_meiling_214d:   0xFA1119,
+    locationnames.cslk3_meiling_214d:   0xFA111A,
+    locationnames.cslk4_meiling_214d:   0xFA111B,
+    locationnames.cslk1_meiling_214a1:  0xFA111C,
+    locationnames.cslk2_meiling_214a1:  0xFA111D,
+    locationnames.cslk3_meiling_214a1:  0xFA111E,
+    locationnames.cslk4_meiling_214a1:  0xFA111F,
+    locationnames.cslk1_meiling_214a2:  0xFA1120,
+    locationnames.cslk2_meiling_214a2:  0xFA1121,
+    locationnames.cslk3_meiling_214a2:  0xFA1122,
+    locationnames.cslk4_meiling_214a2:  0xFA1123,
+    locationnames.cslk1_meiling_22d:    0xFA1124,
+    locationnames.cslk2_meiling_22d:    0xFA1125,
+    locationnames.cslk3_meiling_22d:    0xFA1126,
+    locationnames.cslk4_meiling_22d:    0xFA1127,
+    locationnames.cslk1_meiling_22a1:   0xFA1128,
+    locationnames.cslk2_meiling_22a1:   0xFA1129,
+    locationnames.cslk3_meiling_22a1:   0xFA112A,
+    locationnames.cslk4_meiling_22a1:   0xFA112B,
+    locationnames.cslk1_meiling_22a2:   0xFA112C,
+    locationnames.cslk2_meiling_22a2:   0xFA112D,
+    locationnames.cslk3_meiling_22a2:   0xFA112E,
+    locationnames.cslk4_meiling_22a2:   0xFA112F,
 
 }
 
@@ -3321,54 +3321,54 @@ meiling_spell_loc_table = { #0xFA1130 - FA115B
 }
 
 okuu_skill_loc_table = { #0xFA1200 - FA122F
-    locationnames.csl1_okuu_236d:   0xFA1200,
-    locationnames.csl2_okuu_236d:   0xFA1201,
-    locationnames.csl3_okuu_236d:   0xFA1202,
-    locationnames.csl4_okuu_236d:   0xFA1203,
-    locationnames.csl1_okuu_236a1:  0xFA1204,
-    locationnames.csl2_okuu_236a1:  0xFA1205,
-    locationnames.csl3_okuu_236a1:  0xFA1206,
-    locationnames.csl4_okuu_236a1:  0xFA1207,
-    locationnames.csl1_okuu_236a2:  0xFA1208,
-    locationnames.csl2_okuu_236a2:  0xFA1209,
-    locationnames.csl3_okuu_236a2:  0xFA120A,
-    locationnames.csl4_okuu_236a2:  0xFA120B,
-    locationnames.csl1_okuu_623d:   0xFA120C,
-    locationnames.csl2_okuu_623d:   0xFA120D,
-    locationnames.csl3_okuu_623d:   0xFA120E,
-    locationnames.csl4_okuu_623d:   0xFA120F,
-    locationnames.csl1_okuu_623a1:  0xFA1210,
-    locationnames.csl2_okuu_623a1:  0xFA1211,
-    locationnames.csl3_okuu_623a1:  0xFA1212,
-    locationnames.csl4_okuu_623a1:  0xFA1213,
-    locationnames.csl1_okuu_623a2:  0xFA1214,
-    locationnames.csl2_okuu_623a2:  0xFA1215,
-    locationnames.csl3_okuu_623a2:  0xFA1216,
-    locationnames.csl4_okuu_623a2:  0xFA1217,
-    locationnames.csl1_okuu_214d:   0xFA1218,
-    locationnames.csl2_okuu_214d:   0xFA1219,
-    locationnames.csl3_okuu_214d:   0xFA121A,
-    locationnames.csl4_okuu_214d:   0xFA121B,
-    locationnames.csl1_okuu_214a1:  0xFA121C,
-    locationnames.csl2_okuu_214a1:  0xFA121D,
-    locationnames.csl3_okuu_214a1:  0xFA121E,
-    locationnames.csl4_okuu_214a1:  0xFA121F,
-    locationnames.csl1_okuu_214a2:  0xFA1220,
-    locationnames.csl2_okuu_214a2:  0xFA1221,
-    locationnames.csl3_okuu_214a2:  0xFA1222,
-    locationnames.csl4_okuu_214a2:  0xFA1223,
-    locationnames.csl1_okuu_22d:    0xFA1224,
-    locationnames.csl2_okuu_22d:    0xFA1225,
-    locationnames.csl3_okuu_22d:    0xFA1226,
-    locationnames.csl4_okuu_22d:    0xFA1227,
-    locationnames.csl1_okuu_22a1:   0xFA1228,
-    locationnames.csl2_okuu_22a1:   0xFA1229,
-    locationnames.csl3_okuu_22a1:   0xFA122A,
-    locationnames.csl4_okuu_22a1:   0xFA122B,
-    locationnames.csl1_okuu_22a2:   0xFA122C,
-    locationnames.csl2_okuu_22a2:   0xFA122D,
-    locationnames.csl3_okuu_22a2:   0xFA122E,
-    locationnames.csl4_okuu_22a2:   0xFA122F,
+    locationnames.cslk1_okuu_236d:   0xFA1200,
+    locationnames.cslk2_okuu_236d:   0xFA1201,
+    locationnames.cslk3_okuu_236d:   0xFA1202,
+    locationnames.cslk4_okuu_236d:   0xFA1203,
+    locationnames.cslk1_okuu_236a1:  0xFA1204,
+    locationnames.cslk2_okuu_236a1:  0xFA1205,
+    locationnames.cslk3_okuu_236a1:  0xFA1206,
+    locationnames.cslk4_okuu_236a1:  0xFA1207,
+    locationnames.cslk1_okuu_236a2:  0xFA1208,
+    locationnames.cslk2_okuu_236a2:  0xFA1209,
+    locationnames.cslk3_okuu_236a2:  0xFA120A,
+    locationnames.cslk4_okuu_236a2:  0xFA120B,
+    locationnames.cslk1_okuu_623d:   0xFA120C,
+    locationnames.cslk2_okuu_623d:   0xFA120D,
+    locationnames.cslk3_okuu_623d:   0xFA120E,
+    locationnames.cslk4_okuu_623d:   0xFA120F,
+    locationnames.cslk1_okuu_623a1:  0xFA1210,
+    locationnames.cslk2_okuu_623a1:  0xFA1211,
+    locationnames.cslk3_okuu_623a1:  0xFA1212,
+    locationnames.cslk4_okuu_623a1:  0xFA1213,
+    locationnames.cslk1_okuu_623a2:  0xFA1214,
+    locationnames.cslk2_okuu_623a2:  0xFA1215,
+    locationnames.cslk3_okuu_623a2:  0xFA1216,
+    locationnames.cslk4_okuu_623a2:  0xFA1217,
+    locationnames.cslk1_okuu_214d:   0xFA1218,
+    locationnames.cslk2_okuu_214d:   0xFA1219,
+    locationnames.cslk3_okuu_214d:   0xFA121A,
+    locationnames.cslk4_okuu_214d:   0xFA121B,
+    locationnames.cslk1_okuu_214a1:  0xFA121C,
+    locationnames.cslk2_okuu_214a1:  0xFA121D,
+    locationnames.cslk3_okuu_214a1:  0xFA121E,
+    locationnames.cslk4_okuu_214a1:  0xFA121F,
+    locationnames.cslk1_okuu_214a2:  0xFA1220,
+    locationnames.cslk2_okuu_214a2:  0xFA1221,
+    locationnames.cslk3_okuu_214a2:  0xFA1222,
+    locationnames.cslk4_okuu_214a2:  0xFA1223,
+    locationnames.cslk1_okuu_22d:    0xFA1224,
+    locationnames.cslk2_okuu_22d:    0xFA1225,
+    locationnames.cslk3_okuu_22d:    0xFA1226,
+    locationnames.cslk4_okuu_22d:    0xFA1227,
+    locationnames.cslk1_okuu_22a1:   0xFA1228,
+    locationnames.cslk2_okuu_22a1:   0xFA1229,
+    locationnames.cslk3_okuu_22a1:   0xFA122A,
+    locationnames.cslk4_okuu_22a1:   0xFA122B,
+    locationnames.cslk1_okuu_22a2:   0xFA122C,
+    locationnames.cslk2_okuu_22a2:   0xFA122D,
+    locationnames.cslk3_okuu_22a2:   0xFA122E,
+    locationnames.cslk4_okuu_22a2:   0xFA122F,
 
 }
 
@@ -3433,54 +3433,54 @@ okuu_spell_loc_table = { #0xFA1230 - FA1267
 }
 
 suwako_skill_loc_table = { #0xFA1300 - FA132F
-    locationnames.csl1_suwako_236d:   0xFA1300,
-    locationnames.csl2_suwako_236d:   0xFA1301,
-    locationnames.csl3_suwako_236d:   0xFA1302,
-    locationnames.csl4_suwako_236d:   0xFA1303,
-    locationnames.csl1_suwako_236a1:  0xFA1304,
-    locationnames.csl2_suwako_236a1:  0xFA1305,
-    locationnames.csl3_suwako_236a1:  0xFA1306,
-    locationnames.csl4_suwako_236a1:  0xFA1307,
-    locationnames.csl1_suwako_236a2:  0xFA1308,
-    locationnames.csl2_suwako_236a2:  0xFA1309,
-    locationnames.csl3_suwako_236a2:  0xFA130A,
-    locationnames.csl4_suwako_236a2:  0xFA130B,
-    locationnames.csl1_suwako_623d:   0xFA130C,
-    locationnames.csl2_suwako_623d:   0xFA130D,
-    locationnames.csl3_suwako_623d:   0xFA130E,
-    locationnames.csl4_suwako_623d:   0xFA130F,
-    locationnames.csl1_suwako_623a1:  0xFA1310,
-    locationnames.csl2_suwako_623a1:  0xFA1311,
-    locationnames.csl3_suwako_623a1:  0xFA1312,
-    locationnames.csl4_suwako_623a1:  0xFA1313,
-    locationnames.csl1_suwako_623a2:  0xFA1314,
-    locationnames.csl2_suwako_623a2:  0xFA1315,
-    locationnames.csl3_suwako_623a2:  0xFA1316,
-    locationnames.csl4_suwako_623a2:  0xFA1317,
-    locationnames.csl1_suwako_214d:   0xFA1318,
-    locationnames.csl2_suwako_214d:   0xFA1319,
-    locationnames.csl3_suwako_214d:   0xFA131A,
-    locationnames.csl4_suwako_214d:   0xFA131B,
-    locationnames.csl1_suwako_214a1:  0xFA131C,
-    locationnames.csl2_suwako_214a1:  0xFA131D,
-    locationnames.csl3_suwako_214a1:  0xFA131E,
-    locationnames.csl4_suwako_214a1:  0xFA131F,
-    locationnames.csl1_suwako_214a2:  0xFA1320,
-    locationnames.csl2_suwako_214a2:  0xFA1321,
-    locationnames.csl3_suwako_214a2:  0xFA1322,
-    locationnames.csl4_suwako_214a2:  0xFA1323,
-    locationnames.csl1_suwako_22d:    0xFA1324,
-    locationnames.csl2_suwako_22d:    0xFA1325,
-    locationnames.csl3_suwako_22d:    0xFA1326,
-    locationnames.csl4_suwako_22d:    0xFA1327,
-    locationnames.csl1_suwako_22a1:   0xFA1328,
-    locationnames.csl2_suwako_22a1:   0xFA1329,
-    locationnames.csl3_suwako_22a1:   0xFA132A,
-    locationnames.csl4_suwako_22a1:   0xFA132B,
-    locationnames.csl1_suwako_22a2:   0xFA132C,
-    locationnames.csl2_suwako_22a2:   0xFA132D,
-    locationnames.csl3_suwako_22a2:   0xFA132E,
-    locationnames.csl4_suwako_22a2:   0xFA132F,
+    locationnames.cslk1_suwako_236d:   0xFA1300,
+    locationnames.cslk2_suwako_236d:   0xFA1301,
+    locationnames.cslk3_suwako_236d:   0xFA1302,
+    locationnames.cslk4_suwako_236d:   0xFA1303,
+    locationnames.cslk1_suwako_236a1:  0xFA1304,
+    locationnames.cslk2_suwako_236a1:  0xFA1305,
+    locationnames.cslk3_suwako_236a1:  0xFA1306,
+    locationnames.cslk4_suwako_236a1:  0xFA1307,
+    locationnames.cslk1_suwako_236a2:  0xFA1308,
+    locationnames.cslk2_suwako_236a2:  0xFA1309,
+    locationnames.cslk3_suwako_236a2:  0xFA130A,
+    locationnames.cslk4_suwako_236a2:  0xFA130B,
+    locationnames.cslk1_suwako_623d:   0xFA130C,
+    locationnames.cslk2_suwako_623d:   0xFA130D,
+    locationnames.cslk3_suwako_623d:   0xFA130E,
+    locationnames.cslk4_suwako_623d:   0xFA130F,
+    locationnames.cslk1_suwako_623a1:  0xFA1310,
+    locationnames.cslk2_suwako_623a1:  0xFA1311,
+    locationnames.cslk3_suwako_623a1:  0xFA1312,
+    locationnames.cslk4_suwako_623a1:  0xFA1313,
+    locationnames.cslk1_suwako_623a2:  0xFA1314,
+    locationnames.cslk2_suwako_623a2:  0xFA1315,
+    locationnames.cslk3_suwako_623a2:  0xFA1316,
+    locationnames.cslk4_suwako_623a2:  0xFA1317,
+    locationnames.cslk1_suwako_214d:   0xFA1318,
+    locationnames.cslk2_suwako_214d:   0xFA1319,
+    locationnames.cslk3_suwako_214d:   0xFA131A,
+    locationnames.cslk4_suwako_214d:   0xFA131B,
+    locationnames.cslk1_suwako_214a1:  0xFA131C,
+    locationnames.cslk2_suwako_214a1:  0xFA131D,
+    locationnames.cslk3_suwako_214a1:  0xFA131E,
+    locationnames.cslk4_suwako_214a1:  0xFA131F,
+    locationnames.cslk1_suwako_214a2:  0xFA1320,
+    locationnames.cslk2_suwako_214a2:  0xFA1321,
+    locationnames.cslk3_suwako_214a2:  0xFA1322,
+    locationnames.cslk4_suwako_214a2:  0xFA1323,
+    locationnames.cslk1_suwako_22d:    0xFA1324,
+    locationnames.cslk2_suwako_22d:    0xFA1325,
+    locationnames.cslk3_suwako_22d:    0xFA1326,
+    locationnames.cslk4_suwako_22d:    0xFA1327,
+    locationnames.cslk1_suwako_22a1:   0xFA1328,
+    locationnames.cslk2_suwako_22a1:   0xFA1329,
+    locationnames.cslk3_suwako_22a1:   0xFA132A,
+    locationnames.cslk4_suwako_22a1:   0xFA132B,
+    locationnames.cslk1_suwako_22a2:   0xFA132C,
+    locationnames.cslk2_suwako_22a2:   0xFA132D,
+    locationnames.cslk3_suwako_22a2:   0xFA132E,
+    locationnames.cslk4_suwako_22a2:   0xFA132F,
 
 }
 
@@ -3669,7 +3669,7 @@ all_locations = {
 
 }
 
-lookup_id_to_name: typing.Dict[int, str] = {id: name for name, _ in all_locations.items()}
+lookup_id_to_name: Dict[int, str] = {id: name for name, _ in all_locations.items()}
 
 
 def setup_locations(world: World, player: int):
@@ -3689,72 +3689,169 @@ def setup_locations(world: World, player: int):
     #Add VS mode locations per the player setting
     if world.options.vs_mode_character_wins == 1:
         if world.options.vs_mode_win_count == 1:
-            location_table.update({locationnames.reimu_vs_w1})
-            location_table.update({locationnames.marisa_vs_w1})
-            location_table.update({locationnames.sakuya_vs_w1})
-            location_table.update({locationnames.alice_vs_w1})
-            location_table.update({locationnames.patchouli_vs_w1})
-            location_table.update({locationnames.youmu_vs_w1})
-            location_table.update({locationnames.remilia_vs_w1})
-            location_table.update({locationnames.yuyuko_vs_w1})
-            location_table.update({locationnames.yukari_vs_w1})
-            location_table.update({locationnames.suika_vs_w1})
-            location_table.update({locationnames.reisen_vs_w1})
-            location_table.update({locationnames.aya_vs_w1})
-            location_table.update({locationnames.komachi_vs_w1})
-            location_table.update({locationnames.iku_vs_w1})
-            location_table.update({locationnames.tenshi_vs_w1})
-            location_table.update({locationnames.sanae_vs_w1})
-            location_table.update({locationnames.cirno_vs_w1})
-            location_table.update({locationnames.meiling_vs_w1})
-            location_table.update({locationnames.okuu_vs_w1})
-            location_table.update({locationnames.suwako_vs_w1})
-        elif world.options.vs_mode_win_count == 2:
-            location_table.update({locationnames.reimu_vs_w1})
-            location_table.update({locationnames.reimu_vs_w2})
-            location_table.update({locationnames.marisa_vs_w1})
-            location_table.update({locationnames.marisa_vs_w2})
-            location_table.update({locationnames.sakuya_vs_w1})
-            location_table.update({locationnames.sakuya_vs_w2})
-            location_table.update({locationnames.alice_vs_w1})
-            location_table.update({locationnames.alice_vs_w2})
-            location_table.update({locationnames.patchouli_vs_w1})
-            location_table.update({locationnames.patchouli_vs_w2})
-            location_table.update({locationnames.youmu_vs_w1})
-            location_table.update({locationnames.youmu_vs_w2})
-            location_table.update({locationnames.remilia_vs_w1})
-            location_table.update({locationnames.remilia_vs_w2})
-            location_table.update({locationnames.yuyuko_vs_w1})
-            location_table.update({locationnames.yuyuko_vs_w2})
-            location_table.update({locationnames.yukari_vs_w1})
-            location_table.update({locationnames.yukari_vs_w2})
-            location_table.update({locationnames.suika_vs_w1})
-            location_table.update({locationnames.suika_vs_w2})
-            location_table.update({locationnames.reisen_vs_w1})
-            location_table.update({locationnames.reisen_vs_w2})
-            location_table.update({locationnames.aya_vs_w1})
-            location_table.update({locationnames.aya_vs_w2})
-            location_table.update({locationnames.komachi_vs_w1})
-            location_table.update({locationnames.komachi_vs_w2})
-            location_table.update({locationnames.iku_vs_w1})
-            location_table.update({locationnames.iku_vs_w2})
-            location_table.update({locationnames.tenshi_vs_w1})
-            location_table.update({locationnames.tenshi_vs_w2})
-            location_table.update({locationnames.sanae_vs_w1})
-            location_table.update({locationnames.sanae_vs_w2})
-            location_table.update({locationnames.cirno_vs_w1})
-            location_table.update({locationnames.cirno_vs_w2})
-            location_table.update({locationnames.meiling_vs_w1})
-            location_table.update({locationnames.meiling_vs_w2})
-            location_table.update({locationnames.okuu_vs_w1})
-            location_table.update({locationnames.okuu_vs_w2})
-            location_table.update({locationnames.suwako_vs_w1})
-            location_table.update({locationnames.suwako_vs_w2})
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 2:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 3:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w3":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 4:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w3":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w4":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 5:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w3":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w4":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w5":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 6:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w3":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w4":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w5":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w6":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 7:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w3":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w4":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w5":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w6":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w7":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 8:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w3":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w4":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w5":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w6":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w7":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w8":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 9:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w3":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w4":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w5":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w6":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w7":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w8":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w9":
+                    location_table.update({locationnames[key]})
+        if world.options.vs_mode_win_count == 10:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[-3:] == "_w1":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w2":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w3":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w4":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w5":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w6":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w7":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w8":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w9":
+                    location_table.update({locationnames[key]})
+                if key[-3:] == "_w10":
+                    location_table.update({locationnames[key]})
 
         #Check VS Mode Blacklist
-    if world.option.vs_blacklist_player == "Reimu":
-        del location_table[{**reimu_vs_win_table}]
+        if world.option.vs_blacklist_player == "Reimu":
+            del location_table[{**reimu_vs_win_table}]
+        if world.option.vs_blacklist_player == "Marisa":
+            del location_table[{**marisa_vs_win_table}]
+        if world.option.vs_blacklist_player == "Sakuya":
+            del location_table[{**sakuya_vs_win_table}]
+        if world.option.vs_blacklist_player == "Alice":
+            del location_table[{**alice_vs_win_table}]
+        if world.option.vs_blacklist_player == "Patchouli":
+            del location_table[{**patchouli_vs_win_table}]
+        if world.option.vs_blacklist_player == "Youmu":
+            del location_table[{**youmu_vs_win_table}]
+        if world.option.vs_blacklist_player == "Remilia":
+            del location_table[{**remilia_vs_win_table}]
+        if world.option.vs_blacklist_player == "Yuyuko":
+            del location_table[{**yuyuko_vs_win_table}]
+        if world.option.vs_blacklist_player == "Yukari":
+            del location_table[{**yukari_vs_win_table}]
+        if world.option.vs_blacklist_player == "Suika":
+            del location_table[{**suika_vs_win_table}]
+        if world.option.vs_blacklist_player == "Reisen":
+            del location_table[{**reisen_vs_win_table}]
+        if world.option.vs_blacklist_player == "Aya":
+            del location_table[{**aya_vs_win_table}]
+        if world.option.vs_blacklist_player == "Komachi":
+            del location_table[{**komachi_vs_win_table}]
+        if world.option.vs_blacklist_player == "Iku":
+            del location_table[{**iku_vs_win_table}]
+        if world.option.vs_blacklist_player == "Tenshi":
+            del location_table[{**tenshi_vs_win_table}]
 
+    #Add all Arcade mode checks if enabled
     if world.option.arcade_mode_checks == 1:
         location_table.update({**reimu_arcade_stage_table})
         location_table.update({**marisa_arcade_stage_table})
@@ -3777,47 +3874,162 @@ def setup_locations(world: World, player: int):
         location_table.update({**okuu_arcade_stage_table})
         location_table.update({**suwako_arcade_stage_table})
 
-    #Check Arcade Mode Blacklist    
-    if world.option.arcade_mode_blacklist == "Reimu":
-        del location_table[{**reimu_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Marisa":
-        del location_table[{**marisa_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Sakuya":
-        del location_table[{**sakuya_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Alice":
-        del location_table[{**alice_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Patchouli":
-        del location_table[{**patchouli_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Youmu":
-        del location_table[{**youmu_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Remilia":
-        del location_table[{**remilia_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Yuyuko":
-        del location_table[{**yuyuko_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Yukari":
-        del location_table[{**yukari_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Suika":
-        del location_table[{**suika_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Reisen":
-        del location_table[{**reisen_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Aya":
-        del location_table[{**aya_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Komachi":
-        del location_table[{**komachi_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Iku":
-        del location_table[{**iku_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Tenshi":
-        del location_table[{**tenshi_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Sanae":
-        del location_table[{**sanae_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Cirno":
-        del location_table[{**cirno_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Meiling":
-        del location_table[{**meiling_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Utsuho":
-        del location_table[{**okuu_arcade_stage_table}]
-    if world.option.arcade_mode_blacklist == "Suwako":
-        del location_table[{**suwako_arcade_stage_table}]
+        #Check Arcade Mode Blacklist    
+        if world.option.arcade_mode_blacklist == "Reimu":
+            del location_table[{**reimu_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Marisa":
+            del location_table[{**marisa_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Sakuya":
+            del location_table[{**sakuya_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Alice":
+            del location_table[{**alice_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Patchouli":
+            del location_table[{**patchouli_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Youmu":
+            del location_table[{**youmu_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Remilia":
+            del location_table[{**remilia_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Yuyuko":
+            del location_table[{**yuyuko_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Yukari":
+            del location_table[{**yukari_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Suika":
+            del location_table[{**suika_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Reisen":
+            del location_table[{**reisen_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Aya":
+            del location_table[{**aya_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Komachi":
+            del location_table[{**komachi_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Iku":
+            del location_table[{**iku_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Tenshi":
+            del location_table[{**tenshi_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Sanae":
+            del location_table[{**sanae_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Cirno":
+            del location_table[{**cirno_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Meiling":
+            del location_table[{**meiling_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Utsuho":
+            del location_table[{**okuu_arcade_stage_table}]
+        if world.option.arcade_mode_blacklist == "Suwako":
+            del location_table[{**suwako_arcade_stage_table}]
     
+    
+    #Add Skillsanity checks per the player option
+    if world.option.cardsanity_skills == 1:
+        for index, (key, value) in enumerate(locationnames.items()):
+            if key[+5:] == "cslk1":
+                location_table.update({locationnames[key]})
+    if world.option.cardsanity_skills == 2:
+        for index, (key, value) in enumerate(locationnames.items()):
+            if key[+5:] == "cslk4":
+                location_table.update({locationnames[key]})
+    if world.option.cardsanity_skills == 3:
+        for index, (key, value) in enumerate(locationnames.items()):
+            if key[+4:] == "cslk":
+                location_table.update({locationnames[key]})
+
+    #Check Spellsanity Count if Cardsanity Spells is enabled
+    if world.option.cardsanity_spells == 1:
+        if world.option.cardsanity_spell_count == 1:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl1":
+                    location_table.update({locationnames[key]})
+        if world.option.cardsanity_spell_count == 2:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl1":
+                    location_table.update({locationnames[key]})
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl2":
+                    location_table.update({locationnames[key]})
+        if world.option.cardsanity_spell_count == 3:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl1":
+                    location_table.update({locationnames[key]})
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl2":
+                    location_table.update({locationnames[key]})
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl3":
+                    location_table.update({locationnames[key]})
+        if world.option.cardsanity_spell_count == 4:
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl1":
+                    location_table.update({locationnames[key]})
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl2":
+                    location_table.update({locationnames[key]})
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl3":
+                    location_table.update({locationnames[key]})
+            for index, (key, value) in enumerate(locationnames.items()):
+                if key[+4:] == "csl4":
+                    location_table.update({locationnames[key]})
+
+        
+    #Check Cardsanity Blacklist
+    if world.option.cardsanity_blacklist == "Reimu":
+        del location_table[{**reimu_skill_loc_table}]
+        del location_table[{**reimu_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Marisa":
+        del location_table[{**marisa_skill_loc_table}]
+        del location_table[{**marisa_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Sakuya":
+        del location_table[{**sakuya_skill_loc_table}]
+        del location_table[{**sakuya_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Alice":
+        del location_table[{**alice_skill_loc_table}]
+        del location_table[{**alice_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Patchouli":
+        del location_table[{**patchouli_skill_loc_table}]
+        del location_table[{**patchouli_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Youmu":
+        del location_table[{**youmu_skill_loc_table}]
+        del location_table[{**youmu_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Remilia":
+        del location_table[{**remilia_skill_loc_table}]
+        del location_table[{**remilia_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Yuyuko":
+        del location_table[{**yuyuko_skill_loc_table}]
+        del location_table[{**yuyuko_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Yukari":
+        del location_table[{**yukari_skill_loc_table}]
+        del location_table[{**yukari_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Suika":
+        del location_table[{**suika_skill_loc_table}]
+        del location_table[{**suika_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Reisen":
+        del location_table[{**reisen_skill_loc_table}]
+        del location_table[{**reisen_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Aya":
+        del location_table[{**aya_skill_loc_table}]
+        del location_table[{**aya_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Komachi":
+        del location_table[{**komachi_skill_loc_table}]
+        del location_table[{**komachi_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Iku":
+        del location_table[{**iku_skill_loc_table}]
+        del location_table[{**iku_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Tenshi":
+        del location_table[{**tenshi_skill_loc_table}]
+        del location_table[{**tenshi_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Sanae":
+        del location_table[{**sanae_skill_loc_table}]
+        del location_table[{**sanae_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Cirno":
+        del location_table[{**cirno_skill_loc_table}]
+        del location_table[{**cirno_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Meiling":
+        del location_table[{**meiling_skill_loc_table}]
+        del location_table[{**meiling_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Utsuho":
+        del location_table[{**okuu_skill_loc_table}]
+        del location_table[{**okuu_spell_loc_table}]
+    if world.option.cardsanity_blacklist == "Suwako":
+        del location_table[{**suwako_skill_loc_table}]
+        del location_table[{**suwako_spell_loc_table}]
+
 
     return location_table

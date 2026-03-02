@@ -1,7 +1,7 @@
 """
 Archipelago init file for Touhou 12.3 - Hisoutensoku
 """
-from typing import List
+from typing import List, Dict, str, int
 
 from worlds.Autoworld import World
 from worlds.LauncherComponents import Component, components, launch_subprocess, Type
@@ -11,7 +11,7 @@ from worlds.AutoWorld import WebWorld, World
 from worlds.generic.Rules import set_rule, forbid_item
 
 from .options import SokuOptions
-from .locations import *
+from .locations import location_table, setup_locations, all_locations, location_groups
 from .items import item_table, characters_table, arcade_table, difficulty_table, system_card_table, reimu_skill_table,  reimu_spell_table, \
                    marisa_skill_table, marisa_spell_table, sakuya_skill_table, sakuya_spell_table, alice_skill_table, alice_spell_table, \
                    patchouli_skill_table, patchouli_spell_table, youmu_skill_table, youmu_spell_table, remilia_skill_table, remilia_spell_table, \
@@ -28,3 +28,10 @@ class SokuWorld(World):
     options_dataclass = SokuOptions
 
     item_name_groups = item_groups
+    location_name_groups = location_groups
+    location_name_to_id = all_locations
+
+    location_table: Dict[str, int]
+
+    
+
