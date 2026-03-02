@@ -3930,5 +3930,128 @@ def setup_locations(world: World, player: int):
         del location_table[{**suwako_skill_loc_table}]
         del location_table[{**suwako_spell_loc_table}]
 
+    #Check Full Character Blacklist
+    if world.option.character_full_blacklist == "Reimu":
+        del location_table[{**reimu_vs_win_table}]
+        del location_table[{**reimu_vs_defeat_table}]
+        del location_table[{**reimu_arcade_stage_table}]
+        del location_table[{**reimu_skill_loc_table}]
+        del location_table[{**reimu_spell_loc_table}]
+    if world.option.character_full_blacklist == "Marisa":
+        del location_table[{**marisa_vs_win_table}]
+        del location_table[{**marisa_vs_defeat_table}]
+        del location_table[{**marisa_arcade_stage_table}]
+        del location_table[{**marisa_skill_loc_table}]
+        del location_table[{**marisa_spell_loc_table}]
+    if world.option.character_full_blacklist == "Sakuya":
+        del location_table[{**sakuya_vs_win_table}]
+        del location_table[{**sakuya_vs_defeat_table}]
+        del location_table[{**sakuya_arcade_stage_table}]
+        del location_table[{**sakuya_skill_loc_table}]
+        del location_table[{**sakuya_spell_loc_table}]
+    if world.option.character_full_blacklist == "Alice":
+        del location_table[{**alice_vs_win_table}]
+        del location_table[{**alice_vs_defeat_table}]
+        del location_table[{**alice_arcade_stage_table}]
+        del location_table[{**alice_skill_loc_table}]
+        del location_table[{**alice_spell_loc_table}]
+    if world.option.character_full_blacklist == "Patchouli":
+        del location_table[{**patchouli_vs_win_table}]
+        del location_table[{**patchouli_vs_defeat_table}]
+        del location_table[{**patchouli_arcade_stage_table}]
+        del location_table[{**patchouli_skill_loc_table}]
+        del location_table[{**patchouli_spell_loc_table}]
+    if world.option.character_full_blacklist == "Youmu":
+        del location_table[{**youmu_vs_win_table}]
+        del location_table[{**youmu_vs_defeat_table}]
+        del location_table[{**youmu_arcade_stage_table}]
+        del location_table[{**youmu_skill_loc_table}]
+        del location_table[{**youmu_spell_loc_table}]
+    if world.option.character_full_blacklist == "Remilia":
+        del location_table[{**remilia_vs_win_table}]
+        del location_table[{**remilia_vs_defeat_table}]
+        del location_table[{**remilia_arcade_stage_table}]
+        del location_table[{**remilia_skill_loc_table}]
+        del location_table[{**remilia_spell_loc_table}]
+    if world.option.character_full_blacklist == "Yuyuko":
+        del location_table[{**yuyuko_vs_win_table}]
+        del location_table[{**yuyuko_vs_defeat_table}]
+        del location_table[{**yuyuko_arcade_stage_table}]
+        del location_table[{**yuyuko_skill_loc_table}]
+        del location_table[{**yuyuko_spell_loc_table}]
+    if world.option.character_full_blacklist == "Yukari":
+        del location_table[{**yukari_vs_win_table}]
+        del location_table[{**yukari_vs_defeat_table}]
+        del location_table[{**yukari_arcade_stage_table}]
+        del location_table[{**yukari_skill_loc_table}]
+        del location_table[{**yukari_spell_loc_table}]
+    if world.option.character_full_blacklist == "Suika":
+        del location_table[{**suika_vs_win_table}]
+        del location_table[{**suika_vs_defeat_table}]
+        del location_table[{**suika_arcade_stage_table}]
+        del location_table[{**suika_skill_loc_table}]
+        del location_table[{**suika_spell_loc_table}]
+    if world.option.character_full_blacklist == "Reisen":
+        del location_table[{**reisen_vs_win_table}]
+        del location_table[{**reisen_vs_defeat_table}]
+        del location_table[{**reisen_arcade_stage_table}]
+        del location_table[{**reisen_skill_loc_table}]
+        del location_table[{**reisen_spell_loc_table}]
+    if world.option.character_full_blacklist == "Aya":
+        del location_table[{**aya_vs_win_table}]
+        del location_table[{**aya_vs_defeat_table}]
+        del location_table[{**aya_arcade_stage_table}]
+        del location_table[{**aya_skill_loc_table}]
+        del location_table[{**aya_spell_loc_table}]
+    if world.option.character_full_blacklist == "Komachi":
+        del location_table[{**komachi_vs_win_table}]
+        del location_table[{**komachi_vs_defeat_table}]
+        del location_table[{**komachi_arcade_stage_table}]
+        del location_table[{**komachi_skill_loc_table}]
+        del location_table[{**komachi_spell_loc_table}]
+    if world.option.character_full_blacklist == "Iku":
+        del location_table[{**iku_vs_win_table}]
+        del location_table[{**iku_vs_defeat_table}]
+        del location_table[{**iku_arcade_stage_table}]
+        del location_table[{**iku_skill_loc_table}]
+        del location_table[{**iku_spell_loc_table}]
+    if world.option.character_full_blacklist == "Tenshi":
+        del location_table[{**tenshi_vs_win_table}]
+        del location_table[{**tenshi_vs_defeat_table}]
+        del location_table[{**tenshi_arcade_stage_table}]
+        del location_table[{**tenshi_skill_loc_table}]
+        del location_table[{**tenshi_spell_loc_table}]
+    if world.option.character_full_blacklist == "Sanae":
+        del location_table[{**sanae_vs_win_table}]
+        del location_table[{**sanae_vs_defeat_table}]
+        del location_table[{**sanae_arcade_stage_table}]
+        del location_table[{**sanae_skill_loc_table}]
+        del location_table[{**sanae_spell_loc_table}]
+    if world.option.character_full_blacklist == "Cirno":
+        del location_table[{**cirno_vs_win_table}]
+        del location_table[{**cirno_vs_defeat_table}]
+        del location_table[{**cirno_arcade_stage_table}]
+        del location_table[{**cirno_skill_loc_table}]
+        del location_table[{**cirno_spell_loc_table}]
+    if world.option.character_full_blacklist == "Meiling":
+        del location_table[{**meiling_vs_win_table}]
+        del location_table[{**meiling_vs_defeat_table}]
+        del location_table[{**meiling_arcade_stage_table}]
+        del location_table[{**meiling_skill_loc_table}]
+        del location_table[{**meiling_spell_loc_table}]
+    if world.option.character_full_blacklist == "Utsuho":
+        del location_table[{**okuu_vs_win_table}]
+        del location_table[{**okuu_vs_defeat_table}]
+        del location_table[{**okuu_arcade_stage_table}]
+        del location_table[{**okuu_skill_loc_table}]
+        del location_table[{**okuu_spell_loc_table}]
+    if world.option.character_full_blacklist == "Suwako":
+        del location_table[{**suwako_vs_win_table}]
+        del location_table[{**suwako_vs_defeat_table}]
+        del location_table[{**suwako_arcade_stage_table}]
+        del location_table[{**suwako_skill_loc_table}]
+        del location_table[{**suwako_spell_loc_table}]
+    
+
 
     return location_table
