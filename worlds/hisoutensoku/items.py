@@ -751,7 +751,7 @@ trap_table = {
 
 }
 
-item_table = {
+all_items = {
     **characters_table,
     **arcade_table,
     **difficulty_table,
