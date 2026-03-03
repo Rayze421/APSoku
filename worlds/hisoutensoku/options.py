@@ -86,26 +86,26 @@ class StartingCharacter(Choice):
     """
     display_name = "Starting Character"
     default = "random"
-    option_alice = 0
-    option_aya = 1
-    option_cirno = 2
-    option_iku = 3
-    option_Komachi = 4
-    option_marisa = 5
-    option_meiling = 6
-    option_patchouli = 7
-    option_reimu = 8
-    option_reisen = 9
-    option_remilia = 10
-    option_sakuya = 11
-    option_sanae = 12
-    option_suika = 13
-    option_suwako = 14
-    option_tenshi = 15
-    option_utsuho = 16
-    option_youmu = 17
-    option_yukari = 18
-    option_yuyuko = 19
+    option_reimu = 0
+    option_marisa = 1
+    option_sakuya = 2
+    option_alice = 3
+    option_patchouli = 4
+    option_youmu = 5
+    option_remilia = 6
+    option_yuyuko = 7
+    option_yukari = 8
+    option_suika = 9
+    option_reisen = 10
+    option_aya = 11
+    option_komachi = 12
+    option_iku = 13
+    option_tenshi = 14
+    option_sanae = 15
+    option_cirno = 16
+    option_meiling = 17
+    option_utsuho = 18
+    option_suwako = 19
 
 class CharacterFullBlacklist(OptionSet):
     """

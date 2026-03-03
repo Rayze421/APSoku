@@ -3691,7 +3691,7 @@ def setup_locations(world: World, player: int):
         location_table.update(locationnames.story_end)
     if world.option.goal == "Arcade":
         for index, (key, value) in enumerate(locationnames.items()):
-            if key[-11:] == "arcade_end":
+            if key[-10:] == "arcade_end":
                 location_table.update({locationnames[key]})
     if world.option.goal == "Card Collector":
         location_table.update(locationnames.collector_goal)

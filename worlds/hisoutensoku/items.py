@@ -1,14 +1,14 @@
-import typing
-from .variables import *
+from typing import Dict, NamedTuple, Optional
 from .data import itemnames
+from worlds.AutoWorld import World
 from BaseClasses import Item, ItemClassification
 
 class SokuItem(Item):
     game: str = "Touhou 12.3 - Hisoutensoku"
 
-class SokuItemData(typing.NamedTuple):
+class SokuItemData(NamedTuple):
     category: str
-    code: typing.Optional[int] = None
+    code: Optional[int] = None
     classification: ItemClassification = ItemClassification.filler
 
 #Item ID's in hexadecimal bc it makes me feel smart and this games sheer size will probably warrant it as far as sorting goes
@@ -34,7 +34,9 @@ characters_table = {
     itemnames.meiling:    SokuItemData(0xFF0012, ItemClassification.progression),
     itemnames.okuu:       SokuItemData(0xFF0013, ItemClassification.progression), #Utsuho, also affectionately reffered to as "Okuu"
     itemnames.suwako:     SokuItemData(0xFF0014, ItemClassification.progression),
-    
+}
+
+story_table = {
     #Story Character IDs Range 0xFF0015-FF0017
     itemnames.sanae_story:    SokuItemData(0xFF0015, ItemClassification.progression),
     itemnames.cirno_story:    SokuItemData(0xFF0016, ItemClassification.progression),
@@ -753,6 +755,7 @@ trap_table = {
 
 all_items = {
     **characters_table,
+    **story_table,
     **arcade_table,
     **difficulty_table,
     **system_card_table,
@@ -799,7 +802,79 @@ all_items = {
 
 }
 
-item_groups: typing.Dict[int, str] = {
+def setup_items(world: World, player: int):
+
+    itempool: list[Item] = []
+    
+    if world.option.story_mode_checks == "Sanae":
+        itempool.append(world.create_item({itemnames.sanae_story}))
+
+    
+    world.multiworld.itempool += itempool
+
+    if world.option.starting_character == 0:
+        start_reimu = world.create_item(itemnames.reimu)
+        world.push_precollected(start_reimu)
+    if world.option.starting_character == 1:
+        start_marisa = world.create_item(itemnames.marisa)
+        world.push_precollected(start_marisa)
+    if world.option.starting_character == 2:
+        start_sakuya = world.create_item(itemnames.sakuya)
+        world.push_precollected(start_sakuya)
+    if world.option.starting_character == 3:
+        start_alice = world.create_item(itemnames.alice)
+        world.push_precollected(start_alice)
+    if world.option.starting_character == 4:
+        start_patchouli = world.create_item(itemnames.patchouli)
+        world.push_precollected(start_patchouli)
+    if world.option.starting_character == 5:
+        start_youmu = world.create_item(itemnames.youmu)
+        world.push_precollected(start_youmu)
+    if world.option.starting_character == 6:
+        start_remilia = world.create_item(itemnames.remilia)
+        world.push_precollected(start_remilia)
+    if world.option.starting_character == 7:
+        start_yuyuko = world.create_item(itemnames.yuyuko)
+        world.push_precollected(start_yuyuko)
+    if world.option.starting_character == 8:
+        start_yukari = world.create_item(itemnames.yukari)
+        world.push_precollected(start_yukari)
+    if world.option.starting_character == 9:
+        start_suika = world.create_item(itemnames.suika)
+        world.push_precollected(start_suika)
+    if world.option.starting_character == 10:
+        start_reisen = world.create_item(itemnames.reisen)
+        world.push_precollected(start_reisen)
+    if world.option.starting_character == 11:
+        start_aya = world.create_item(itemnames.aya)
+        world.push_precollected(start_aya)
+    if world.option.starting_character == 12:
+        start_komachi = world.create_item(itemnames.komachi)
+        world.push_precollected(start_komachi)
+    if world.option.starting_character == 13:
+        start_iku = world.create_item(itemnames.komachi)
+        world.push_precollected(start_iku)
+    if world.option.starting_character == 14:
+        start_tenshi = world.create_item(itemnames.tenshi)
+        world.push_precollected(start_tenshi)
+    if world.option.starting_character == 15:
+        start_sanae = world.create_item(itemnames.sanae)
+        world.push_precollected(start_sanae)
+    if world.option.starting_character == 16:
+        start_cirno = world.create_item(itemnames.cirno)
+        world.push_precollected(start_cirno)
+    if world.option.starting_character == 17:
+        start_meiling = world.create_item(itemnames.meiling)
+        world.push_precollected(start_meiling)
+    if world.option.starting_character == 18:
+        start_okuu = world.create_item(itemnames.okuu)
+        world.push_precollected(start_okuu)
+    if world.option.starting_character == 19:
+        start_suwako = world.create_item(itemnames.suwako)
+        world.push_precollected(start_suwako)
+
+
+item_groups: Dict[int, str] = {
 
     #General Item Groups
     "Characters": list(characters_table.keys()),
@@ -817,5 +892,5 @@ item_groups: typing.Dict[int, str] = {
     "Reimu Gems": list(itemnames.reimu_5sc_fs),
 }
 
-lookup_id_to_name: typing.Dict[int, str] = {data.code: item_name for item_name, data in all_items.items() if data.code}
+lookup_id_to_name: Dict[int, str] = {data.code: item_name for item_name, data in all_items.items() if data.code}
 
