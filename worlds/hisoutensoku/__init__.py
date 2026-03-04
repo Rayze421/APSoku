@@ -3,17 +3,21 @@ Archipelago init file for Touhou 12.3 - Hisoutensoku
 """
 from typing import List, Dict
 
-from worlds.Autoworld import World
+
 from worlds.LauncherComponents import Component, components, launch_subprocess, Type
 
-from BaseClasses import Item, Location, Region, Tutorial, Multiworld
+from BaseClasses import Item, Location, Region, Tutorial, MultiWorld
 from worlds.AutoWorld import WebWorld, World
 from worlds.generic.Rules import set_rule, forbid_item
 
-from .options import SokuOptions
+from .sokuoptions import SokuOptions, soku_option_groups
 from .locations import location_table, setup_locations, all_locations, location_groups, lookup_id_to_name, create_region
 from .items import item_table, all_items, item_groups
-from .world import SokuWorld as SokuWorld
+from . import options as soku_options
+
+class SokuWeb(WebWorld):
+    theme = "partyTime"
+    option_groups = soku_option_groups
 
 class SokuWorld(World):
 
@@ -23,8 +27,8 @@ class SokuWorld(World):
     Deckbuilding, and a robust projectile system.
     """
     game = "Touhou 12.3 - Hisoutensoku"
-    options: SokuOptions
-    options_dataclass = SokuOptions
+    options_dataclass = soku_options.SokuOptions
+    options: soku_options.SokuOptions
 
     item_name_groups = item_groups
     location_name_groups = location_groups

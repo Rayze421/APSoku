@@ -1,7 +1,7 @@
-from typing import Dict, int, str
+from typing import Dict
 from worlds.AutoWorld import World
 from .data import locationnames
-from BaseClasses import Location, Multiworld, Region
+from BaseClasses import Location, MultiWorld, Region
 from .world import SokuWorld
 
 class SokuLocation(Location):

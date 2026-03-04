@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from options import Choice, Toggle, OptionSet, OptionGroup, PerGameCommonOptions, Deathlink, Range
+from Options import Choice, Toggle, OptionSet, OptionGroup, PerGameCommonOptions, DeathLink, Range
 
     
 
@@ -530,7 +530,7 @@ class NoDeckLimit(Choice):
     option_always = 2
 
 
-class Deathlink(Deathlink):
+class Deathlink(DeathLink):
     """
     When you lose in Arcade Mode or Story Mode, everyone else with 
     deathlink enabled also dies in theirs. Of course, the reverse is 
@@ -539,7 +539,7 @@ class Deathlink(Deathlink):
     When you recieve a deathlink from another player, a round will 
     be immediately lost with your HP dropped to 0.
     """
-    display_name = "Deathlink"
+    display_name = "Death Link"
     default = False
     
 class DeathlinkTrigger(Choice):
@@ -602,7 +602,7 @@ class SokuOptions(PerGameCommonOptions):
     only_lunatic: OnlyLunatic
 
 
-option_groups = [
+soku_option_groups = [
     OptionGroup(
         "Goal Settings",
         [Goal, StoryModeCount, ArcadeModeCount, CardCollectorCount, CardMasterCount],
