@@ -1,7 +1,7 @@
 """
 Archipelago init file for Touhou 12.3 - Hisoutensoku
 """
-from typing import List, Dict, str, int
+from typing import List, Dict
 
 from worlds.Autoworld import World
 from worlds.LauncherComponents import Component, components, launch_subprocess, Type

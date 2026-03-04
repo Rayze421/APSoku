@@ -1,7 +1,10 @@
-from typing import Dict, NamedTuple, Optional
+from typing import Dict, NamedTuple, Optional, TYPE_CHECKING
 from .data import itemnames
 from worlds.AutoWorld import World
 from BaseClasses import Item, ItemClassification
+
+if TYPE_CHECKING:
+    from .world import SokuWorld
 
 class SokuItem(Item):
     game: str = "Touhou 12.3 - Hisoutensoku"
@@ -807,7 +810,11 @@ def setup_items(world: World, player: int):
     itempool: list[Item] = []
     
     if world.option.story_mode_checks == "Sanae":
-        itempool.append(world.create_item({itemnames.sanae_story}))
+        itempool += [world.create_item({itemnames.sanae_story}) for _ in range(5)]
+    if world.option.story_mode_checks == "Cirno":
+        itempool += [world.create_item({itemnames.cirno_story}) for _ in range(5)]
+    if world.option.story_mode_checks == "Meiling":
+        itempool += [world.create_item({itemnames.meiling_story}) for _ in range(5)]
 
     
     world.multiworld.itempool += itempool
