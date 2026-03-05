@@ -2,7 +2,7 @@ from typing import Dict
 from worlds.AutoWorld import World
 from .data import locationnames
 from BaseClasses import Location, MultiWorld, Region
-from .world import SokuWorld
+
 
 class SokuLocation(Location):
     game: str = "Touhou 12.3 - Hisoutensoku"
@@ -3673,12 +3673,7 @@ all_locations = {
 lookup_id_to_name: Dict[int, str] = {id: name for name, _ in all_locations.items()}
 
 
-def create_region(world: SokuWorld) -> None:
-    start_region = Region("Start Region", world.player, world.multiworld)
-    start_region.locations += [all_locations(lookup_id_to_name)]
-    regions = [start_region]
 
-    world.multiworld.regions += regions
 
 
 

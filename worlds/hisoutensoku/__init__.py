@@ -10,14 +10,14 @@ from BaseClasses import Item, Location, Region, Tutorial, MultiWorld
 from worlds.AutoWorld import WebWorld, World
 from worlds.generic.Rules import set_rule, forbid_item
 
-from .sokuoptions import SokuOptions, soku_option_groups
-from .locations import location_table, setup_locations, all_locations, location_groups, lookup_id_to_name, create_region
-from .items import item_table, all_items, item_groups
+
+from .locations import setup_locations, all_locations, location_groups, lookup_id_to_name, create_region
+from .items import all_items, item_groups
 from . import options as soku_options
 
 class SokuWeb(WebWorld):
     theme = "partyTime"
-    option_groups = soku_option_groups
+    option_groups = soku_options.soku_option_groups
 
 class SokuWorld(World):
 
@@ -37,11 +37,12 @@ class SokuWorld(World):
 
     location_table: Dict[str, int]
 
-    def create_regions(self) -> None:
-        create_region(self)
-        setup_locations(self)
-      
-        self.location_table = setup_locations(self, self.player)
+def create_region(world: SokuWorld) -> None:
+    start_region = Region("Start Region", world.player, world.multiworld)
+    start_region.locations += [all_locations(lookup_id_to_name)]
+    regions = [start_region]
+
+    world.multiworld.regions += regions
     
 
 
