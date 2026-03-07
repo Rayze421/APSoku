@@ -805,7 +805,7 @@ all_items = {
 
 }
 
-def setup_items(world: World, player: int):
+def create_items(world: World, player: int):
 
     itempool: list[Item] = []
     
@@ -816,6 +816,75 @@ def setup_items(world: World, player: int):
     if world.option.story_mode_checks == "Meiling":
         itempool += [world.create_item({itemnames.meiling_story}) for _ in range(5)]
 
+
+    if world.option.arcade_mode_checks == 1:
+        if world.option.arcade_stage_unlocks == 0:
+            itempool += [world.create_item({itemnames.arcade_stage}) for _ in range(9)]
+        if world.option.arcade_stage_unlocks == 1:
+            itempool += [world.create_item({itemnames.alice_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.aya_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.cirno_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.iku_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.komachi_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.marisa_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.meiling_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.patchouli_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.reimu_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.reisen_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.remilia_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.sakuya_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.sanae_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.suika_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.suwako_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.tenshi_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.okuu_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.youmu_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.yukari_arcade}) for _ in range(9)]
+            itempool += [world.create_item({itemnames.yuyuko_arcade}) for _ in range(9)]
+
+    if world.option.cardsanity_skills == range(1-4):
+        itempool += [world.create_item({**reimu_skill_table})]
+        itempool += [world.create_item({**marisa_skill_table})]
+        itempool += [world.create_item({**sakuya_skill_table})]
+        itempool += [world.create_item({**alice_skill_table})]
+        itempool += [world.create_item({**patchouli_skill_table})]
+        itempool += [world.create_item({**youmu_skill_table})]
+        itempool += [world.create_item({**remilia_skill_table})]
+        itempool += [world.create_item({**yuyuko_skill_table})]
+        itempool += [world.create_item({**yukari_skill_table})]
+        itempool += [world.create_item({**suika_skill_table})]
+        itempool += [world.create_item({**reisen_skill_table})]
+        itempool += [world.create_item({**aya_skill_table})]
+        itempool += [world.create_item({**komachi_skill_table})]
+        itempool += [world.create_item({**iku_skill_table})]
+        itempool += [world.create_item({**tenshi_skill_table})]
+        itempool += [world.create_item({**sanae_skill_table})]
+        itempool += [world.create_item({**cirno_skill_table})]
+        itempool += [world.create_item({**meiling_skill_table})]
+        itempool += [world.create_item({**okuu_skill_table})]
+        itempool += [world.create_item({**suwako_skill_table})]
+
+    if world.option.cardsanity_spells == 1:
+        itempool += [world.create_item({**reimu_spell_table})]
+        itempool += [world.create_item({**marisa_spell_table})]
+        itempool += [world.create_item({**sakuya_spell_table})]
+        itempool += [world.create_item({**alice_spell_table})]
+        itempool += [world.create_item({**patchouli_spell_table})]
+        itempool += [world.create_item({**youmu_spell_table})]
+        itempool += [world.create_item({**remilia_spell_table})]
+        itempool += [world.create_item({**yuyuko_spell_table})]
+        itempool += [world.create_item({**yukari_spell_table})]
+        itempool += [world.create_item({**suika_spell_table})]
+        itempool += [world.create_item({**reisen_spell_table})]
+        itempool += [world.create_item({**aya_spell_table})]
+        itempool += [world.create_item({**komachi_spell_table})]
+        itempool += [world.create_item({**iku_spell_table})]
+        itempool += [world.create_item({**tenshi_spell_table})]
+        itempool += [world.create_item({**sanae_spell_table})]
+        itempool += [world.create_item({**cirno_spell_table})]
+        itempool += [world.create_item({**meiling_spell_table})]
+        itempool += [world.create_item({**okuu_spell_table})]
+        itempool += [world.create_item({**suwako_spell_table})]
     
     world.multiworld.itempool += itempool
 
@@ -879,6 +948,11 @@ def setup_items(world: World, player: int):
     if world.option.starting_character == 19:
         start_suwako = world.create_item(itemnames.suwako)
         world.push_precollected(start_suwako)
+    
+
+    
+
+        
 
 
 item_groups: Dict[int, str] = {

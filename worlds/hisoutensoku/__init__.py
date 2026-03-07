@@ -37,12 +37,25 @@ class SokuWorld(World):
 
     location_table: Dict[str, int]
 
-def create_region(world: SokuWorld) -> None:
-    start_region = Region("Start Region", world.player, world.multiworld)
-    start_region.locations += [all_locations(lookup_id_to_name)]
-    regions = [start_region]
+    def fill_slot_data(self) -> dict:
+        return {
+            "Version": "0.1.0",
+            "Goal": self.options.goal.value,
+            "Story Mode Goal": self.options.story_mode_count.value,
+            "Arcade Mode Goal": self.options.arcade_mode_count.value,
+            "Card Collector Count": self.options.card_collector_count.value,
+            "Card Master Count": self.options.card_master_count,
+            "Starting Character": self.options.starting_character.value,
+            
 
-    world.multiworld.regions += regions
+        }
+
+    def create_region(world: SokuWorld) -> None:
+        start_region = Region("Start Region", world.player, world.multiworld)
+        start_region.locations += [all_locations(lookup_id_to_name)]
+        regions = [start_region]
+    
+        world.multiworld.regions += regions
     
 
 
