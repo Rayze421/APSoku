@@ -805,7 +805,7 @@ all_items = {
 
 }
 
-def create_items(world: World, player: int):
+def setup_items(world: World, player: int):
 
     itempool: list[Item] = []
     
@@ -948,11 +948,6 @@ def create_items(world: World, player: int):
     if world.option.starting_character == 19:
         start_suwako = world.create_item(itemnames.suwako)
         world.push_precollected(start_suwako)
-    
-
-    
-
-        
 
 
 item_groups: Dict[int, str] = {
