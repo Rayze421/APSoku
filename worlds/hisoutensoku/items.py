@@ -6,8 +6,6 @@ from BaseClasses import Item, ItemClassification
 if TYPE_CHECKING:
     from .world import SokuWorld
 
-class SokuItem(Item):
-    game: str = "Touhou 12.3 - Hisoutensoku"
 
 class SokuItemData(NamedTuple):
     category: str
