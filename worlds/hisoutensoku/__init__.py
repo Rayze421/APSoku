@@ -200,7 +200,7 @@ class SokuWorld(World):
                     arcade_table.youmu_arcade,
                     arcade_table.yukari_arcade,
                     arcade_table.yuyuko_arcade
-                    }) for _ in range(10)]
+                    }) for _ in range(9)]
             
         match self.option.cardsanity_skills: #add Skill Cards to the itempool if enabled
             case 1 | 2 | 3:
