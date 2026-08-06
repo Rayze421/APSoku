@@ -11,9 +11,9 @@ from worlds.generic.Rules import set_rule, forbid_item
 from .data import itemnames, locationnames
 
 
-from .locations import setup_locations, all_locations, location_groups, lookup_id_to_name, create_region
-from .items import (all_items, item_groups,
-                    item_table, characters_table, story_table, arcade_table, difficulty_table,
+from .locations import all_locations, soku_location_groups, lookup_id_to_name
+from .items import (all_items, soku_item_groups,
+                    characters_table, arcade_table
                     )
 from . import options as soku_options
 
@@ -36,8 +36,8 @@ class SokuWorld(World):
     options_dataclass = soku_options.SokuOptions
     options: soku_options.SokuOptions
 
-    item_name_groups = item_groups
-    location_name_groups = location_groups
+    item_name_groups = soku_item_groups
+    location_name_groups = soku_location_groups
     item_name_to_id = {name: data.code for name, data in all_items.items()}
     location_name_to_id = all_locations
 
@@ -47,44 +47,39 @@ class SokuWorld(World):
         return {
             "PlayerNum": self.player,
             "ModVersion": 1,
-            "Goal": self.options.goal.value,
-            "StoryModeCount": self.options.story_mode_count.value, 
-            "ArcadeModeCount": self.options.arcade_mode_count.value,
-            "CardCollectorCount": self.options.card_collector_count.value,
-            "CardMasterCount": self.options.card_master_count.value,
-            "StartingCharacter": self.options.starting_character.value,
-            "VSModeWins": self.options.vs_mode_character_wins.value,
-            "VSModeWinCount": self.options.vs_mode_win_count.value,
-            "StoryChecks": self.options.story_mode_checks.value,
-            "StoryStageUnlocks": self.options.story_stage_unlocks.value,
-            "ArcadeChecks": self.options.arcade_mode_checks.value,
-            "ArcadeStageUnlocks": self.options.arcade_stage_unlocks.value,
-            "CardsanitySkills": self.options.cardsanity_skills.value,
-            "CardsanitySpells": self.options.cardsanity_spells.value,
-            "CardsanitySpellCount": self.options.cardsanity_spell_count.value, 
-            "CardsanityStartCards": self.options.cardsanity_starting_cards.value,
-            "SystemCardCheckCount": self.options.system_card_check_count.value,
-            "SystemCardCharacterChecks": self.options.system_card_character_checks.value,
-            "NoDeckLimit": self.options.no_deck_limit.value, 
-            "DifficultyItems": self.options.difficulty_items.value,
-            "DifficultyStart": self.options.difficulty_start.value,
-            "ExcludeLunatic": self.options.exclude_lunatic.value,
-            "OnlyLunatic": self.options.only_lunatic.value,
+            "Goal": self.soku_options.goal.value,
+            "StoryModeCount": self.soku_options.story_mode_count.value, 
+            "ArcadeModeCount": self.soku_options.arcade_mode_count.value,
+            "CardCollectorCount": self.soku_options.card_collector_count.value,
+            "CardMasterCount": self.soku_options.card_master_count.value,
+            "StartingCharacter": self.soku_options.starting_character.value,
+            "VSModeWins": self.soku_options.vs_mode_character_wins.value,
+            "VSModeWinCount": self.soku_options.vs_mode_win_count.value,
+            "StoryChecks": self.soku_options.story_mode_checks.value,
+            "StoryStageUnlocks": self.soku_options.story_stage_unlocks.value,
+            "ArcadeChecks": self.soku_options.arcade_mode_checks.value,
+            "ArcadeStageUnlocks": self.soku_options.arcade_stage_unlocks.value,
+            "CardsanitySkills": self.soku_options.cardsanity_skills.value,
+            "CardsanitySpells": self.soku_options.cardsanity_spells.value,
+            "CardsanitySpellCount": self.soku_options.cardsanity_spell_count.value, 
+            "CardsanityStartCards": self.soku_options.cardsanity_starting_cards.value,
+            "SystemCardCheckCount": self.soku_options.system_card_check_count.value,
+            "SystemCardCharacterChecks": self.soku_options.system_card_character_checks.value,
+            "NoDeckLimit": self.soku_options.no_deck_limit.value, 
+            "DifficultyItems": self.soku_options.difficulty_items.value,
+            "DifficultyStart": self.soku_options.difficulty_start.value,
+            "ExcludeLunatic": self.soku_options.exclude_lunatic.value,
+            "OnlyLunatic": self.soku_options.only_lunatic.value,
 
-            "CharacterFullBlacklist": self.options.character_full_blacklist.value, 
-            "VSBlacklistPlayer": self.options.vs_blacklist_player.value,
-            "VSBlacklistOpponent": self.options.vs_blacklist_opponent.value,
-            "ArcadeBlacklist": self.options.arcade_mode_blacklist.value,
-            "CardsanityBlacklist": self.options.cardsanity_blacklist.value
+            "CharacterFullBlacklist": self.soku_options.character_full_blacklist.value, 
+            "VSBlacklistPlayer": self.soku_options.vs_blacklist_player.value,
+            "VSBlacklistOpponent": self.soku_options.vs_blacklist_opponent.value,
+            "ArcadeBlacklist": self.soku_options.arcade_mode_blacklist.value,
+            "CardsanityBlacklist": self.soku_options.cardsanity_blacklist.value
         }
        
 
-    def create_region(world: SokuWorld) -> None:
-        start_region = Region("Start Region", world.player, world.multiworld)
-        start_region.locations += [all_locations(lookup_id_to_name)]
-        regions = [start_region]
-    
-        world.multiworld.regions += regions
+
     
     def create_item(self, name: str) -> SokuItem:
         """Create a single AP Item by name"""
@@ -102,18 +97,19 @@ class SokuWorld(World):
 
         itempool: list[Item] = []
 
-
+        #Character items unlock the first stage, each stege en-post requires one of these
         if self.option.story_mode_checks  == 'Sanae':
-            itempool += [self.create_item({itemnames.sanae_story}) for _ in range(5)]
+            itempool += [self.create_item({itemnames.sanae_story}) for _ in range(4)]
         if self.option.story_mode_checks  == 'Cirno':
-            itempool += [self.create_item({itemnames.cirno_story}) for _ in range(5)]
+            itempool += [self.create_item({itemnames.cirno_story}) for _ in range(4)]
         if self.option.story_mode_checks  == 'Meiling':
-            itempool += [self.create_item({itemnames.meiling_story}) for _ in range(5)]
+            itempool += [self.create_item({itemnames.meiling_story}) for _ in range(4)]
         
+        #Add all characters to the pool
+        itempool += [self.create_item({characters_table.items})] 
         
-        itempool += [self.create_item({characters_table.items})] #Add all characters to the pool
-
-        match self.option.starting_character: #Add selected character to Precollected, and remove them from the pool
+        #Add selected character to Precollected, and remove them from the pool
+        match self.option.starting_character: 
             case 0: #Reimu
                 self.push_precollected(characters_table.reimu)
                 itempool.remove[characters_table.reimu]
@@ -250,6 +246,7 @@ class SokuWorld(World):
                 all_items.meiling_spell_table.items,
                 all_items.okuu_spell_table.items
             }) for _ in range(1)]
+
 
         
 

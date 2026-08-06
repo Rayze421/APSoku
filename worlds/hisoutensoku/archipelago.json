@@ -1,6 +1,8 @@
 {
       "game": "Touhou 12.3 - Hisoutensoku",
-      "authors": [ "Rayze421" ],
-      "minimum_ap_version": "0.6.5",
-      "world_version": "0.0.1"
+      "authors": ["Rayze421"],
+      "minimum_ap_version": "0.6.7",
+      "world_version": "0.0.1",
+      "version": 1,
+      "compatible_version": 1
 }

@@ -4080,3 +4080,7 @@ def setup_locations(world: World, player: int):
 
 
     return location_table
+
+soku_location_groups = {
+
+}

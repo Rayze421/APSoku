@@ -1,10 +1,7 @@
-from typing import Dict, NamedTuple, Optional, TYPE_CHECKING
+from typing import Dict, NamedTuple, Optional
 from .data import itemnames
 from worlds.AutoWorld import World
 from BaseClasses import Item, ItemClassification
-
-if TYPE_CHECKING:
-    from .world import SokuWorld
 
 
 class SokuItemData(NamedTuple):
@@ -803,91 +800,15 @@ all_items = {
 
 }
 
-def setup_items(world: World, player: int):
 
-    itempool: list[Item] = []
-    
-    if world.option.story_mode_checks == "Sanae":
-        itempool += [world.create_item({itemnames.sanae_story}) for _ in range(5)]
-    if world.option.story_mode_checks == "Cirno":
-        itempool += [world.create_item({itemnames.cirno_story}) for _ in range(5)]
-    if world.option.story_mode_checks == "Meiling":
-        itempool += [world.create_item({itemnames.meiling_story}) for _ in range(5)]
-
-    
-    world.multiworld.itempool += itempool
-
-    if world.option.starting_character == 0:
-        start_reimu = world.create_item(itemnames.reimu)
-        world.push_precollected(start_reimu)
-    if world.option.starting_character == 1:
-        start_marisa = world.create_item(itemnames.marisa)
-        world.push_precollected(start_marisa)
-    if world.option.starting_character == 2:
-        start_sakuya = world.create_item(itemnames.sakuya)
-        world.push_precollected(start_sakuya)
-    if world.option.starting_character == 3:
-        start_alice = world.create_item(itemnames.alice)
-        world.push_precollected(start_alice)
-    if world.option.starting_character == 4:
-        start_patchouli = world.create_item(itemnames.patchouli)
-        world.push_precollected(start_patchouli)
-    if world.option.starting_character == 5:
-        start_youmu = world.create_item(itemnames.youmu)
-        world.push_precollected(start_youmu)
-    if world.option.starting_character == 6:
-        start_remilia = world.create_item(itemnames.remilia)
-        world.push_precollected(start_remilia)
-    if world.option.starting_character == 7:
-        start_yuyuko = world.create_item(itemnames.yuyuko)
-        world.push_precollected(start_yuyuko)
-    if world.option.starting_character == 8:
-        start_yukari = world.create_item(itemnames.yukari)
-        world.push_precollected(start_yukari)
-    if world.option.starting_character == 9:
-        start_suika = world.create_item(itemnames.suika)
-        world.push_precollected(start_suika)
-    if world.option.starting_character == 10:
-        start_reisen = world.create_item(itemnames.reisen)
-        world.push_precollected(start_reisen)
-    if world.option.starting_character == 11:
-        start_aya = world.create_item(itemnames.aya)
-        world.push_precollected(start_aya)
-    if world.option.starting_character == 12:
-        start_komachi = world.create_item(itemnames.komachi)
-        world.push_precollected(start_komachi)
-    if world.option.starting_character == 13:
-        start_iku = world.create_item(itemnames.komachi)
-        world.push_precollected(start_iku)
-    if world.option.starting_character == 14:
-        start_tenshi = world.create_item(itemnames.tenshi)
-        world.push_precollected(start_tenshi)
-    if world.option.starting_character == 15:
-        start_sanae = world.create_item(itemnames.sanae)
-        world.push_precollected(start_sanae)
-    if world.option.starting_character == 16:
-        start_cirno = world.create_item(itemnames.cirno)
-        world.push_precollected(start_cirno)
-    if world.option.starting_character == 17:
-        start_meiling = world.create_item(itemnames.meiling)
-        world.push_precollected(start_meiling)
-    if world.option.starting_character == 18:
-        start_okuu = world.create_item(itemnames.okuu)
-        world.push_precollected(start_okuu)
-    if world.option.starting_character == 19:
-        start_suwako = world.create_item(itemnames.suwako)
-        world.push_precollected(start_suwako)
-
-
-item_groups: Dict[int, str] = {
+soku_item_groups: Dict[int, str] = {
 
     #General Item Groups
     "Characters": list(characters_table.keys()),
-    "Story Characters": list(itemnames.sanae_story, itemnames.cirno_story, itemnames.meiling_story),
+    "Story Characters": list(story_table.keys()),
     "System Cards": list(system_card_table.keys()),
     "Reimu Skills": list(reimu_skill_table.keys()),
     "Reimu Spells": list(reimu_spell_table.keys()),
-    "Reimu Cards": list(reimu_spell_table.keys(), reimu_skill_table.keys()),
     
     #Miscelaneous Slang
     "Reimu 236d": list(itemnames.reimu_236d),
